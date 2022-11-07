@@ -1,0 +1,15 @@
+import {{pascalCase name}}Component from './{{pascalCase name}}.component'
+import { {{pascalCase name}}Data } from './{{pascalCase name}}.mock'
+
+export default {
+  title: '{{pascalCase module}} Module/{{pascalCase name}}Component',
+  component: {{pascalCase name}}Component,
+}
+
+export const Default{{pascalCase name}}Component = () => {
+  return (
+    <{{pascalCase name}}Component
+      {...{{pascalCase name}}Data}
+    />
+  )
+}

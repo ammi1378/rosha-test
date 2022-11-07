@@ -1,0 +1,114 @@
+.Rosha-style-banner{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.Rosha-height-banner{
+    position: relative;
+    width: 100%;
+    height: 365px!important;
+}
+.Rosha-height-home-banner{
+    position: relative;
+    width: 100%;
+    height: 665px!important;
+}
+
+.Rosha-position-modal{
+    position: relative;
+}
+.Rosha-layer-on-benner{
+    position: absolute;
+    top:50%; left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(19, 70, 92);
+    opacity: 0.5!important;
+}
+.Rosha-layer-title-benner{
+    position: absolute;
+    top: 15%; bottom: 15%;
+    color: white;
+    text-align: center!important;
+}
+
+.Rosha-layer-discribtion-benner{
+    position: absolute;
+    top: 30%; bottom: 15%;
+    color: white;
+    text-align: center!important;
+    font-size: 22px;
+    direction: ltr!important;
+}
+.Rosha-btn-moreinfo-style1{
+    width: 100%;
+    background-color: #10a5b2;
+    color: #ffffff;
+    border: 2px solid #10a5b2;
+}
+.Rosha-btn-moreinfo-style2{
+    width: 100%;
+    border: 2px solid #10a5b2;
+    background-color: #ffffff;
+    color: #10a5b2;
+}
+.Rosha-btn-moreinfo-style2:hover{
+    background-color: #10a5b2;
+    color: #ffffff;
+}
+.Rosha-style-card-image{
+    min-height: 285px!important;
+    max-height: 285px!important;
+    object-fit: cover;
+}
+.Rosha-height-discribtion{
+    height: 50px!important;
+    overflow: hidden;
+}
+.Rosha-height-title-card{
+    max-height: 63px!important;
+    overflow: hidden;
+}
+.Rosha-size-image-card-IranVisa{
+    object-fit: cover!important;
+    width: 100%!important;
+    height: 100%!important;
+    border-radius: 7px!important;
+}
+@media screen and (max-width: 769px) {
+    .Rosha-size-image-Card{
+        height: 200px!important;
+        width: 100%!important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .Rosha-size-image-Card{
+        height: 300px!important;
+        width: 200%!important;
+    }
+}
+.Rosha-style-Card-w100:hover{
+    box-shadow: 1px 0px 10px 4px #0000002b;
+    border-radius: 12px;
+    transition: 250ms;
+}
+.Rosha-height-blog-banner-1{
+    position: relative;
+    width: 100%;
+    height: 460px!important;
+}
+.Rosha-height-blog-banner-2{
+    position: relative;
+    width: 100%;
+    height: 260px!important;
+}
+.Rosha-height-blog-banner-3{
+    position: relative;
+    width: 100%;
+    height: 500px!important;
+}
+.Rosha-display-none{
+    display: none!important;
+}
+
