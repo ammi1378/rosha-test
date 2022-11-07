@@ -22,7 +22,7 @@ import globalAxios, {
   AxiosRequestConfig,
 } from "axios";
 
-export const BASE_PATH = "http://127.0.0.1:8082/api".replace(/\/+$/, "");
+export const BASE_PATH = "http://94.101.179.129:8082/api".replace(/\/+$/, "");
 
 /**
  *
