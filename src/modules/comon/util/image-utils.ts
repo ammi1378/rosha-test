@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8082";
+import { BASE_URL } from "../../../rosha-api/base";
 
 export const serverImage = (imageUrl: string) => {
   return BASE_URL + imageUrl;
