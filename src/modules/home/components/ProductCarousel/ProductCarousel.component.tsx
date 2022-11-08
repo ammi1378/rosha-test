@@ -103,15 +103,6 @@ const ProductCarouselComponent: React.FC<ProductCarouselProps> = ({
             <div className="swiper-wrapper">
               {items?.map((homeCardItem) => {
                 return (
-                  // <HomeCardItemComponent
-                  //   item={}
-                  //   title={homeCardItem.attributes?.Name}
-                  //   images={homeCardItem.attributes?.Card?.CardImage?.data}
-                  //   Historical={homeCardItem.attributes?.Card?.CardDescription}
-                  //   cities={homeCardItem.attributes?.Cities}
-                  //   duration={homeCardItem.attributes?.Duration}
-                  //   describtion={homeCardItem.attributes?.Card?.CardDescription}
-                  // />
                   <HomeCardItemComponent
                     item={homeCardItem}
                     isSearchListing={false}

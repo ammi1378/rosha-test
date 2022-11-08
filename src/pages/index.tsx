@@ -11,18 +11,19 @@ import CategoryCarouselComponent from "../modules/home/components/CategoryCarous
 import HeroBannerComponent from "../modules/home/components/HeroBanner/HeroBanner.component";
 import ProductCarouselComponent from "../modules/home/components/ProductCarousel/ProductCarousel.component";
 import VideoBlockComponent from "../modules/home/components/VideoBlock/VideoBlock.component";
-import { TourApi } from "../rosha-api/api";
+import { HomePageDetailApi, TourApi } from "../rosha-api/api";
 
 const Home = ({
   newTours,
   bestSellingTours,
+  homePageDtails,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         {/* <!-- Hero Banner --> */}
-        <HeroBannerComponent />
+        {homePageDtails && <HeroBannerComponent homePageDtails={homePageDtails}/>}
         {/* <!-- Product Carousel --> */}
         {newTours.tours && (
           <ProductCarouselComponent
@@ -39,7 +40,7 @@ const Home = ({
           />
         )}
         <CategoryCarouselComponent />
-        <VideoBlockComponent />
+        {/* <VideoBlockComponent /> */}
       </main>
       <FooterComponent />
     </>
@@ -68,8 +69,17 @@ export const getServerSideProps = async ({
     subHeader: "Sost Brilliant reasons Emprise should be your one-stop-shop!",
     tours: bestSellingTours,
   };
+
+  const homePageDetailApi = new HomePageDetailApi();
+  const homePageDtails = await homePageDetailApi
+    .getHomePageDetail()
+    .then((res) => res.data.data);
   return {
-    props: { newTours: newToursData, bestSellingTours: bestSellingToursData },
+    props: {
+      newTours: newToursData,
+      bestSellingTours: bestSellingToursData,
+      homePageDtails,
+    },
   };
 };
 

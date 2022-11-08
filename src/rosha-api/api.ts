@@ -1126,189 +1126,6 @@
  /**
   * 
   * @export
-  * @interface IBusServiceInfoListResponseDataItemAttributesModel
-  */
- export interface IBusServiceInfoListResponseDataItemAttributesModel {
-     /**
-      * 
-      * @type {IGeneralInfoPagesGeneralInfoPagesComponentModel}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'InfoPage'?: IGeneralInfoPagesGeneralInfoPagesComponentModel;
-     /**
-      * 
-      * @type {string}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'createdAt'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'updatedAt'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'publishedAt'?: string;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'createdBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel}
-      * @memberof IBusServiceInfoListResponseDataItemAttributesModel
-      */
-     'updatedBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoListResponseDataItemLocalizedModel
-  */
- export interface IBusServiceInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusServiceInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusServiceInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoListResponseDataItemModel
-  */
- export interface IBusServiceInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusServiceInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusServiceInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoListResponseModel
-  */
- export interface IBusServiceInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<IBusServiceInfoListResponseDataItemModel>}
-      * @memberof IBusServiceInfoListResponseModel
-      */
-     'data'?: Array<IBusServiceInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IBusServiceInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoRequestDataModel
-  */
- export interface IBusServiceInfoRequestDataModel {
-     /**
-      * 
-      * @type {IGeneralInfoPagesGeneralInfoPagesComponentModel}
-      * @memberof IBusServiceInfoRequestDataModel
-      */
-     'InfoPage'?: IGeneralInfoPagesGeneralInfoPagesComponentModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoRequestModel
-  */
- export interface IBusServiceInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IBusServiceInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoResponseDataObjectLocalizedModel
-  */
- export interface IBusServiceInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusServiceInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusServiceInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoResponseDataObjectModel
-  */
- export interface IBusServiceInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusServiceInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusServiceInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusServiceInfoResponseModel
-  */
- export interface IBusServiceInfoResponseModel {
-     /**
-      * 
-      * @type {IBusServiceInfoResponseDataObjectModel}
-      * @memberof IBusServiceInfoResponseModel
-      */
-     'data'?: IBusServiceInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof IBusServiceInfoResponseModel
-      */
-     'meta'?: object;
- }
- /**
-  * 
-  * @export
   * @interface IBusServiceListResponseDataItemAttributesModel
   */
  export interface IBusServiceListResponseDataItemAttributesModel {
@@ -1546,133 +1363,6 @@
       * 
       * @type {object}
       * @memberof IBusServiceResponseModel
-      */
-     'meta'?: object;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoListResponseDataItemLocalizedModel
-  */
- export interface IBusinessTravelInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusinessTravelInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusinessTravelInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoListResponseDataItemModel
-  */
- export interface IBusinessTravelInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusinessTravelInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusinessTravelInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoListResponseModel
-  */
- export interface IBusinessTravelInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<IBusinessTravelInfoListResponseDataItemModel>}
-      * @memberof IBusinessTravelInfoListResponseModel
-      */
-     'data'?: Array<IBusinessTravelInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IBusinessTravelInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoRequestModel
-  */
- export interface IBusinessTravelInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IBusinessTravelInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoResponseDataObjectLocalizedModel
-  */
- export interface IBusinessTravelInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusinessTravelInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusinessTravelInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoResponseDataObjectModel
-  */
- export interface IBusinessTravelInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IBusinessTravelInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IBusinessTravelInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IBusinessTravelInfoResponseModel
-  */
- export interface IBusinessTravelInfoResponseModel {
-     /**
-      * 
-      * @type {IBusinessTravelInfoResponseDataObjectModel}
-      * @memberof IBusinessTravelInfoResponseModel
-      */
-     'data'?: IBusinessTravelInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof IBusinessTravelInfoResponseModel
       */
      'meta'?: object;
  }
@@ -1960,133 +1650,6 @@
  /**
   * 
   * @export
-  * @interface ICipInternationalAirportServiceInfoListResponseDataItemLocalizedModel
-  */
- export interface ICipInternationalAirportServiceInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof ICipInternationalAirportServiceInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof ICipInternationalAirportServiceInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoListResponseDataItemModel
-  */
- export interface ICipInternationalAirportServiceInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof ICipInternationalAirportServiceInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof ICipInternationalAirportServiceInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoListResponseModel
-  */
- export interface ICipInternationalAirportServiceInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<ICipInternationalAirportServiceInfoListResponseDataItemModel>}
-      * @memberof ICipInternationalAirportServiceInfoListResponseModel
-      */
-     'data'?: Array<ICipInternationalAirportServiceInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof ICipInternationalAirportServiceInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoRequestModel
-  */
- export interface ICipInternationalAirportServiceInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof ICipInternationalAirportServiceInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoResponseDataObjectLocalizedModel
-  */
- export interface ICipInternationalAirportServiceInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof ICipInternationalAirportServiceInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof ICipInternationalAirportServiceInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoResponseDataObjectModel
-  */
- export interface ICipInternationalAirportServiceInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof ICipInternationalAirportServiceInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof ICipInternationalAirportServiceInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface ICipInternationalAirportServiceInfoResponseModel
-  */
- export interface ICipInternationalAirportServiceInfoResponseModel {
-     /**
-      * 
-      * @type {ICipInternationalAirportServiceInfoResponseDataObjectModel}
-      * @memberof ICipInternationalAirportServiceInfoResponseModel
-      */
-     'data'?: ICipInternationalAirportServiceInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof ICipInternationalAirportServiceInfoResponseModel
-      */
-     'meta'?: object;
- }
- /**
-  * 
-  * @export
   * @interface ICipInternationalAirportServiceListResponseDataItemLocalizedModel
   */
  export interface ICipInternationalAirportServiceListResponseDataItemLocalizedModel {
@@ -2348,133 +1911,6 @@
       * @memberof IComponentPagesTourServicesComponentModel
       */
      'Service'?: string;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoListResponseDataItemLocalizedModel
-  */
- export interface IDailyTourInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IDailyTourInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IDailyTourInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoListResponseDataItemModel
-  */
- export interface IDailyTourInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IDailyTourInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IDailyTourInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoListResponseModel
-  */
- export interface IDailyTourInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<IDailyTourInfoListResponseDataItemModel>}
-      * @memberof IDailyTourInfoListResponseModel
-      */
-     'data'?: Array<IDailyTourInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IDailyTourInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoRequestModel
-  */
- export interface IDailyTourInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IDailyTourInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoResponseDataObjectLocalizedModel
-  */
- export interface IDailyTourInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IDailyTourInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IDailyTourInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoResponseDataObjectModel
-  */
- export interface IDailyTourInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IDailyTourInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IDailyTourInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IDailyTourInfoResponseModel
-  */
- export interface IDailyTourInfoResponseModel {
-     /**
-      * 
-      * @type {IDailyTourInfoResponseDataObjectModel}
-      * @memberof IDailyTourInfoResponseModel
-      */
-     'data'?: IDailyTourInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof IDailyTourInfoResponseModel
-      */
-     'meta'?: object;
  }
  /**
   * 
@@ -2872,133 +2308,6 @@
       * @memberof IErrorModel
       */
      'error': IErrorErrorModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoListResponseDataItemLocalizedModel
-  */
- export interface IFlightServiceInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IFlightServiceInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IFlightServiceInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoListResponseDataItemModel
-  */
- export interface IFlightServiceInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IFlightServiceInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IFlightServiceInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoListResponseModel
-  */
- export interface IFlightServiceInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<IFlightServiceInfoListResponseDataItemModel>}
-      * @memberof IFlightServiceInfoListResponseModel
-      */
-     'data'?: Array<IFlightServiceInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IFlightServiceInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoRequestModel
-  */
- export interface IFlightServiceInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IFlightServiceInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoResponseDataObjectLocalizedModel
-  */
- export interface IFlightServiceInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IFlightServiceInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IFlightServiceInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoResponseDataObjectModel
-  */
- export interface IFlightServiceInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IFlightServiceInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IFlightServiceInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IFlightServiceInfoResponseModel
-  */
- export interface IFlightServiceInfoResponseModel {
-     /**
-      * 
-      * @type {IFlightServiceInfoResponseDataObjectModel}
-      * @memberof IFlightServiceInfoResponseModel
-      */
-     'data'?: IFlightServiceInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof IFlightServiceInfoResponseModel
-      */
-     'meta'?: object;
  }
  /**
   * 
@@ -3418,36 +2727,6 @@
      'id'?: number;
      /**
       * 
-      * @type {string}
-      * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
-      */
-     'Name'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
-      */
-     'MailAddress'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
-      */
-     'MobilePhone'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
-      */
-     'PaxNumber'?: string;
-     /**
-      * 
-      * @type {string}
-      * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
-      */
-     'Nationality'?: string;
-     /**
-      * 
       * @type {any}
       * @memberof IGeneralInfoPagesGeneralRequestsComponentModel
       */
@@ -3587,129 +2866,247 @@
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoListResponseDataItemLocalizedModel
+  * @interface IHomePageDetailListResponseDataItemAttributesModel
   */
- export interface IHotelServiceInfoListResponseDataItemLocalizedModel {
+ export interface IHomePageDetailListResponseDataItemAttributesModel {
      /**
       * 
-      * @type {number}
-      * @memberof IHotelServiceInfoListResponseDataItemLocalizedModel
+      * @type {Array<IHomePageHomeCardBannersComponentModel>}
+      * @memberof IHomePageDetailListResponseDataItemAttributesModel
       */
-     'id'?: number;
+     'HomeCardBanner'?: Array<IHomePageHomeCardBannersComponentModel>;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IHotelServiceInfoListResponseDataItemLocalizedModel
+      * @type {string}
+      * @memberof IHomePageDetailListResponseDataItemAttributesModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'createdAt'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageDetailListResponseDataItemAttributesModel
+      */
+     'updatedAt'?: string;
+     /**
+      * 
+      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel}
+      * @memberof IHomePageDetailListResponseDataItemAttributesModel
+      */
+     'createdBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel;
+     /**
+      * 
+      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel}
+      * @memberof IHomePageDetailListResponseDataItemAttributesModel
+      */
+     'updatedBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoListResponseDataItemModel
+  * @interface IHomePageDetailListResponseDataItemLocalizedModel
   */
- export interface IHotelServiceInfoListResponseDataItemModel {
+ export interface IHomePageDetailListResponseDataItemLocalizedModel {
      /**
       * 
       * @type {number}
-      * @memberof IHotelServiceInfoListResponseDataItemModel
+      * @memberof IHomePageDetailListResponseDataItemLocalizedModel
       */
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IHotelServiceInfoListResponseDataItemModel
+      * @type {IHomePageDetailListResponseDataItemAttributesModel}
+      * @memberof IHomePageDetailListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IHomePageDetailListResponseDataItemAttributesModel;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoListResponseModel
+  * @interface IHomePageDetailListResponseDataItemModel
   */
- export interface IHotelServiceInfoListResponseModel {
+ export interface IHomePageDetailListResponseDataItemModel {
      /**
       * 
-      * @type {Array<IHotelServiceInfoListResponseDataItemModel>}
-      * @memberof IHotelServiceInfoListResponseModel
+      * @type {number}
+      * @memberof IHomePageDetailListResponseDataItemModel
       */
-     'data'?: Array<IHotelServiceInfoListResponseDataItemModel>;
+     'id'?: number;
+     /**
+      * 
+      * @type {IHomePageDetailListResponseDataItemAttributesModel}
+      * @memberof IHomePageDetailListResponseDataItemModel
+      */
+     'attributes'?: IHomePageDetailListResponseDataItemAttributesModel;
+ }
+ /**
+  * 
+  * @export
+  * @interface IHomePageDetailListResponseModel
+  */
+ export interface IHomePageDetailListResponseModel {
+     /**
+      * 
+      * @type {Array<IHomePageDetailListResponseDataItemModel>}
+      * @memberof IHomePageDetailListResponseModel
+      */
+     'data'?: IHomePageDetailListResponseDataItemModel;
      /**
       * 
       * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IHotelServiceInfoListResponseModel
+      * @memberof IHomePageDetailListResponseModel
       */
      'meta'?: IAirportTransportationServiceListResponseMetaModel;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoRequestModel
+  * @interface IHomePageDetailRequestDataModel
   */
- export interface IHotelServiceInfoRequestModel {
+ export interface IHomePageDetailRequestDataModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IHotelServiceInfoRequestModel
+      * @type {Array<IHomePageHomeCardBannersComponentModel>}
+      * @memberof IHomePageDetailRequestDataModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'HomeCardBanner'?: Array<IHomePageHomeCardBannersComponentModel>;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoResponseDataObjectLocalizedModel
+  * @interface IHomePageDetailRequestModel
   */
- export interface IHotelServiceInfoResponseDataObjectLocalizedModel {
+ export interface IHomePageDetailRequestModel {
+     /**
+      * 
+      * @type {IHomePageDetailRequestDataModel}
+      * @memberof IHomePageDetailRequestModel
+      */
+     'data': IHomePageDetailRequestDataModel;
+ }
+ /**
+  * 
+  * @export
+  * @interface IHomePageDetailResponseDataObjectLocalizedModel
+  */
+ export interface IHomePageDetailResponseDataObjectLocalizedModel {
      /**
       * 
       * @type {number}
-      * @memberof IHotelServiceInfoResponseDataObjectLocalizedModel
+      * @memberof IHomePageDetailResponseDataObjectLocalizedModel
       */
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IHotelServiceInfoResponseDataObjectLocalizedModel
+      * @type {IHomePageDetailListResponseDataItemAttributesModel}
+      * @memberof IHomePageDetailResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IHomePageDetailListResponseDataItemAttributesModel;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoResponseDataObjectModel
+  * @interface IHomePageDetailResponseDataObjectModel
   */
- export interface IHotelServiceInfoResponseDataObjectModel {
+ export interface IHomePageDetailResponseDataObjectModel {
      /**
       * 
       * @type {number}
-      * @memberof IHotelServiceInfoResponseDataObjectModel
+      * @memberof IHomePageDetailResponseDataObjectModel
       */
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IHotelServiceInfoResponseDataObjectModel
+      * @type {IHomePageDetailListResponseDataItemAttributesModel}
+      * @memberof IHomePageDetailResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IHomePageDetailListResponseDataItemAttributesModel;
  }
  /**
   * 
   * @export
-  * @interface IHotelServiceInfoResponseModel
+  * @interface IHomePageDetailResponseModel
   */
- export interface IHotelServiceInfoResponseModel {
+ export interface IHomePageDetailResponseModel {
      /**
       * 
-      * @type {IHotelServiceInfoResponseDataObjectModel}
-      * @memberof IHotelServiceInfoResponseModel
+      * @type {IHomePageDetailResponseDataObjectModel}
+      * @memberof IHomePageDetailResponseModel
       */
-     'data'?: IHotelServiceInfoResponseDataObjectModel;
+     'data'?: IHomePageDetailResponseDataObjectModel;
      /**
       * 
       * @type {object}
-      * @memberof IHotelServiceInfoResponseModel
+      * @memberof IHomePageDetailResponseModel
       */
      'meta'?: object;
+ }
+ /**
+  * 
+  * @export
+  * @interface IHomePageHomeCardBannersComponentLinkModel
+  */
+ export interface IHomePageHomeCardBannersComponentLinkModel {
+     /**
+      * 
+      * @type {number}
+      * @memberof IHomePageHomeCardBannersComponentLinkModel
+      */
+     'id'?: number;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageHomeCardBannersComponentLinkModel
+      */
+     'Text'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageHomeCardBannersComponentLinkModel
+      */
+     'Link'?: string;
+ }
+ /**
+  * 
+  * @export
+  * @interface IHomePageHomeCardBannersComponentModel
+  */
+ export interface IHomePageHomeCardBannersComponentModel {
+     /**
+      * 
+      * @type {number}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'id'?: number;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'Title'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'SubTitle'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'Description'?: string;
+     /**
+      * 
+      * @type {IHomePageHomeCardBannersComponentLinkModel}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'Link'?: IHomePageHomeCardBannersComponentLinkModel;
+     /**
+      * 
+      * @type {IGeneralInfoPagesReviewsComponentPictureReviewerModel}
+      * @memberof IHomePageHomeCardBannersComponentModel
+      */
+     'Banner'?: IGeneralInfoPagesReviewsComponentPictureReviewerModel;
  }
  /**
   * 
@@ -3993,6 +3390,49 @@
  /**
   * 
   * @export
+  * @interface IIranVisaInfoListResponseDataItemAttributesModel
+  */
+ export interface IIranVisaInfoListResponseDataItemAttributesModel {
+     /**
+      * 
+      * @type {IGeneralInfoPagesGeneralInfoPagesComponentModel}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'InfoPage'?: IGeneralInfoPagesGeneralInfoPagesComponentModel;
+     /**
+      * 
+      * @type {string}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'createdAt'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'updatedAt'?: string;
+     /**
+      * 
+      * @type {string}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'publishedAt'?: string;
+     /**
+      * 
+      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'createdBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesFilesDataInnerAttributesCreatedByModel;
+     /**
+      * 
+      * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel}
+      * @memberof IIranVisaInfoListResponseDataItemAttributesModel
+      */
+     'updatedBy'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryDataInnerAttributesFolderDataAttributesParentModel;
+ }
+ /**
+  * 
+  * @export
   * @interface IIranVisaInfoListResponseDataItemLocalizedModel
   */
  export interface IIranVisaInfoListResponseDataItemLocalizedModel {
@@ -4004,10 +3444,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IIranVisaInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4023,10 +3463,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IIranVisaInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4050,15 +3490,28 @@
  /**
   * 
   * @export
+  * @interface IIranVisaInfoRequestDataModel
+  */
+ export interface IIranVisaInfoRequestDataModel {
+     /**
+      * 
+      * @type {IGeneralInfoPagesGeneralInfoPagesComponentModel}
+      * @memberof IIranVisaInfoRequestDataModel
+      */
+     'InfoPage'?: IGeneralInfoPagesGeneralInfoPagesComponentModel;
+ }
+ /**
+  * 
+  * @export
   * @interface IIranVisaInfoRequestModel
   */
  export interface IIranVisaInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IIranVisaInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -4074,10 +3527,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IIranVisaInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4093,10 +3546,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IIranVisaInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4131,16 +3584,10 @@
      'Name'?: string;
      /**
       * 
-      * @type {IGeneralInfoPagesSecondGeneralCardsComponentModel}
+      * @type {IGeneralInfoPagesFirstGeneralCardsComponentModel}
       * @memberof IIranVisaListResponseDataItemAttributesModel
       */
-     'Card'?: IGeneralInfoPagesSecondGeneralCardsComponentModel;
-     /**
-      * 
-      * @type {string}
-      * @memberof IIranVisaListResponseDataItemAttributesModel
-      */
-     'RichText'?: string;
+     'Card'?: IGeneralInfoPagesFirstGeneralCardsComponentModel;
      /**
       * 
       * @type {string}
@@ -4243,16 +3690,10 @@
      'Name'?: string;
      /**
       * 
-      * @type {IGeneralInfoPagesSecondGeneralCardsComponentModel}
+      * @type {IGeneralInfoPagesFirstGeneralCardsComponentModel}
       * @memberof IIranVisaRequestDataModel
       */
-     'Card'?: IGeneralInfoPagesSecondGeneralCardsComponentModel;
-     /**
-      * 
-      * @type {string}
-      * @memberof IIranVisaRequestDataModel
-      */
-     'RichText'?: string;
+     'Card'?: IGeneralInfoPagesFirstGeneralCardsComponentModel;
  }
  /**
   * 
@@ -4338,10 +3779,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IMeetingRoomServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4357,10 +3798,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IMeetingRoomServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4389,10 +3830,10 @@
  export interface IMeetingRoomServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IMeetingRoomServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -4408,10 +3849,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IMeetingRoomServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -4427,10 +3868,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IMeetingRoomServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5213,10 +4654,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IRestaurantServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5232,10 +4673,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IRestaurantServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5264,10 +4705,10 @@
  export interface IRestaurantServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IRestaurantServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -5283,10 +4724,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IRestaurantServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5302,10 +4743,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IRestaurantServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5710,10 +5151,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IShoppingServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5729,10 +5170,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IShoppingServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5761,10 +5202,10 @@
  export interface IShoppingServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IShoppingServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -5780,10 +5221,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IShoppingServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5799,10 +5240,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IShoppingServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5964,10 +5405,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourGuideServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -5983,10 +5424,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourGuideServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6015,10 +5456,10 @@
  export interface ITourGuideServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof ITourGuideServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -6034,10 +5475,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourGuideServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6053,10 +5494,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourGuideServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6218,10 +5659,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6237,10 +5678,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6269,10 +5710,10 @@
  export interface ITourInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof ITourInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -6288,10 +5729,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6307,10 +5748,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITourInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6732,10 +6173,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITrainServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6751,10 +6192,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITrainServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6783,10 +6224,10 @@
  export interface ITrainServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof ITrainServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -6802,10 +6243,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITrainServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -6821,10 +6262,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITrainServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7150,10 +6591,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITranslatingAndInterpretingServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7169,10 +6610,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITranslatingAndInterpretingServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7201,10 +6642,10 @@
  export interface ITranslatingAndInterpretingServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof ITranslatingAndInterpretingServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -7220,10 +6661,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITranslatingAndInterpretingServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7239,10 +6680,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITranslatingAndInterpretingServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7404,10 +6845,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITravelInsuranceServiceInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7423,10 +6864,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITravelInsuranceServiceInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7455,10 +6896,10 @@
  export interface ITravelInsuranceServiceInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof ITravelInsuranceServiceInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -7474,10 +6915,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITravelInsuranceServiceInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7493,10 +6934,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof ITravelInsuranceServiceInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7658,10 +7099,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUnescoInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7677,10 +7118,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUnescoInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7709,10 +7150,10 @@
  export interface IUnescoInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IUnescoInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -7728,10 +7169,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUnescoInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -7747,10 +7188,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUnescoInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -8491,10 +7932,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUseFullInformationInfoListResponseDataItemLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -8510,10 +7951,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUseFullInformationInfoListResponseDataItemModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -8542,10 +7983,10 @@
  export interface IUseFullInformationInfoRequestModel {
      /**
       * 
-      * @type {IBusServiceInfoRequestDataModel}
+      * @type {IIranVisaInfoRequestDataModel}
       * @memberof IUseFullInformationInfoRequestModel
       */
-     'data': IBusServiceInfoRequestDataModel;
+     'data': IIranVisaInfoRequestDataModel;
  }
  /**
   * 
@@ -8561,10 +8002,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUseFullInformationInfoResponseDataObjectLocalizedModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -8580,10 +8021,10 @@
      'id'?: number;
      /**
       * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
+      * @type {IIranVisaInfoListResponseDataItemAttributesModel}
       * @memberof IUseFullInformationInfoResponseDataObjectModel
       */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
+     'attributes'?: IIranVisaInfoListResponseDataItemAttributesModel;
  }
  /**
   * 
@@ -9731,13 +9172,13 @@
       * @type {IDatetimeModel}
       * @memberof IUsersPermissionsRoleModel
       */
-     'createdAt'?: any;
+     'createdAt'?: string;
      /**
       * 
       * @type {IDatetimeModel}
       * @memberof IUsersPermissionsRoleModel
       */
-     'updatedAt'?: any;
+     'updatedAt'?: string;
  }
  /**
   * 
@@ -10171,133 +9612,6 @@
       * 
       * @type {object}
       * @memberof IUsersPermissionsUserResponseModel
-      */
-     'meta'?: object;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoListResponseDataItemLocalizedModel
-  */
- export interface IVipDomesticAirportServiceInfoListResponseDataItemLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IVipDomesticAirportServiceInfoListResponseDataItemLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IVipDomesticAirportServiceInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoListResponseDataItemModel
-  */
- export interface IVipDomesticAirportServiceInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IVipDomesticAirportServiceInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IVipDomesticAirportServiceInfoListResponseDataItemModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoListResponseModel
-  */
- export interface IVipDomesticAirportServiceInfoListResponseModel {
-     /**
-      * 
-      * @type {Array<IVipDomesticAirportServiceInfoListResponseDataItemModel>}
-      * @memberof IVipDomesticAirportServiceInfoListResponseModel
-      */
-     'data'?: Array<IVipDomesticAirportServiceInfoListResponseDataItemModel>;
-     /**
-      * 
-      * @type {IAirportTransportationServiceListResponseMetaModel}
-      * @memberof IVipDomesticAirportServiceInfoListResponseModel
-      */
-     'meta'?: IAirportTransportationServiceListResponseMetaModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoRequestModel
-  */
- export interface IVipDomesticAirportServiceInfoRequestModel {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestDataModel}
-      * @memberof IVipDomesticAirportServiceInfoRequestModel
-      */
-     'data': IBusServiceInfoRequestDataModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoResponseDataObjectLocalizedModel
-  */
- export interface IVipDomesticAirportServiceInfoResponseDataObjectLocalizedModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IVipDomesticAirportServiceInfoResponseDataObjectLocalizedModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IVipDomesticAirportServiceInfoResponseDataObjectLocalizedModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoResponseDataObjectModel
-  */
- export interface IVipDomesticAirportServiceInfoResponseDataObjectModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IVipDomesticAirportServiceInfoResponseDataObjectModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IBusServiceInfoListResponseDataItemAttributesModel}
-      * @memberof IVipDomesticAirportServiceInfoResponseDataObjectModel
-      */
-     'attributes'?: IBusServiceInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IVipDomesticAirportServiceInfoResponseModel
-  */
- export interface IVipDomesticAirportServiceInfoResponseModel {
-     /**
-      * 
-      * @type {IVipDomesticAirportServiceInfoResponseDataObjectModel}
-      * @memberof IVipDomesticAirportServiceInfoResponseModel
-      */
-     'data'?: IVipDomesticAirportServiceInfoResponseDataObjectModel;
-     /**
-      * 
-      * @type {object}
-      * @memberof IVipDomesticAirportServiceInfoResponseModel
       */
      'meta'?: object;
  }
@@ -11576,381 +10890,6 @@
  
  
  /**
-  * BusServiceInfoApi - axios parameter creator
-  * @export
-  */
- export const BusServiceInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteBusServiceInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/bus-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getBusServiceInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/bus-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {IBusServiceInfoRequestModel} iBusServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putBusServiceInfo: async (iBusServiceInfoRequestModel: IBusServiceInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iBusServiceInfoRequestModel' is not null or undefined
-             assertParamExists('putBusServiceInfo', 'iBusServiceInfoRequestModel', iBusServiceInfoRequestModel)
-             const localVarPath = `/bus-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iBusServiceInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * BusServiceInfoApi - functional programming interface
-  * @export
-  */
- export const BusServiceInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = BusServiceInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteBusServiceInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBusServiceInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getBusServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IBusServiceInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getBusServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {IBusServiceInfoRequestModel} iBusServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putBusServiceInfo(iBusServiceInfoRequestModel: IBusServiceInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IBusServiceInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putBusServiceInfo(iBusServiceInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * BusServiceInfoApi - factory interface
-  * @export
-  */
- export const BusServiceInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = BusServiceInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteBusServiceInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteBusServiceInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getBusServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IBusServiceInfoListResponseModel> {
-             return localVarFp.getBusServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {IBusServiceInfoRequestModel} iBusServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putBusServiceInfo(iBusServiceInfoRequestModel: IBusServiceInfoRequestModel, options?: any): AxiosPromise<IBusServiceInfoResponseModel> {
-             return localVarFp.putBusServiceInfo(iBusServiceInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getBusServiceInfo operation in BusServiceInfoApi.
-  * @export
-  * @interface BusServiceInfoApiGetBusServiceInfoRequest
-  */
- export interface BusServiceInfoApiGetBusServiceInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof BusServiceInfoApiGetBusServiceInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putBusServiceInfo operation in BusServiceInfoApi.
-  * @export
-  * @interface BusServiceInfoApiPutBusServiceInfoRequest
-  */
- export interface BusServiceInfoApiPutBusServiceInfoRequest {
-     /**
-      * 
-      * @type {IBusServiceInfoRequestModel}
-      * @memberof BusServiceInfoApiPutBusServiceInfo
-      */
-     readonly iBusServiceInfoRequestModel: IBusServiceInfoRequestModel
- }
- 
- /**
-  * BusServiceInfoApi - object-oriented interface
-  * @export
-  * @class BusServiceInfoApi
-  * @extends {BaseAPI}
-  */
- export class BusServiceInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusServiceInfoApi
-      */
-     public deleteBusServiceInfo(options?: AxiosRequestConfig) {
-         return BusServiceInfoApiFp(this.configuration).deleteBusServiceInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {BusServiceInfoApiGetBusServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusServiceInfoApi
-      */
-     public getBusServiceInfo(requestParameters: BusServiceInfoApiGetBusServiceInfoRequest = {}, options?: AxiosRequestConfig) {
-         return BusServiceInfoApiFp(this.configuration).getBusServiceInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {BusServiceInfoApiPutBusServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusServiceInfoApi
-      */
-     public putBusServiceInfo(requestParameters: BusServiceInfoApiPutBusServiceInfoRequest, options?: AxiosRequestConfig) {
-         return BusServiceInfoApiFp(this.configuration).putBusServiceInfo(requestParameters.iBusServiceInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
   * BusinessTravelApi - axios parameter creator
   * @export
   */
@@ -12519,381 +11458,6 @@
       */
      public putBusinessTravelsId(requestParameters: BusinessTravelApiPutBusinessTravelsIdRequest, options?: AxiosRequestConfig) {
          return BusinessTravelApiFp(this.configuration).putBusinessTravelsId(requestParameters.id, requestParameters.iBusinessTravelRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
-  * BusinessTravelInfoApi - axios parameter creator
-  * @export
-  */
- export const BusinessTravelInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteBusinessTravelInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/business-travel-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getBusinessTravelInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/business-travel-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {IBusinessTravelInfoRequestModel} iBusinessTravelInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putBusinessTravelInfo: async (iBusinessTravelInfoRequestModel: IBusinessTravelInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iBusinessTravelInfoRequestModel' is not null or undefined
-             assertParamExists('putBusinessTravelInfo', 'iBusinessTravelInfoRequestModel', iBusinessTravelInfoRequestModel)
-             const localVarPath = `/business-travel-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iBusinessTravelInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * BusinessTravelInfoApi - functional programming interface
-  * @export
-  */
- export const BusinessTravelInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = BusinessTravelInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteBusinessTravelInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteBusinessTravelInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getBusinessTravelInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IBusinessTravelInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getBusinessTravelInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {IBusinessTravelInfoRequestModel} iBusinessTravelInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putBusinessTravelInfo(iBusinessTravelInfoRequestModel: IBusinessTravelInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IBusinessTravelInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putBusinessTravelInfo(iBusinessTravelInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * BusinessTravelInfoApi - factory interface
-  * @export
-  */
- export const BusinessTravelInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = BusinessTravelInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteBusinessTravelInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteBusinessTravelInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getBusinessTravelInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IBusinessTravelInfoListResponseModel> {
-             return localVarFp.getBusinessTravelInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {IBusinessTravelInfoRequestModel} iBusinessTravelInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putBusinessTravelInfo(iBusinessTravelInfoRequestModel: IBusinessTravelInfoRequestModel, options?: any): AxiosPromise<IBusinessTravelInfoResponseModel> {
-             return localVarFp.putBusinessTravelInfo(iBusinessTravelInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getBusinessTravelInfo operation in BusinessTravelInfoApi.
-  * @export
-  * @interface BusinessTravelInfoApiGetBusinessTravelInfoRequest
-  */
- export interface BusinessTravelInfoApiGetBusinessTravelInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof BusinessTravelInfoApiGetBusinessTravelInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putBusinessTravelInfo operation in BusinessTravelInfoApi.
-  * @export
-  * @interface BusinessTravelInfoApiPutBusinessTravelInfoRequest
-  */
- export interface BusinessTravelInfoApiPutBusinessTravelInfoRequest {
-     /**
-      * 
-      * @type {IBusinessTravelInfoRequestModel}
-      * @memberof BusinessTravelInfoApiPutBusinessTravelInfo
-      */
-     readonly iBusinessTravelInfoRequestModel: IBusinessTravelInfoRequestModel
- }
- 
- /**
-  * BusinessTravelInfoApi - object-oriented interface
-  * @export
-  * @class BusinessTravelInfoApi
-  * @extends {BaseAPI}
-  */
- export class BusinessTravelInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusinessTravelInfoApi
-      */
-     public deleteBusinessTravelInfo(options?: AxiosRequestConfig) {
-         return BusinessTravelInfoApiFp(this.configuration).deleteBusinessTravelInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {BusinessTravelInfoApiGetBusinessTravelInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusinessTravelInfoApi
-      */
-     public getBusinessTravelInfo(requestParameters: BusinessTravelInfoApiGetBusinessTravelInfoRequest = {}, options?: AxiosRequestConfig) {
-         return BusinessTravelInfoApiFp(this.configuration).getBusinessTravelInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {BusinessTravelInfoApiPutBusinessTravelInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof BusinessTravelInfoApi
-      */
-     public putBusinessTravelInfo(requestParameters: BusinessTravelInfoApiPutBusinessTravelInfoRequest, options?: AxiosRequestConfig) {
-         return BusinessTravelInfoApiFp(this.configuration).putBusinessTravelInfo(requestParameters.iBusinessTravelInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
      }
  }
  
@@ -13472,381 +12036,6 @@
  
  
  /**
-  * CipInternationalAirportServiceInfoApi - axios parameter creator
-  * @export
-  */
- export const CipInternationalAirportServiceInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteCipInternationalAirportServiceInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/cip-international-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getCipInternationalAirportServiceInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/cip-international-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {ICipInternationalAirportServiceInfoRequestModel} iCipInternationalAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putCipInternationalAirportServiceInfo: async (iCipInternationalAirportServiceInfoRequestModel: ICipInternationalAirportServiceInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iCipInternationalAirportServiceInfoRequestModel' is not null or undefined
-             assertParamExists('putCipInternationalAirportServiceInfo', 'iCipInternationalAirportServiceInfoRequestModel', iCipInternationalAirportServiceInfoRequestModel)
-             const localVarPath = `/cip-international-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iCipInternationalAirportServiceInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * CipInternationalAirportServiceInfoApi - functional programming interface
-  * @export
-  */
- export const CipInternationalAirportServiceInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = CipInternationalAirportServiceInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteCipInternationalAirportServiceInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteCipInternationalAirportServiceInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getCipInternationalAirportServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ICipInternationalAirportServiceInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getCipInternationalAirportServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {ICipInternationalAirportServiceInfoRequestModel} iCipInternationalAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putCipInternationalAirportServiceInfo(iCipInternationalAirportServiceInfoRequestModel: ICipInternationalAirportServiceInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ICipInternationalAirportServiceInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putCipInternationalAirportServiceInfo(iCipInternationalAirportServiceInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * CipInternationalAirportServiceInfoApi - factory interface
-  * @export
-  */
- export const CipInternationalAirportServiceInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = CipInternationalAirportServiceInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteCipInternationalAirportServiceInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteCipInternationalAirportServiceInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getCipInternationalAirportServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<ICipInternationalAirportServiceInfoListResponseModel> {
-             return localVarFp.getCipInternationalAirportServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {ICipInternationalAirportServiceInfoRequestModel} iCipInternationalAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putCipInternationalAirportServiceInfo(iCipInternationalAirportServiceInfoRequestModel: ICipInternationalAirportServiceInfoRequestModel, options?: any): AxiosPromise<ICipInternationalAirportServiceInfoResponseModel> {
-             return localVarFp.putCipInternationalAirportServiceInfo(iCipInternationalAirportServiceInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getCipInternationalAirportServiceInfo operation in CipInternationalAirportServiceInfoApi.
-  * @export
-  * @interface CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfoRequest
-  */
- export interface CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putCipInternationalAirportServiceInfo operation in CipInternationalAirportServiceInfoApi.
-  * @export
-  * @interface CipInternationalAirportServiceInfoApiPutCipInternationalAirportServiceInfoRequest
-  */
- export interface CipInternationalAirportServiceInfoApiPutCipInternationalAirportServiceInfoRequest {
-     /**
-      * 
-      * @type {ICipInternationalAirportServiceInfoRequestModel}
-      * @memberof CipInternationalAirportServiceInfoApiPutCipInternationalAirportServiceInfo
-      */
-     readonly iCipInternationalAirportServiceInfoRequestModel: ICipInternationalAirportServiceInfoRequestModel
- }
- 
- /**
-  * CipInternationalAirportServiceInfoApi - object-oriented interface
-  * @export
-  * @class CipInternationalAirportServiceInfoApi
-  * @extends {BaseAPI}
-  */
- export class CipInternationalAirportServiceInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof CipInternationalAirportServiceInfoApi
-      */
-     public deleteCipInternationalAirportServiceInfo(options?: AxiosRequestConfig) {
-         return CipInternationalAirportServiceInfoApiFp(this.configuration).deleteCipInternationalAirportServiceInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof CipInternationalAirportServiceInfoApi
-      */
-     public getCipInternationalAirportServiceInfo(requestParameters: CipInternationalAirportServiceInfoApiGetCipInternationalAirportServiceInfoRequest = {}, options?: AxiosRequestConfig) {
-         return CipInternationalAirportServiceInfoApiFp(this.configuration).getCipInternationalAirportServiceInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {CipInternationalAirportServiceInfoApiPutCipInternationalAirportServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof CipInternationalAirportServiceInfoApi
-      */
-     public putCipInternationalAirportServiceInfo(requestParameters: CipInternationalAirportServiceInfoApiPutCipInternationalAirportServiceInfoRequest, options?: AxiosRequestConfig) {
-         return CipInternationalAirportServiceInfoApiFp(this.configuration).putCipInternationalAirportServiceInfo(requestParameters.iCipInternationalAirportServiceInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
   * DailyTourApi - axios parameter creator
   * @export
   */
@@ -14415,381 +12604,6 @@
       */
      public putDailyToursId(requestParameters: DailyTourApiPutDailyToursIdRequest, options?: AxiosRequestConfig) {
          return DailyTourApiFp(this.configuration).putDailyToursId(requestParameters.id, requestParameters.iDailyTourRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
-  * DailyTourInfoApi - axios parameter creator
-  * @export
-  */
- export const DailyTourInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteDailyTourInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/daily-tour-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getDailyTourInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/daily-tour-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {IDailyTourInfoRequestModel} iDailyTourInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putDailyTourInfo: async (iDailyTourInfoRequestModel: IDailyTourInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iDailyTourInfoRequestModel' is not null or undefined
-             assertParamExists('putDailyTourInfo', 'iDailyTourInfoRequestModel', iDailyTourInfoRequestModel)
-             const localVarPath = `/daily-tour-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iDailyTourInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * DailyTourInfoApi - functional programming interface
-  * @export
-  */
- export const DailyTourInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = DailyTourInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteDailyTourInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteDailyTourInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getDailyTourInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IDailyTourInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getDailyTourInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {IDailyTourInfoRequestModel} iDailyTourInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putDailyTourInfo(iDailyTourInfoRequestModel: IDailyTourInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IDailyTourInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putDailyTourInfo(iDailyTourInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * DailyTourInfoApi - factory interface
-  * @export
-  */
- export const DailyTourInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = DailyTourInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteDailyTourInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteDailyTourInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getDailyTourInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IDailyTourInfoListResponseModel> {
-             return localVarFp.getDailyTourInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {IDailyTourInfoRequestModel} iDailyTourInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putDailyTourInfo(iDailyTourInfoRequestModel: IDailyTourInfoRequestModel, options?: any): AxiosPromise<IDailyTourInfoResponseModel> {
-             return localVarFp.putDailyTourInfo(iDailyTourInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getDailyTourInfo operation in DailyTourInfoApi.
-  * @export
-  * @interface DailyTourInfoApiGetDailyTourInfoRequest
-  */
- export interface DailyTourInfoApiGetDailyTourInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof DailyTourInfoApiGetDailyTourInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putDailyTourInfo operation in DailyTourInfoApi.
-  * @export
-  * @interface DailyTourInfoApiPutDailyTourInfoRequest
-  */
- export interface DailyTourInfoApiPutDailyTourInfoRequest {
-     /**
-      * 
-      * @type {IDailyTourInfoRequestModel}
-      * @memberof DailyTourInfoApiPutDailyTourInfo
-      */
-     readonly iDailyTourInfoRequestModel: IDailyTourInfoRequestModel
- }
- 
- /**
-  * DailyTourInfoApi - object-oriented interface
-  * @export
-  * @class DailyTourInfoApi
-  * @extends {BaseAPI}
-  */
- export class DailyTourInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof DailyTourInfoApi
-      */
-     public deleteDailyTourInfo(options?: AxiosRequestConfig) {
-         return DailyTourInfoApiFp(this.configuration).deleteDailyTourInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {DailyTourInfoApiGetDailyTourInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof DailyTourInfoApi
-      */
-     public getDailyTourInfo(requestParameters: DailyTourInfoApiGetDailyTourInfoRequest = {}, options?: AxiosRequestConfig) {
-         return DailyTourInfoApiFp(this.configuration).getDailyTourInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {DailyTourInfoApiPutDailyTourInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof DailyTourInfoApi
-      */
-     public putDailyTourInfo(requestParameters: DailyTourInfoApiPutDailyTourInfoRequest, options?: AxiosRequestConfig) {
-         return DailyTourInfoApiFp(this.configuration).putDailyTourInfo(requestParameters.iDailyTourInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
      }
  }
  
@@ -15368,18 +13182,18 @@
  
  
  /**
-  * FlightServiceInfoApi - axios parameter creator
+  * HomePageDetailApi - axios parameter creator
   * @export
   */
- export const FlightServiceInfoApiAxiosParamCreator = function (configuration?: Configuration) {
+ export const HomePageDetailApiAxiosParamCreator = function (configuration?: Configuration) {
      return {
          /**
           * 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         deleteFlightServiceInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/flight-service-info`;
+         deleteHomePageDetail: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+             const localVarPath = `/home-page-detail`;
              // use dummy base URL string because the URL constructor only accepts absolute URLs.
              const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
              let baseOptions;
@@ -15420,8 +13234,8 @@
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         getFlightServiceInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/flight-service-info`;
+         getHomePageDetail: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+             const localVarPath = `/home-page-detail`;
              // use dummy base URL string because the URL constructor only accepts absolute URLs.
              const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
              let baseOptions;
@@ -15486,14 +13300,14 @@
          },
          /**
           * 
-          * @param {IFlightServiceInfoRequestModel} iFlightServiceInfoRequestModel 
+          * @param {IHomePageDetailRequestModel} iHomePageDetailRequestModel 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         putFlightServiceInfo: async (iFlightServiceInfoRequestModel: IFlightServiceInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iFlightServiceInfoRequestModel' is not null or undefined
-             assertParamExists('putFlightServiceInfo', 'iFlightServiceInfoRequestModel', iFlightServiceInfoRequestModel)
-             const localVarPath = `/flight-service-info`;
+         putHomePageDetail: async (iHomePageDetailRequestModel: IHomePageDetailRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+             // verify required parameter 'iHomePageDetailRequestModel' is not null or undefined
+             assertParamExists('putHomePageDetail', 'iHomePageDetailRequestModel', iHomePageDetailRequestModel)
+             const localVarPath = `/home-page-detail`;
              // use dummy base URL string because the URL constructor only accepts absolute URLs.
              const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
              let baseOptions;
@@ -15516,7 +13330,7 @@
              setSearchParams(localVarUrlObj, localVarQueryParameter);
              let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
              localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iFlightServiceInfoRequestModel, localVarRequestOptions, configuration)
+             localVarRequestOptions.data = serializeDataIfNeeded(iHomePageDetailRequestModel, localVarRequestOptions, configuration)
  
              return {
                  url: toPathString(localVarUrlObj),
@@ -15527,19 +13341,19 @@
  };
  
  /**
-  * FlightServiceInfoApi - functional programming interface
+  * HomePageDetailApi - functional programming interface
   * @export
   */
- export const FlightServiceInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = FlightServiceInfoApiAxiosParamCreator(configuration)
+ export const HomePageDetailApiFp = function(configuration?: Configuration) {
+     const localVarAxiosParamCreator = HomePageDetailApiAxiosParamCreator(configuration)
      return {
          /**
           * 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         async deleteFlightServiceInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteFlightServiceInfo(options);
+         async deleteHomePageDetail(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteHomePageDetail(options);
              return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
          },
          /**
@@ -15556,37 +13370,37 @@
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         async getFlightServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IFlightServiceInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getFlightServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
+         async getHomePageDetail(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IHomePageDetailListResponseModel>> {
+             const localVarAxiosArgs = await localVarAxiosParamCreator.getHomePageDetail(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
              return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
          },
          /**
           * 
-          * @param {IFlightServiceInfoRequestModel} iFlightServiceInfoRequestModel 
+          * @param {IHomePageDetailRequestModel} iHomePageDetailRequestModel 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         async putFlightServiceInfo(iFlightServiceInfoRequestModel: IFlightServiceInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IFlightServiceInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putFlightServiceInfo(iFlightServiceInfoRequestModel, options);
+         async putHomePageDetail(iHomePageDetailRequestModel: IHomePageDetailRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IHomePageDetailResponseModel>> {
+             const localVarAxiosArgs = await localVarAxiosParamCreator.putHomePageDetail(iHomePageDetailRequestModel, options);
              return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
          },
      }
  };
  
  /**
-  * FlightServiceInfoApi - factory interface
+  * HomePageDetailApi - factory interface
   * @export
   */
- export const FlightServiceInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = FlightServiceInfoApiFp(configuration)
+ export const HomePageDetailApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+     const localVarFp = HomePageDetailApiFp(configuration)
      return {
          /**
           * 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         deleteFlightServiceInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteFlightServiceInfo(options).then((request) => request(axios, basePath));
+         deleteHomePageDetail(options?: any): AxiosPromise<number> {
+             return localVarFp.deleteHomePageDetail(options).then((request) => request(axios, basePath));
          },
          /**
           * 
@@ -15602,142 +13416,142 @@
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         getFlightServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IFlightServiceInfoListResponseModel> {
-             return localVarFp.getFlightServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
+         getHomePageDetail(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IHomePageDetailListResponseModel> {
+             return localVarFp.getHomePageDetail(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
          },
          /**
           * 
-          * @param {IFlightServiceInfoRequestModel} iFlightServiceInfoRequestModel 
+          * @param {IHomePageDetailRequestModel} iHomePageDetailRequestModel 
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
-         putFlightServiceInfo(iFlightServiceInfoRequestModel: IFlightServiceInfoRequestModel, options?: any): AxiosPromise<IFlightServiceInfoResponseModel> {
-             return localVarFp.putFlightServiceInfo(iFlightServiceInfoRequestModel, options).then((request) => request(axios, basePath));
+         putHomePageDetail(iHomePageDetailRequestModel: IHomePageDetailRequestModel, options?: any): AxiosPromise<IHomePageDetailResponseModel> {
+             return localVarFp.putHomePageDetail(iHomePageDetailRequestModel, options).then((request) => request(axios, basePath));
          },
      };
  };
  
  /**
-  * Request parameters for getFlightServiceInfo operation in FlightServiceInfoApi.
+  * Request parameters for getHomePageDetail operation in HomePageDetailApi.
   * @export
-  * @interface FlightServiceInfoApiGetFlightServiceInfoRequest
+  * @interface HomePageDetailApiGetHomePageDetailRequest
   */
- export interface FlightServiceInfoApiGetFlightServiceInfoRequest {
+ export interface HomePageDetailApiGetHomePageDetailRequest {
      /**
       * Sort by attributes ascending (asc) or descending (desc)
       * @type {string}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly sort?: string
  
      /**
       * Retun page/pageSize (default: true)
       * @type {boolean}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly paginationWithCount?: boolean
  
      /**
       * Page number (default: 0)
       * @type {number}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly paginationPage?: number
  
      /**
       * Page size (default: 25)
       * @type {number}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly paginationPageSize?: number
  
      /**
       * Offset value (default: 0)
       * @type {number}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly paginationStart?: number
  
      /**
       * Number of entities to return (default: 25)
       * @type {number}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly paginationLimit?: number
  
      /**
       * Fields to return (ex: title,author)
       * @type {string}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly fields?: string
  
      /**
       * Relations to return
       * @type {string}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly populate?: string
  
      /**
       * Filters to apply
       * @type {object}
-      * @memberof FlightServiceInfoApiGetFlightServiceInfo
+      * @memberof HomePageDetailApiGetHomePageDetail
       */
      readonly filters?: object
  }
  
  /**
-  * Request parameters for putFlightServiceInfo operation in FlightServiceInfoApi.
+  * Request parameters for putHomePageDetail operation in HomePageDetailApi.
   * @export
-  * @interface FlightServiceInfoApiPutFlightServiceInfoRequest
+  * @interface HomePageDetailApiPutHomePageDetailRequest
   */
- export interface FlightServiceInfoApiPutFlightServiceInfoRequest {
+ export interface HomePageDetailApiPutHomePageDetailRequest {
      /**
       * 
-      * @type {IFlightServiceInfoRequestModel}
-      * @memberof FlightServiceInfoApiPutFlightServiceInfo
+      * @type {IHomePageDetailRequestModel}
+      * @memberof HomePageDetailApiPutHomePageDetail
       */
-     readonly iFlightServiceInfoRequestModel: IFlightServiceInfoRequestModel
+     readonly iHomePageDetailRequestModel: IHomePageDetailRequestModel
  }
  
  /**
-  * FlightServiceInfoApi - object-oriented interface
+  * HomePageDetailApi - object-oriented interface
   * @export
-  * @class FlightServiceInfoApi
+  * @class HomePageDetailApi
   * @extends {BaseAPI}
   */
- export class FlightServiceInfoApi extends BaseAPI {
+ export class HomePageDetailApi extends BaseAPI {
      /**
       * 
       * @param {*} [options] Override http request option.
       * @throws {RequiredError}
-      * @memberof FlightServiceInfoApi
+      * @memberof HomePageDetailApi
       */
-     public deleteFlightServiceInfo(options?: AxiosRequestConfig) {
-         return FlightServiceInfoApiFp(this.configuration).deleteFlightServiceInfo(options).then((request) => request(this.axios, this.basePath));
+     public deleteHomePageDetail(options?: AxiosRequestConfig) {
+         return HomePageDetailApiFp(this.configuration).deleteHomePageDetail(options).then((request) => request(this.axios, this.basePath));
      }
  
      /**
       * 
-      * @param {FlightServiceInfoApiGetFlightServiceInfoRequest} requestParameters Request parameters.
+      * @param {HomePageDetailApiGetHomePageDetailRequest} requestParameters Request parameters.
       * @param {*} [options] Override http request option.
       * @throws {RequiredError}
-      * @memberof FlightServiceInfoApi
+      * @memberof HomePageDetailApi
       */
-     public getFlightServiceInfo(requestParameters: FlightServiceInfoApiGetFlightServiceInfoRequest = {}, options?: AxiosRequestConfig) {
-         return FlightServiceInfoApiFp(this.configuration).getFlightServiceInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
+     public getHomePageDetail(requestParameters: HomePageDetailApiGetHomePageDetailRequest = {}, options?: AxiosRequestConfig) {
+         return HomePageDetailApiFp(this.configuration).getHomePageDetail(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
      }
  
      /**
       * 
-      * @param {FlightServiceInfoApiPutFlightServiceInfoRequest} requestParameters Request parameters.
+      * @param {HomePageDetailApiPutHomePageDetailRequest} requestParameters Request parameters.
       * @param {*} [options] Override http request option.
       * @throws {RequiredError}
-      * @memberof FlightServiceInfoApi
+      * @memberof HomePageDetailApi
       */
-     public putFlightServiceInfo(requestParameters: FlightServiceInfoApiPutFlightServiceInfoRequest, options?: AxiosRequestConfig) {
-         return FlightServiceInfoApiFp(this.configuration).putFlightServiceInfo(requestParameters.iFlightServiceInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
+     public putHomePageDetail(requestParameters: HomePageDetailApiPutHomePageDetailRequest, options?: AxiosRequestConfig) {
+         return HomePageDetailApiFp(this.configuration).putHomePageDetail(requestParameters.iHomePageDetailRequestModel, options).then((request) => request(this.axios, this.basePath));
      }
  }
  
@@ -16311,381 +14125,6 @@
       */
      public putHotelServicesId(requestParameters: HotelServiceApiPutHotelServicesIdRequest, options?: AxiosRequestConfig) {
          return HotelServiceApiFp(this.configuration).putHotelServicesId(requestParameters.id, requestParameters.iHotelServiceRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
-  * HotelServiceInfoApi - axios parameter creator
-  * @export
-  */
- export const HotelServiceInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteHotelServiceInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/hotel-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getHotelServiceInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/hotel-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {IHotelServiceInfoRequestModel} iHotelServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putHotelServiceInfo: async (iHotelServiceInfoRequestModel: IHotelServiceInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iHotelServiceInfoRequestModel' is not null or undefined
-             assertParamExists('putHotelServiceInfo', 'iHotelServiceInfoRequestModel', iHotelServiceInfoRequestModel)
-             const localVarPath = `/hotel-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iHotelServiceInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * HotelServiceInfoApi - functional programming interface
-  * @export
-  */
- export const HotelServiceInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = HotelServiceInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteHotelServiceInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteHotelServiceInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getHotelServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IHotelServiceInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getHotelServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {IHotelServiceInfoRequestModel} iHotelServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putHotelServiceInfo(iHotelServiceInfoRequestModel: IHotelServiceInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IHotelServiceInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putHotelServiceInfo(iHotelServiceInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * HotelServiceInfoApi - factory interface
-  * @export
-  */
- export const HotelServiceInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = HotelServiceInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteHotelServiceInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteHotelServiceInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getHotelServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IHotelServiceInfoListResponseModel> {
-             return localVarFp.getHotelServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {IHotelServiceInfoRequestModel} iHotelServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putHotelServiceInfo(iHotelServiceInfoRequestModel: IHotelServiceInfoRequestModel, options?: any): AxiosPromise<IHotelServiceInfoResponseModel> {
-             return localVarFp.putHotelServiceInfo(iHotelServiceInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getHotelServiceInfo operation in HotelServiceInfoApi.
-  * @export
-  * @interface HotelServiceInfoApiGetHotelServiceInfoRequest
-  */
- export interface HotelServiceInfoApiGetHotelServiceInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof HotelServiceInfoApiGetHotelServiceInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putHotelServiceInfo operation in HotelServiceInfoApi.
-  * @export
-  * @interface HotelServiceInfoApiPutHotelServiceInfoRequest
-  */
- export interface HotelServiceInfoApiPutHotelServiceInfoRequest {
-     /**
-      * 
-      * @type {IHotelServiceInfoRequestModel}
-      * @memberof HotelServiceInfoApiPutHotelServiceInfo
-      */
-     readonly iHotelServiceInfoRequestModel: IHotelServiceInfoRequestModel
- }
- 
- /**
-  * HotelServiceInfoApi - object-oriented interface
-  * @export
-  * @class HotelServiceInfoApi
-  * @extends {BaseAPI}
-  */
- export class HotelServiceInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof HotelServiceInfoApi
-      */
-     public deleteHotelServiceInfo(options?: AxiosRequestConfig) {
-         return HotelServiceInfoApiFp(this.configuration).deleteHotelServiceInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {HotelServiceInfoApiGetHotelServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof HotelServiceInfoApi
-      */
-     public getHotelServiceInfo(requestParameters: HotelServiceInfoApiGetHotelServiceInfoRequest = {}, options?: AxiosRequestConfig) {
-         return HotelServiceInfoApiFp(this.configuration).getHotelServiceInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {HotelServiceInfoApiPutHotelServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof HotelServiceInfoApi
-      */
-     public putHotelServiceInfo(requestParameters: HotelServiceInfoApiPutHotelServiceInfoRequest, options?: AxiosRequestConfig) {
-         return HotelServiceInfoApiFp(this.configuration).putHotelServiceInfo(requestParameters.iHotelServiceInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
      }
  }
  
@@ -30175,381 +27614,6 @@
       */
      public putVipDomesticAirportServicesId(requestParameters: VipDomesticAirportServiceApiPutVipDomesticAirportServicesIdRequest, options?: AxiosRequestConfig) {
          return VipDomesticAirportServiceApiFp(this.configuration).putVipDomesticAirportServicesId(requestParameters.id, requestParameters.iVipDomesticAirportServiceRequestModel, options).then((request) => request(this.axios, this.basePath));
-     }
- }
- 
- 
- /**
-  * VipDomesticAirportServiceInfoApi - axios parameter creator
-  * @export
-  */
- export const VipDomesticAirportServiceInfoApiAxiosParamCreator = function (configuration?: Configuration) {
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteVipDomesticAirportServiceInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/vip-domestic-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getVipDomesticAirportServiceInfo: async (sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             const localVarPath = `/vip-domestic-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
-             if (sort !== undefined) {
-                 localVarQueryParameter['sort'] = sort;
-             }
- 
-             if (paginationWithCount !== undefined) {
-                 localVarQueryParameter['pagination[withCount]'] = paginationWithCount;
-             }
- 
-             if (paginationPage !== undefined) {
-                 localVarQueryParameter['pagination[page]'] = paginationPage;
-             }
- 
-             if (paginationPageSize !== undefined) {
-                 localVarQueryParameter['pagination[pageSize]'] = paginationPageSize;
-             }
- 
-             if (paginationStart !== undefined) {
-                 localVarQueryParameter['pagination[start]'] = paginationStart;
-             }
- 
-             if (paginationLimit !== undefined) {
-                 localVarQueryParameter['pagination[limit]'] = paginationLimit;
-             }
- 
-             if (fields !== undefined) {
-                 localVarQueryParameter['fields'] = fields;
-             }
- 
-             if (populate !== undefined) {
-                 localVarQueryParameter['populate'] = populate;
-             }
- 
-             if (filters !== undefined) {
-                 localVarQueryParameter['filters'] = filters;
-             }
- 
- 
-     
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-         /**
-          * 
-          * @param {IVipDomesticAirportServiceInfoRequestModel} iVipDomesticAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putVipDomesticAirportServiceInfo: async (iVipDomesticAirportServiceInfoRequestModel: IVipDomesticAirportServiceInfoRequestModel, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-             // verify required parameter 'iVipDomesticAirportServiceInfoRequestModel' is not null or undefined
-             assertParamExists('putVipDomesticAirportServiceInfo', 'iVipDomesticAirportServiceInfoRequestModel', iVipDomesticAirportServiceInfoRequestModel)
-             const localVarPath = `/vip-domestic-airport-service-info`;
-             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-             let baseOptions;
-             if (configuration) {
-                 baseOptions = configuration.baseOptions;
-             }
- 
-             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-             const localVarHeaderParameter = {} as any;
-             const localVarQueryParameter = {} as any;
- 
-             // authentication bearerAuth required
-             // http bearer authentication required
-             await setBearerAuthToObject(localVarHeaderParameter, configuration)
- 
- 
-     
-             localVarHeaderParameter['Content-Type'] = 'application/json';
- 
-             setSearchParams(localVarUrlObj, localVarQueryParameter);
-             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-             localVarRequestOptions.data = serializeDataIfNeeded(iVipDomesticAirportServiceInfoRequestModel, localVarRequestOptions, configuration)
- 
-             return {
-                 url: toPathString(localVarUrlObj),
-                 options: localVarRequestOptions,
-             };
-         },
-     }
- };
- 
- /**
-  * VipDomesticAirportServiceInfoApi - functional programming interface
-  * @export
-  */
- export const VipDomesticAirportServiceInfoApiFp = function(configuration?: Configuration) {
-     const localVarAxiosParamCreator = VipDomesticAirportServiceInfoApiAxiosParamCreator(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async deleteVipDomesticAirportServiceInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteVipDomesticAirportServiceInfo(options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async getVipDomesticAirportServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IVipDomesticAirportServiceInfoListResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.getVipDomesticAirportServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-         /**
-          * 
-          * @param {IVipDomesticAirportServiceInfoRequestModel} iVipDomesticAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         async putVipDomesticAirportServiceInfo(iVipDomesticAirportServiceInfoRequestModel: IVipDomesticAirportServiceInfoRequestModel, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IVipDomesticAirportServiceInfoResponseModel>> {
-             const localVarAxiosArgs = await localVarAxiosParamCreator.putVipDomesticAirportServiceInfo(iVipDomesticAirportServiceInfoRequestModel, options);
-             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-         },
-     }
- };
- 
- /**
-  * VipDomesticAirportServiceInfoApi - factory interface
-  * @export
-  */
- export const VipDomesticAirportServiceInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-     const localVarFp = VipDomesticAirportServiceInfoApiFp(configuration)
-     return {
-         /**
-          * 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         deleteVipDomesticAirportServiceInfo(options?: any): AxiosPromise<number> {
-             return localVarFp.deleteVipDomesticAirportServiceInfo(options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {string} [sort] Sort by attributes ascending (asc) or descending (desc)
-          * @param {boolean} [paginationWithCount] Retun page/pageSize (default: true)
-          * @param {number} [paginationPage] Page number (default: 0)
-          * @param {number} [paginationPageSize] Page size (default: 25)
-          * @param {number} [paginationStart] Offset value (default: 0)
-          * @param {number} [paginationLimit] Number of entities to return (default: 25)
-          * @param {string} [fields] Fields to return (ex: title,author)
-          * @param {string} [populate] Relations to return
-          * @param {object} [filters] Filters to apply
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         getVipDomesticAirportServiceInfo(sort?: string, paginationWithCount?: boolean, paginationPage?: number, paginationPageSize?: number, paginationStart?: number, paginationLimit?: number, fields?: string, populate?: string, filters?: object, options?: any): AxiosPromise<IVipDomesticAirportServiceInfoListResponseModel> {
-             return localVarFp.getVipDomesticAirportServiceInfo(sort, paginationWithCount, paginationPage, paginationPageSize, paginationStart, paginationLimit, fields, populate, filters, options).then((request) => request(axios, basePath));
-         },
-         /**
-          * 
-          * @param {IVipDomesticAirportServiceInfoRequestModel} iVipDomesticAirportServiceInfoRequestModel 
-          * @param {*} [options] Override http request option.
-          * @throws {RequiredError}
-          */
-         putVipDomesticAirportServiceInfo(iVipDomesticAirportServiceInfoRequestModel: IVipDomesticAirportServiceInfoRequestModel, options?: any): AxiosPromise<IVipDomesticAirportServiceInfoResponseModel> {
-             return localVarFp.putVipDomesticAirportServiceInfo(iVipDomesticAirportServiceInfoRequestModel, options).then((request) => request(axios, basePath));
-         },
-     };
- };
- 
- /**
-  * Request parameters for getVipDomesticAirportServiceInfo operation in VipDomesticAirportServiceInfoApi.
-  * @export
-  * @interface VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfoRequest
-  */
- export interface VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfoRequest {
-     /**
-      * Sort by attributes ascending (asc) or descending (desc)
-      * @type {string}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly sort?: string
- 
-     /**
-      * Retun page/pageSize (default: true)
-      * @type {boolean}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly paginationWithCount?: boolean
- 
-     /**
-      * Page number (default: 0)
-      * @type {number}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly paginationPage?: number
- 
-     /**
-      * Page size (default: 25)
-      * @type {number}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly paginationPageSize?: number
- 
-     /**
-      * Offset value (default: 0)
-      * @type {number}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly paginationStart?: number
- 
-     /**
-      * Number of entities to return (default: 25)
-      * @type {number}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly paginationLimit?: number
- 
-     /**
-      * Fields to return (ex: title,author)
-      * @type {string}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly fields?: string
- 
-     /**
-      * Relations to return
-      * @type {string}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly populate?: string
- 
-     /**
-      * Filters to apply
-      * @type {object}
-      * @memberof VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfo
-      */
-     readonly filters?: object
- }
- 
- /**
-  * Request parameters for putVipDomesticAirportServiceInfo operation in VipDomesticAirportServiceInfoApi.
-  * @export
-  * @interface VipDomesticAirportServiceInfoApiPutVipDomesticAirportServiceInfoRequest
-  */
- export interface VipDomesticAirportServiceInfoApiPutVipDomesticAirportServiceInfoRequest {
-     /**
-      * 
-      * @type {IVipDomesticAirportServiceInfoRequestModel}
-      * @memberof VipDomesticAirportServiceInfoApiPutVipDomesticAirportServiceInfo
-      */
-     readonly iVipDomesticAirportServiceInfoRequestModel: IVipDomesticAirportServiceInfoRequestModel
- }
- 
- /**
-  * VipDomesticAirportServiceInfoApi - object-oriented interface
-  * @export
-  * @class VipDomesticAirportServiceInfoApi
-  * @extends {BaseAPI}
-  */
- export class VipDomesticAirportServiceInfoApi extends BaseAPI {
-     /**
-      * 
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof VipDomesticAirportServiceInfoApi
-      */
-     public deleteVipDomesticAirportServiceInfo(options?: AxiosRequestConfig) {
-         return VipDomesticAirportServiceInfoApiFp(this.configuration).deleteVipDomesticAirportServiceInfo(options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof VipDomesticAirportServiceInfoApi
-      */
-     public getVipDomesticAirportServiceInfo(requestParameters: VipDomesticAirportServiceInfoApiGetVipDomesticAirportServiceInfoRequest = {}, options?: AxiosRequestConfig) {
-         return VipDomesticAirportServiceInfoApiFp(this.configuration).getVipDomesticAirportServiceInfo(requestParameters.sort, requestParameters.paginationWithCount, requestParameters.paginationPage, requestParameters.paginationPageSize, requestParameters.paginationStart, requestParameters.paginationLimit, requestParameters.fields, requestParameters.populate, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
-     }
- 
-     /**
-      * 
-      * @param {VipDomesticAirportServiceInfoApiPutVipDomesticAirportServiceInfoRequest} requestParameters Request parameters.
-      * @param {*} [options] Override http request option.
-      * @throws {RequiredError}
-      * @memberof VipDomesticAirportServiceInfoApi
-      */
-     public putVipDomesticAirportServiceInfo(requestParameters: VipDomesticAirportServiceInfoApiPutVipDomesticAirportServiceInfoRequest, options?: AxiosRequestConfig) {
-         return VipDomesticAirportServiceInfoApiFp(this.configuration).putVipDomesticAirportServiceInfo(requestParameters.iVipDomesticAirportServiceInfoRequestModel, options).then((request) => request(this.axios, this.basePath));
      }
  }
  

@@ -15,13 +15,15 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
         <div className="navigation-header">
           <div className="navigation-brand-text">
             <div className="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-              <a href="./index.html">
-                <img
-                  src="/NewImages/logo-rosha-Copy.png"
-                  alt="#"
-                  className=""
-                />
-              </a>
+              <Link href="/">
+                <a>
+                  <img
+                    src="/NewImages/logo-rosha-Copy.png"
+                    alt="#"
+                    className=""
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className="navigation-button-toggler">
@@ -34,14 +36,16 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
           <div className="navigation-body-header rlr-navigation__body-header">
             <div className="navigation-brand-text">
               <div className="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-                <a href="./index.html">
-                  <img
-                    src="/NewImages/logo-rosha-Copy.png"
-                    width="170px"
-                    height="170px"
-                    alt="#"
-                  />
-                </a>
+                <Link href="/">
+                  <a>
+                    <img
+                      src="/NewImages/logo-rosha-Copy.png"
+                      width="170px"
+                      height="170px"
+                      alt="#"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
             <span className="rlr-sVGIcon navigation-body-close-button">
@@ -302,7 +306,6 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a href="Rosha-Service-Translating.html"></a>
                               <Link href="/service/translate">
                                 <a> Translating and Interpreting Services</a>
                               </Link>
@@ -324,43 +327,9 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 <a className="navigation-link">Iran Visa</a>
               </Link>
             </li>
-            {/* <!-- Dropdown menu 2 --> */}
-            <li className="navigation-item">
-              <a
-                className="navigation-link"
-                href="http://localhost:3000/bloges/bloglist"
-              >
-                Blog
-              </a>
-              <ul className="navigation-dropdown">
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="Rosha-Blog-Business.html"
-                  >
-                    Business Travel
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="Rosha-Blog-Useful.html"
-                  >
-                    Useful Information
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="Rosha-Blog-Unesco.html"
-                  >
-                    Unesco Site
-                  </a>
-                </li>
-              </ul>
-            </li>
+          
 
-            <li className="navigation-item">
+            {/* <li className="navigation-item">
               <a
                 className="navigation-link"
                 href="http://localhost:3000/aboutUs/aboutus"
@@ -368,7 +337,6 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 About Us
               </a>
             </li>
-            {/* <!-- Dropdown menu 2 --> */}
             <li className="navigation-item">
               <a
                 className="navigation-link"
@@ -382,11 +350,10 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
               <a className="navigation-link" href="Rosha-Souvenirs.html">
                 Souvenirs
               </a>
-            </li>
+            </li> */}
           </ul>
           {/* <!-- User actions menu --> */}
-          <ul className="navigation-menu rlr-navigation__menu align-to-right">
-            {/* <!-- User account dropdown --> */}
+          {/* <ul className="navigation-menu rlr-navigation__menu align-to-right">
             <li className="navigation-item">
               <a className="navigation-link" href="#">
                 Sarah J
@@ -442,7 +409,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </nav>
     </header>

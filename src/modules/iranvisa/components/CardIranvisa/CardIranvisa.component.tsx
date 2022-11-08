@@ -1,6 +1,5 @@
 import React from "react";
 import IranVisaCardItemComponent from "../IranVisaCardItem/IranVisaCardItem.component";
-import ProductListComponent from "../ProductList/ProductList.component";
 import { CardIranvisaProps } from "./CardIranvisa.props";
 
 const cardIranvisaComponent = "cardIranvisaComponent";

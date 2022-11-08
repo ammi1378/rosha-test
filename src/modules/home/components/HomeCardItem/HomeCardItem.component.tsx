@@ -29,7 +29,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           <div className="rlr-product-detail-header__button-wrapper">
             <span className="rlr-product-detail-header__helptext rlr-js-helptext"></span>
           </div>
-          <a href={`${service}/${item.id}`} target="_blank">
+          <a href={`/service/tour/${item.id}`} target="_blank">
             <div className="swiper rlr-js-product-multi-image-swiper">
               <div className="swiper-wrapper">
                 {item.images?.map((image) => {
@@ -71,7 +71,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           <header className="rlr-product-card__header">
             <div>
               <a
-                href={`${service}/${item.id}`}
+                href={`/service/tour//${item.id}`}
                 target="_blank"
                 className="rlr-product-card__anchor-title"
               >
@@ -84,7 +84,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
               </a>
               <div>
                 <a
-                  href={`${service}/${item.id}`}
+                  href={`/service/tour/${item.id}`}
                   target="_blank"
                   className="rlr-product-card__anchor-cat"
                 >
@@ -96,7 +96,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
                   <>
                     <span className="rlr-product-card__sub-title">|</span>
                     <a
-                      href={`${service}/${item.id}`}
+                      href={`/service/tour/${item.id}`}
                       target="_blank"
                       className="rlr-product-card__anchor-sub-cat"
                     >
@@ -164,21 +164,6 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
                 })}
               </ul>
             )}
-            {/* <div className="row">
-              <a type="button" className="col-md-6 my-2">
-                <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2">
-                  More Info
-                </span>
-              </a>
-              <div className="col-md-6 my-2">
-                <a
-                  href="Rosha-Form.html"
-                  className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1"
-                >
-                  Booking
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </article>
