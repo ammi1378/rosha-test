@@ -22,8 +22,8 @@ import globalAxios, {
   AxiosRequestConfig,
 } from "axios";
 
-export const BASE_URL = "http://127.0.0.1:8082".replace(/\/+$/, "");
-export const BASE_PATH = "http://127.0.0.1:8082/api".replace(/\/+$/, "");
+export const BASE_URL = "http://rosha.adiaweb.io".replace(/\/+$/, "");
+export const BASE_PATH = "http://rosha.adiaweb.io/api".replace(/\/+$/, "");
 
 /**
  *
