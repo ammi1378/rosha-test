@@ -22,8 +22,8 @@ import globalAxios, {
   AxiosRequestConfig,
 } from "axios";
 
-export const BASE_URL = "http://rosha.adiyaweb.ir".replace(/\/+$/, "");
-export const BASE_PATH = "http://rosha.adiyaweb.ir/api".replace(/\/+$/, "");
+export const BASE_URL = "http://rosha.adiaweb.io".replace(/\/+$/, "");
+export const BASE_PATH = "http://rosha.adiaweb.io/api".replace(/\/+$/, "");
 
 /**
  *
