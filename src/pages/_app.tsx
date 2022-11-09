@@ -8,17 +8,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script
         src="/js/a/navigation.min.js"
         defer
-        onLoad={() =>
-          console.log(`script loaded correctly, window.FB has been populated`)
-        }
+        strategy="afterInteractive"
       />
-      <Script
-        src="/js/a/main.js"
-        defer
-        onLoad={() =>
-          console.log(`script loaded correctly, window.FB has been populated`)
-        }
-      />
+      <Script src="/js/a/main.js" defer strategy="afterInteractive" />
 
       <Component {...pageProps} />
     </>
