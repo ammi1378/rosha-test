@@ -29,7 +29,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           <div className="rlr-product-detail-header__button-wrapper">
             <span className="rlr-product-detail-header__helptext rlr-js-helptext"></span>
           </div>
-          <a href={`/service/tour/${item.id}`} target="_blank">
+          <a href={`/service/${service}/${item.id}`} target="_blank">
             <div className="swiper rlr-js-product-multi-image-swiper">
               <div className="swiper-wrapper">
                 {item.images?.map((image) => {
@@ -71,7 +71,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           <header className="rlr-product-card__header">
             <div>
               <a
-                href={`/service/tour//${item.id}`}
+                href={`/service/${service}/${item.id}`}
                 target="_blank"
                 className="rlr-product-card__anchor-title"
               >
@@ -84,7 +84,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
               </a>
               <div>
                 <a
-                  href={`/service/tour/${item.id}`}
+                  href={`/service/${service}/${item.id}`}
                   target="_blank"
                   className="rlr-product-card__anchor-cat"
                 >
@@ -96,7 +96,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
                   <>
                     <span className="rlr-product-card__sub-title">|</span>
                     <a
-                      href={`/service/tour/${item.id}`}
+                      href={`/service/${service}/${item.id}`}
                       target="_blank"
                       className="rlr-product-card__anchor-sub-cat"
                     >
