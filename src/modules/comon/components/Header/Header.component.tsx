@@ -327,9 +327,8 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 <a className="navigation-link">Iran Visa</a>
               </Link>
             </li>
-          
 
-            {/* <li className="navigation-item">
+            <li className="navigation-item">
               <a
                 className="navigation-link"
                 href="http://localhost:3000/aboutUs/aboutus"
@@ -337,79 +336,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 About Us
               </a>
             </li>
-            <li className="navigation-item">
-              <a
-                className="navigation-link"
-                href="http://localhost:3000/contactUs/contact"
-              >
-                Contact Us
-              </a>
-            </li>
-
-            <li className="navigation-item">
-              <a className="navigation-link" href="Rosha-Souvenirs.html">
-                Souvenirs
-              </a>
-            </li> */}
           </ul>
-          {/* <!-- User actions menu --> */}
-          {/* <ul className="navigation-menu rlr-navigation__menu align-to-right">
-            <li className="navigation-item">
-              <a className="navigation-link" href="#">
-                Sarah J
-                <img
-                  className="ui right spaced avatar image"
-                  src="/images/blog-single-avatar.png"
-                  alt="account avatar"
-                />
-              </a>
-              <ul className="navigation-dropdown">
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="./my-account-pages--dashboard.html"
-                  >
-                    Profile
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="./my-account-pages--order.html"
-                  >
-                    Your Orders
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="./my-account-pages--subscription.html"
-                  >
-                    Subscriptions
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="./search-results--no-sidebar.html"
-                  >
-                    Favorites
-                  </a>
-                </li>
-                <li className="navigation-dropdown-item">
-                  <hr className="dropdown-divider rlr-dropdown__divider" />
-                </li>
-                <li className="navigation-dropdown-item">
-                  <a
-                    className="navigation-dropdown-link"
-                    href="./account-pages--login.html"
-                  >
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul> */}
         </div>
       </nav>
     </header>

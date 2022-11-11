@@ -1,4 +1,5 @@
 import React from "react";
+import { serverImage } from "../../../comon/util/image-utils";
 import OurVisionAboutUsCardComponent from "../OurVisionAboutUsCard/OurVisionAboutUsCard.component";
 import { OurVisionAboutusProps } from "./OurVisionAboutus.props";
 
@@ -28,10 +29,8 @@ const ourVisionAboutuCardData = [
 ];
 const OurVisionAboutusComponent: React.FC<OurVisionAboutusProps> = ({
   className,
-  title,
-  image,
-  describtion,
   rtl,
+  data,
 }) => {
   return (
     <section
@@ -42,18 +41,24 @@ const OurVisionAboutusComponent: React.FC<OurVisionAboutusProps> = ({
       <div className="col-lg-6">
         {/* <!-- Section heading --> */}
         <div className="rlr-section__title">
-          <h2 className="rlr-section__title--main">{title}</h2>
-          <span className="rlr-section__title--sub">{describtion}</span>
+          <h2 className="rlr-section__title--main">
+            {data?.attributes?.Vision?.Header}
+          </h2>
+          <span className="rlr-section__title--sub">
+            {data?.attributes?.Vision?.SubHeader}
+          </span>
         </div>
         <div className="row gy-5">
-          {ourVisionAboutuCardData.map((ourVisionAboutuCardItem) => {
-            return (
-              <OurVisionAboutUsCardComponent
-                number={ourVisionAboutuCardItem.number}
-                describtion={ourVisionAboutuCardItem.describtion}
-              />
-            );
-          })}
+          {data?.attributes?.Vision?.VisionItem?.map(
+            (ourVisionAboutuCardItem, i) => {
+              return (
+                <OurVisionAboutUsCardComponent
+                  number={i + 1}
+                  describtion={ourVisionAboutuCardItem.Description}
+                />
+              );
+            }
+          )}
         </div>
       </div>
       <div
@@ -61,17 +66,21 @@ const OurVisionAboutusComponent: React.FC<OurVisionAboutusProps> = ({
           rtl ? "flex-sm-column-reverse rlr-dotted-image" : ""
         }`}
       >
-        {image.map((image) => {
-          return (
-            <div
-              className={`rlr-img ${
-                rtl ? "rlr-img--dotted-reversed" : "rlr-img--dotted img-fluid"
-              }`}
-            >
-              <img className="img-fluid" src={image} alt=" image our vision" />
-            </div>
-          );
-        })}
+        <div
+          className={`rlr-img ${
+            rtl ? "rlr-img--dotted-reversed" : "rlr-img--dotted img-fluid"
+          }`}
+          style={{ height: "100%" }}
+        >
+          <img
+            className="img-fluid"
+            src={serverImage(
+              data?.attributes?.Vision?.Image?.data?.attributes?.url || ""
+            )}
+            alt=" image our vision"
+            style={{ height: "100%", objectFit: "cover" }}
+          />
+        </div>
       </div>
     </section>
   );

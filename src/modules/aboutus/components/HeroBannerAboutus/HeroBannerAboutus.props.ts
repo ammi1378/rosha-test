@@ -1,5 +1,6 @@
+import { IAboutPageDetailListResponseDataItemModel } from "../../../../rosha-api/api";
+
 export interface HeroBannerAboutusProps {
   className?: string;
-  title:string;
-  image:string[];
+  data: IAboutPageDetailListResponseDataItemModel | undefined;
 }

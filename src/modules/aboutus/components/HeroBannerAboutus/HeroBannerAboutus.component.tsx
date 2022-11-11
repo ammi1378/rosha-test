@@ -1,4 +1,5 @@
 import React from "react";
+import { serverImage } from "../../../comon/util/image-utils";
 import BannerAboutUsCardComponent from "../BannerAboutUsCard/BannerAboutUsCard.component";
 import { HeroBannerAboutusProps } from "./HeroBannerAboutus.props";
 
@@ -23,8 +24,7 @@ const BannerAboutUsCardData = [
 ];
 const HeroBannerAboutusComponent: React.FC<HeroBannerAboutusProps> = ({
   className,
-  title,
-  image,
+  data,
 }) => {
   return (
     <section className="rlr-about-hero">
@@ -33,20 +33,26 @@ const HeroBannerAboutusComponent: React.FC<HeroBannerAboutusProps> = ({
           <div className="rlr-about-hero__content">
             <img
               className="rlr-about-hero__bg"
-              src="./images/about-hero-3.jpg"
+              src={serverImage(
+                data?.attributes?.AboutCards?.Image?.data?.attributes?.url || ""
+              )}
               alt="..."
             />
             <div className="rlr-about-hero__content-inner">
-              <h1 className="type-d1 rlr-about-hero__title">{title}</h1>
+              <h1 className="type-d1 rlr-about-hero__title">
+                {data?.attributes?.AboutCards?.Header}
+              </h1>
               <div className="rlr-about-hero__cards">
-                {BannerAboutUsCardData.map((BannerAboutUsCardItem) => {
-                  return (
-                    <BannerAboutUsCardComponent
-                      question={BannerAboutUsCardItem.question}
-                      descrintion={BannerAboutUsCardItem.describtion}
-                    />
-                  );
-                })}
+                {data?.attributes?.AboutCards?.Cards?.map(
+                  (BannerAboutUsCardItem) => {
+                    return (
+                      <BannerAboutUsCardComponent
+                        question={BannerAboutUsCardItem.Title}
+                        descrintion={BannerAboutUsCardItem.Description}
+                      />
+                    );
+                  }
+                )}
               </div>
             </div>
           </div>

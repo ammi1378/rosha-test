@@ -26,52 +26,21 @@ const OurTeamAboutusData = [
 ];
 const AboutUsMainContentComponent: React.FC<AboutUsMainContentProps> = ({
   className,
+  data,
 }) => {
   return (
     <div className={`${aboutUsMainContentComponent} ${className}`}>
-      <HeroBannerAboutusComponent
-        title={bannerAboutusData.title}
-        image={bannerAboutusData.image}
-      />
+      <HeroBannerAboutusComponent data={data} />
       <section className="rlr-about rlr-section rlr-section__my">
         <div className="container">
-          {ourVisionAboutusData.map((ourVisionAboutusItem) => {
-            return (
-              <OurVisionAboutusComponent
-                rtl={false}
-                title={ourVisionAboutusItem.title}
-                describtion={ourVisionAboutusItem.describtion}
-                image={ourVisionAboutusItem.image}
-              />
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="rlr-about rlr-section rlr-section__my">
-        <div className="container">
-          {ourVisionAboutusData.map((ourVisionAboutusItem) => {
-            return (
-              <OurVisionAboutusComponent
-                rtl={true}
-                title={ourVisionAboutusItem.title}
-                describtion={ourVisionAboutusItem.describtion}
-                image={ourVisionAboutusItem.image}
-              />
-            );
-          })}
+          <OurVisionAboutusComponent rtl={false} data={data} />
         </div>
       </section>
 
       <section className="rlr-about rlr-section rlr-section__my">
         <div className="container">
           {OurTeamAboutusData.map((OurTeamAboutusItem) => {
-            return (
-              <OurTeamAboutusComponent
-                title={OurTeamAboutusItem.title}
-                describtion={OurTeamAboutusItem.describtion}
-              />
-            );
+            return <OurTeamAboutusComponent data={data} />;
           })}
         </div>
       </section>

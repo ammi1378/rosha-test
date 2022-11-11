@@ -10,16 +10,7 @@ const FooterComponent: React.FC<FooterProps> = ({ className }) => {
         className={`${footerComponent} ${className} rlr-footer rlr-section rlr-section__mt`}
       >
         <div className="container">
-          <div className="rlr-footer__getintouch">
-            <div className="rlr-footer__getintouch_col rlr-footer__getintouch__col--title">
-              <h4>Get in travel</h4>
-              <p>Adventures Calling You Guys!</p>
-            </div>
-            <div className="rlr-footer__getintouch_col rlr-footer__getintouch__col--address">
-              <h4>Our Offices</h4>
-              <a href="#">Nepal, USA, India</a>
-            </div>
-          </div>
+
           {/* <!-- Footer menu --> */}
           <div className="rlr-footer__menu">
             <nav className="rlr-footer__menu__col">

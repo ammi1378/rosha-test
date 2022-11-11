@@ -1,7 +1,7 @@
+import { IAboutPageDetailListResponseDataItemModel } from "../../../../rosha-api/api";
+
 export interface OurVisionAboutusProps {
   className?: string;
-  title: string;
-  image: string[];
-  describtion: string;
+  data: IAboutPageDetailListResponseDataItemModel | undefined;
   rtl: boolean;
 }

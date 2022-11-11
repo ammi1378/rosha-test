@@ -1,5 +1,5 @@
 export interface OurVisionAboutUsCardProps {
   className?: string;
-  number:string;
-  describtion:string;  
+  number?: number;
+  describtion?: string;
 }
