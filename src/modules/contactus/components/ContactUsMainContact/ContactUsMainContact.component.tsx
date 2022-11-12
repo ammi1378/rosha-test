@@ -50,14 +50,14 @@ const ContactUsMainContactComponent: React.FC<ContactUsMainContactProps> = ({ cl
     </section> */}
     <section className="rlr-about rlr-section rlr-section__my">
       <div className="container">
-        {OurTeamContactusData.map((OurTeamContactusItem) => {
+        {/* {OurTeamContactusData.map((OurTeamContactusItem) => {
           return (
             <OurTeamAboutusComponent
             title={OurTeamContactusItem.title}
             describtion={OurTeamContactusItem.describtion}
             />
           )
-        })}
+        })} */}
       </div>
     </section>
   </div>

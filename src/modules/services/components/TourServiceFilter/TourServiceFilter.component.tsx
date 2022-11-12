@@ -220,7 +220,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         {servicesFilters.filters.rates && (
           <div className="rlr-product-filters__filter">
             <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
-              Tour Rating
+              Rating
             </label>
             <ul className="rlr-checkboxes">
               {ratings.map((rate, rateIndex) => {
