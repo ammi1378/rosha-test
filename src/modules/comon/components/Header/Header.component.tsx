@@ -15,7 +15,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
         <div className="navigation-header">
           <div className="navigation-brand-text">
             <div className="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-              <a target={"_blank"} href="/">
+              <a href="/">
                 <img
                   src="/NewImages/logo-rosha-Copy.png"
                   alt="#"
@@ -34,7 +34,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
           <div className="navigation-body-header rlr-navigation__body-header">
             <div className="navigation-brand-text">
               <div className="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-                <a target={"_blank"} href="/">
+                <a href="/">
                   <img
                     src="/NewImages/logo-rosha-Copy.png"
                     width="170px"
@@ -53,21 +53,13 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
           <ul className="navigation-menu rlr-navigation__menu rlr-navigation__menu--main-links">
             {/* <!-- Dropdown menu 1 --> */}
             <li className="navigation-item">
-              <a
-                target={"_blank"}
-                href="/service/tour"
-                className="navigation-link"
-              >
+              <a href="/service/tour" className="navigation-link">
                 Tours
               </a>
             </li>
             {/* <!-- Mega menu --> */}
             <li className="navigation-item">
-              <a
-                className="navigation-link"
-                target={"_blank"}
-                href="/service/daily-tour"
-              >
+              <a className="navigation-link" href="/service/daily-tour">
                 Daly Tours
               </a>
             </li>
@@ -91,9 +83,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/hotel">
-                                Hotel Booking
-                              </a>
+                              <a href="/service/hotel">Hotel Booking</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Lorem ipsum dolor sit amet, consectetur
@@ -106,7 +96,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/restaurant">
+                              <a href="/service/restaurant">
                                 Restaurant Reservation
                               </a>
                             </span>
@@ -121,7 +111,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/meeting-room">
+                              <a href="/service/meeting-room">
                                 Meeting Room & Salon Raservation
                               </a>
                             </span>
@@ -136,10 +126,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/shopping">
-                                {" "}
-                                Shopping Tour
-                              </a>
+                              <a href="/service/shopping"> Shopping Tour</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Add your menu subtext here
@@ -160,10 +147,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/flight">
-                                {" "}
-                                Fights Booking
-                              </a>
+                              <a href="/service/flight"> Fights Booking</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Lorem ipsum dolor sit amet, consectetur
@@ -176,10 +160,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/train">
-                                {" "}
-                                Train Booking
-                              </a>
+                              <a href="/service/train"> Train Booking</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Lorem ipsum dolor sit amet, consectetur
@@ -192,10 +173,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/bus">
-                                {" "}
-                                Bus Booking
-                              </a>
+                              <a href="/service/bus"> Bus Booking</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Add your menu subtext here
@@ -208,7 +186,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/airport">
+                              <a href="/service/airport">
                                 {" "}
                                 Airport Transportation
                               </a>
@@ -232,7 +210,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/vip-domestic">
+                              <a href="/service/vip-domestic">
                                 {" "}
                                 VIP Domestic Airport Services
                               </a>
@@ -248,7 +226,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/cip">
+                              <a href="/service/cip">
                                 {" "}
                                 CIP International Airport Services
                               </a>
@@ -264,7 +242,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/private-jet">
+                              <a href="/service/private-jet">
                                 {" "}
                                 Privat Jet Reservation
                               </a>
@@ -288,7 +266,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/insurance">
+                              <a href="/service/insurance">
                                 {" "}
                                 Travel Insurance Service
                               </a>
@@ -304,10 +282,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/tour-guid">
-                                {" "}
-                                Tour Guid
-                              </a>
+                              <a href="/service/tour-guid"> Tour Guid</a>
                             </span>
                             <span className="rlr-icon-text__subtext">
                               Lorem ipsum dolor sit amet, consectetur
@@ -320,7 +295,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a target={"_blank"} href="/service/translate">
+                              <a href="/service/translate">
                                 {" "}
                                 Translating and Interpreting Services
                               </a>
@@ -338,17 +313,13 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
             </li>
 
             <li className="navigation-item">
-              <a
-                target={"_blank"}
-                href="/service/iran-visa"
-                className="navigation-link"
-              >
+              <a href="/service/iran-visa" className="navigation-link">
                 Iran Visa
               </a>
             </li>
 
             <li className="navigation-item">
-              <a target={"_blank"} href="/aboutUs" className="navigation-link">
+              <a href="/aboutUs" className="navigation-link">
                 About Us
               </a>
             </li>
