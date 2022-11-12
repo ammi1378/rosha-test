@@ -22,7 +22,11 @@ const OurTeamCardComponent: React.FC<OurTeamCardProps> = ({
       <div className="rlr-team-card rlr-team-card--v2">
         {/* <!-- Team thumb --> */}
         <div className="rlr-team-card__thumb">
-          <img src={serverImage(image || "")} alt="Member Photo" />
+          <img
+            style={{ aspectRatio: 1, objectFit: "cover" }}
+            src={serverImage(image || "")}
+            alt="Member Photo"
+          />
         </div>
         {/* <!-- Team summary --> */}
         <div className="rlr-team-card__summary">

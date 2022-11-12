@@ -329,12 +329,9 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
             </li>
 
             <li className="navigation-item">
-              <a
-                className="navigation-link"
-                href="http://localhost:3000/aboutUs/aboutus"
-              >
-                About Us
-              </a>
+              <Link href="/aboutUs">
+                <a className="navigation-link">About Us</a>
+              </Link>
             </li>
           </ul>
         </div>
