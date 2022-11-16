@@ -185,6 +185,31 @@ export type IServiceApiName =
   | "vip-domestic"
   | "iran-visa";
 
+// const data = [
+//   {
+//     service: "tour",
+//     filters: [
+//       {
+//         filterType: "search-text",
+//         headder: "header",
+//       },
+//       {
+//         filterType: "rating",
+//         headder: "Tour rating",
+//       },
+//     ],
+//   },
+//   {
+//     service: "hotel",
+//     filters: [
+//       {
+//         filterType: "rating",
+//         headder: "Hotel rating",
+//       },
+//     ],
+//   },
+// ];
+
 export interface IServicesMappedData {
   features?: (string | undefined)[];
   star?: number;

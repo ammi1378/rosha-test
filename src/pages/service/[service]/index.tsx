@@ -27,7 +27,7 @@ const ToursPage = ({
   service,
   serviceInfo,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  debugger
+
   const GetFilterComponent = () => {
     return (
       <TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />
