@@ -10,7 +10,7 @@ import {
   IServiceDetail,
 } from "../../../../modules/comon/services/service-api-gen";
 import { ValidApis } from "../../../../modules/comon/services/services-api-gen";
-import { IServiceApiName } from "../../../../modules/comon/services/services-api-gen";
+import { IServiceApiName } from "../../../../modules/comon/services/IServiceApiName";
 import MediaSliderComponent from "../../../../modules/toursingle/components/MediaSlider/MediaSlider.component";
 import ProductDetailSectionComponent from "../../../../modules/toursingle/components/ProductDetailSection/ProductDetailSection.component";
 import SimilarProductsComponent from "../../../../modules/toursingle/components/SimilarProducts/SimilarProducts.component";

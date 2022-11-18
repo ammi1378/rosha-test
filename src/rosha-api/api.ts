@@ -20,6 +20,7 @@
  import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
  // @ts-ignore
  import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { IServicesInfoListResponseDataItemModel } from './IServicesInfoListResponseDataItemModel';
  
  /**
   * 
@@ -5370,25 +5371,6 @@
       * 
       * @type {IServicesInfoListResponseDataItemAttributesModel}
       * @memberof IServicesInfoListResponseDataItemLocalizedModel
-      */
-     'attributes'?: IServicesInfoListResponseDataItemAttributesModel;
- }
- /**
-  * 
-  * @export
-  * @interface IServicesInfoListResponseDataItemModel
-  */
- export interface IServicesInfoListResponseDataItemModel {
-     /**
-      * 
-      * @type {number}
-      * @memberof IServicesInfoListResponseDataItemModel
-      */
-     'id'?: number;
-     /**
-      * 
-      * @type {IServicesInfoListResponseDataItemAttributesModel}
-      * @memberof IServicesInfoListResponseDataItemModel
       */
      'attributes'?: IServicesInfoListResponseDataItemAttributesModel;
  }

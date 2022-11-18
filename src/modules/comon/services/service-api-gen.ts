@@ -18,7 +18,7 @@ import {
   TravelInsuranceServiceApi,
   VipDomesticAirportServiceApi,
 } from "../../../rosha-api/api";
-import { IServiceApiName } from "./services-api-gen";
+import { IServiceApiName } from "./IServiceApiName";
 
 export const getServiceApi = (
   type: IServiceApiName,

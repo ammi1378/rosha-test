@@ -9,14 +9,14 @@ import {
   IServiceDetail,
 } from "../../../../modules/comon/services/service-api-gen";
 import {
-  IServiceApiName,
   ValidApis,
 } from "../../../../modules/comon/services/services-api-gen";
+import { IServiceApiName } from "../../../../modules/comon/services/IServiceApiName";
 import {
-  IServicesInfoListResponseDataItemModel,
   RequestApi,
   ServicesInfoApi,
 } from "../../../../rosha-api/api";
+import { IServicesInfoListResponseDataItemModel } from "../../../../rosha-api/IServicesInfoListResponseDataItemModel";
 
 const ServiceRequest = ({
   service,

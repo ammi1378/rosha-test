@@ -1,8 +1,8 @@
 import { ITourListResponseModel } from "../../../../rosha-api/api";
 import {
-  IServiceApiName,
   IServicesMappedData,
 } from "../../../comon/services/services-api-gen";
+import { IServiceApiName } from "../../../comon/services/IServiceApiName";
 
 export interface CardToursProps {
   className?: string;

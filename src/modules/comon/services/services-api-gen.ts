@@ -19,6 +19,7 @@ import {
   TravelInsuranceServiceApi,
   VipDomesticAirportServiceApi,
 } from "../../../rosha-api/api";
+import { IServiceApiName } from "./IServiceApiName";
 
 export const getServicesApi = (
   type: IServiceApiName,
@@ -164,26 +165,6 @@ const serviceItemMapper = (
     features: item.attributes?.Services?.map((service) => service.Service),
   };
 };
-
-export type IServiceApiName =
-  | "tour"
-  | "airport"
-  | "business-travel"
-  | "bus"
-  | "cip"
-  | "daily-tour"
-  | "flight"
-  | "meeting-room"
-  | "private-jet"
-  | "restaurant"
-  | "shopping"
-  | "tour-guid"
-  | "train"
-  | "translate"
-  | "insurance"
-  | "hotel"
-  | "vip-domestic"
-  | "iran-visa";
 
 export interface IServicesMappedData {
   features?: (string | undefined)[];
