@@ -85,6 +85,8 @@ export const getServerSideProps = async ({
     });
   }
 
+  console.log({ query });
+
   let items: IServicesMappedData[] | undefined;
 
   if (!ValidApis.includes(service)) {
@@ -99,7 +101,6 @@ export const getServerSideProps = async ({
   const foundedInfo = await servicesInfoApi
     .getServicesInfos({}, { params: infoQueryString })
     .then((res) => (res.data?.data?.length ? res.data.data[0] : null));
-  console.log({ foundedInfo });
 
   try {
     items = await getServicesApi(service, queryString);
