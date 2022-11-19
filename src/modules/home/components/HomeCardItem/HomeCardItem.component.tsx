@@ -13,9 +13,8 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
 }) => {
   return (
     <div
-      className={`${className} ${homeCardItemComponent} ${
-        isSearchListing ? "col-md-6 col-lg-4" : "swiper-slide"
-      }`}
+      className={`${className} ${homeCardItemComponent} ${isSearchListing ? "col-md-6 col-lg-4" : "swiper-slide"
+        }`}
     >
       <article
         className="rlr-product-card rlr-product-card--v3"
@@ -104,6 +103,14 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
                         {item.city}
                       </span>
                     </a>
+                  </>
+                )}
+                {item.city && (
+                  <>
+                    <span className="rlr-product-card__sub-title">|</span>
+                    <span className="rlr-product-card__sub-title">
+                      {item.season}
+                    </span>
                   </>
                 )}
               </div>

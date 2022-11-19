@@ -3027,6 +3027,12 @@ import { IServicesInfoListResponseDataItemModel } from './IServicesInfoListRespo
       * @memberof IGeneralInfoPagesFirstGeneralCardsComponentModel
       */
      'CardDescription'?: string;
+        /**
+      * 
+      * @type {string}
+      * @memberof IGeneralInfoPagesFirstGeneralCardsComponentModel
+      */
+         'CardSeason'?: string;
      /**
       * 
       * @type {number}

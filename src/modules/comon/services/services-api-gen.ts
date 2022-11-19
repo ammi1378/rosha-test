@@ -159,6 +159,7 @@ const serviceItemMapper = (
     }),
     description: item.attributes?.Card?.CardDescription,
     star: item.attributes?.Card?.CardStar,
+    season: item.attributes?.Card?.CardSeason,
 
     city: item.attributes?.Cities?.CityName,
     duration: item.attributes?.Duration || 1,
@@ -176,6 +177,7 @@ export interface IServicesMappedData {
   id?: number;
   title?: string;
   featured?: boolean;
+  season? : string;
 }
 
 export const ValidApis: Array<IServiceApiName> = [

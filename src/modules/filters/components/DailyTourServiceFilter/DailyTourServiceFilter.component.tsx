@@ -310,7 +310,6 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
                                 </li>
                             );
                         })}
-
                     </ul>
                 </div>
                 <div className="row mt-3">

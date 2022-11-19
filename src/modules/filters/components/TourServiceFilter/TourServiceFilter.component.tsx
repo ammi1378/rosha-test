@@ -104,7 +104,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     }
 
     if (servicesFilters.filters.seasons?.value.length) {
-      filters.Card.Season = {
+      filters.Card.CardSeason = {
         $in: servicesFilters.filters.seasons?.value,
       };
     }
