@@ -1,33 +1,30 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import QueryString from "qs";
 import React, { useEffect, useState } from "react";
 import {
-  IRatesFilter,
   IServiceFilter,
   IServiceFilters,
   ITourFilters,
-  ITourFiltersKey,
   TourServiceFilterProps,
 } from "./TourServiceFilter.props";
 
 const tourServiceFilterComponent = "tourServiceFilterComponent";
 const ratings = [5, 4, 3, 2, 1];
+const seasons = ["Spring", "Summer", "Fall", "Winter"];
 const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
   className,
   service,
   serviceInfo,
 }) => {
   const router = useRouter();
-
   const [filtersValue, setFiltersValue] = useState<ITourFilters>({
     keyword: "",
     rating: "",
-    minDays: "1",
-    maxDays: "4",
+    minDays: "7",
+    maxDays: "14",
     tourType: "",
     city: "",
-    date: "",
+    seasons: "",
   });
   const [servicesFilters, setServicesFilters] = useState<IServiceFilters>({
     filters: {
@@ -41,13 +38,17 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         fields: "Rate",
         value: [],
       },
+      seasons: {
+        type: "season",
+        fields: "Season",
+        value: [],
+      },
     },
-
     query: "",
   });
+  const [filterQuery, setFilterQuery] = useState("");
 
   useEffect(() => {
-    // debugger;
     const query = router.query;
     const filters: ITourFilters = {
       keyword: "",
@@ -56,7 +57,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
       maxDays: "4",
       tourType: "",
       city: "",
-      date: "",
+      seasons: "",
     };
     let queryString = "";
     if (query) {
@@ -74,34 +75,37 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     if (ratesFilter && localServicesFilters.filters.rates) {
       localServicesFilters.filters.rates.value = ratesFilter.map((val) => +val);
     }
+    const seasonFilter = parsedQueryString?.filters?.Card?.Season?.$in as
+      | string[]
+      | undefined;
+
+    if (seasonFilter && localServicesFilters.filters.seasons) {
+      localServicesFilters.filters.seasons.value = seasonFilter.map(
+        (val) => val
+      );
+    }
 
     const keywordFilter = parsedQueryString?.filters?.Name?.$contains;
     if (keywordFilter && localServicesFilters.filters.keywordFilter) {
       localServicesFilters.filters.keywordFilter.value = keywordFilter;
     }
-
-    // const minDaysFilter = parsedQueryString?.filters?.$and[0]?.Duration?.$gt;
-    // const maxDaysFilter = parsedQueryString?.filters?.$and[1]?.Duration?.$lt;
-
-    // if (minDaysFilter) {
-    //   filters.minDays = minDaysFilter;
-    // }
-    // if (maxDaysFilter) {
-    //   filters.maxDays = maxDaysFilter;
-    // }
     setFiltersValue(filters);
     setServicesFilters(localServicesFilters);
-  }, [router]);
+  }, []);
 
-  const [filterQuery, setFilterQuery] = useState("");
-
+  //   useEffect()
   useEffect(() => {
     const filters: { [key: string]: any } = {};
+    filters.Card = {};
     if (servicesFilters.filters.rates?.value.length) {
-      filters.Card = {
-        CardStar: {
-          $in: servicesFilters.filters.rates?.value,
-        },
+      filters.Card.CardStar = {
+        $in: servicesFilters.filters.rates?.value,
+      };
+    }
+
+    if (servicesFilters.filters.seasons?.value.length) {
+      filters.Card.Season = {
+        $in: servicesFilters.filters.seasons?.value,
       };
     }
 
@@ -110,19 +114,6 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         $contains: servicesFilters.filters.keywordFilter?.value,
       };
     }
-
-    // filters.$and = [
-    //   {
-    //     Duration: {
-    //       $gt: filtersValue.minDays,
-    //     },
-    //   },
-    //   {
-    //     Duration: {
-    //       $lt: filtersValue.maxDays,
-    //     },
-    //   },
-    // ];
 
     const query = QueryString.stringify(
       {
@@ -133,27 +124,31 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
       }
     );
     setFilterQuery(query);
+    router.push(`/service/${service}/${query.length ? "?" + query : ""}`);
   }, [servicesFilters]);
+
+  //   useEffect(() => {
+  //     debugger
+  //     router.push({}, `/service/${service}/${filterQuery.length ? "?" + filterQuery : ""}`);
+  //   }, [filterQuery]);
 
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
     // const foundedFilterIndex = localServicesFilters.filters.findIndex(
     //   (foundedFilter) => foundedFilter.type === filter.type
     // );
-
     if (
       filter.type === "keyword" &&
       localServicesFilters.filters.keywordFilter
     ) {
       localServicesFilters.filters.keywordFilter.value = value;
     }
-
     setServicesFilters(localServicesFilters);
   };
 
-  const changeServiceRate = (filter: IRatesFilter, value: number) => {
+  const changeServiceRate = (filter: any, value: any) => {
     const items = filter.value;
-    const itemIndex = items?.findIndex((item) => item === value);
+    const itemIndex = items?.findIndex((item: any) => item === value);
 
     if (itemIndex === -1) {
       items?.push(value);
@@ -162,12 +157,6 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     }
 
     serviceFilterChange(filter, items);
-  };
-
-  const filterChange = (key: ITourFiltersKey, value: string) => {
-    const filters: ITourFilters = { ...filtersValue };
-    filters[key] = value;
-    setFiltersValue(filters);
   };
 
   return (
@@ -216,7 +205,6 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
             <p>{serviceInfo.attributes?.FilterDescription}</p>
           </div>
         )}
-
         {servicesFilters.filters.rates && (
           <div className="rlr-product-filters__filter">
             <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
@@ -234,7 +222,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
                       id={`rlr-filter-rating-${rate}`}
                       type="checkbox"
                       value={`${rate}`}
-                      onChange={(e) =>
+                      onChange={() =>
                         changeServiceRate(
                           servicesFilters.filters.rates!,
                           5 - rateIndex
@@ -255,7 +243,10 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
                         .fill("")
                         .map((i, index) => {
                           return (
-                            <i key={index} className="rlr-icon-font flaticon-star-1"> </i>
+                            <i
+                              key={index}
+                              className="rlr-icon-font flaticon-star-1"
+                            ></i>
                           );
                         })}
                     </label>
@@ -266,14 +257,125 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
           </div>
         )}
 
+        <div className="rlr-product-filters__filter mt-4">
+          <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
+            Seasons
+          </label>
+          <ul className="rlr-checkboxes">
+            {seasons.map((season) => {
+              return (
+                <li className="form-check form-check-block" key={season}>
+                  <input
+                    className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
+                    type="checkbox"
+                    value={`${season}`}
+                    onChange={(e) =>
+                      changeServiceRate(
+                        servicesFilters.filters.seasons!,
+                        season
+                      )
+                    }
+                    checked={servicesFilters.filters.seasons?.value?.includes(
+                      season
+                    )}
+                  />
+                  <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
+                    {season}
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="rlr-range-slider">
+          <span className="rlr-range-slider__price-box">
+            <input
+              type="number"
+              className="form-control"
+              defaultValue={0}
+              value={filtersValue.minDays!}
+              onChange={(e) => console.log(e.target.value)}
+              data-name-min="0"
+              data-name-max="30"
+            />
+            <input
+              type="number"
+              className="form-control"
+              defaultValue={10}
+              value={filtersValue.maxDays!}
+              data-name-min="0"
+              data-name-max="30"
+            />
+          </span>
+          <input
+            value={filtersValue.minDays!}
+            defaultValue={0}
+            min="0"
+            max="30"
+            step="1"
+            type="range"
+          />
+          <input
+            min="0"
+            max="30"
+            step="1"
+            type="range"
+            defaultValue={10}
+            value={filtersValue.maxDays!}
+          />
+        </div>
         <div className="row mt-3">
-          <Link
-            href={`/service/${service}/${
-              filterQuery.length ? "?" + filterQuery : ""
-            }`}
-          >
-            <a className="btn btn-success">Search</a>
-          </Link>
+          <div className="col-xl-10">
+            <label className="rlr-form-label rlr-form-label--dark">
+              Physical
+            </label>
+            <select
+              id="rlr-product-form-product-sub-category"
+              className="form-select rlr-form-select"
+            >
+              <option value="" disabled selected>
+                Select
+              </option>
+              <option value="1">WildLife Tours</option>
+              <option value="2">Persian food Tours</option>
+              <option value="3">Ski Tours</option>
+              <option value="3">Desert Tours</option>
+              <option value="3">Adventure Tours</option>
+              <option value="3">Nomadic Tours</option>
+              <option value="3">Historical Tours</option>
+              <option value="3">Eco Tours</option>
+              <option value="3">Cultural Tours</option>
+              <option value="3">Trekking Tours</option>
+              <option value="3">Camping Tours</option>
+              <option value="3">Safari Tours</option>
+              <option value="3">Combination Tours</option>
+              <option value="3">Multi Country</option>
+              <option value="3">All Tours</option>
+              <option value="3">Religious Tours</option>
+              <option value="3">Exhibition Tours</option>
+              <option value="3">Medical Tours</option>
+            </select>
+          </div>
+          <div className="col-xl-2"></div>
+        </div>
+
+        <div className="row mt-3">
+          <div className="col-xl-10">
+            <label className="rlr-form-label rlr-form-label--dark">
+              Cities
+            </label>
+            <select className="form-select rlr-form-select">
+              <option value="" disabled selected>
+                Select
+              </option>
+              <option value="1">Tehran</option>
+              <option value="2">Kish</option>
+              <option value="3">Mashhad</option>
+              <option value="3">Esfehan</option>
+              <option value="3">Gheshm</option>
+            </select>
+          </div>
+          <div className="col-xl-2"></div>
         </div>
       </div>
     </aside>

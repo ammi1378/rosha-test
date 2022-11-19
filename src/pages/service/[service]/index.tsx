@@ -7,31 +7,35 @@ import FooterComponent from "../../../modules/comon/components/Footer/Footer.com
 import HeaderComponent from "../../../modules/comon/components/Header/Header.component";
 import {
   getServicesApi,
-  IServiceApiName,
   IServicesMappedData,
   ValidApis,
 } from "../../../modules/comon/services/services-api-gen";
+import { IServiceApiName } from "../../../modules/comon/services/IServiceApiName";
 import CardIranvisaComponent from "../../../modules/iranvisa/components/CardIranvisa/CardIranvisa.component";
-import BreadcrumbComponent from "../../../modules/services/components/Breadcrumb/Breadcrumb.component";
 import SearchResultHeadersComponent from "../../../modules/services/components/SearchResultHeaders/SearchResultHeaders.component";
 import ServiceFilterContainerComponent from "../../../modules/services/components/ServiceFilterContainer/ServiceFilterContainer.component";
-import TourServiceFilterComponent from "../../../modules/services/components/TourServiceFilter/TourServiceFilter.component";
+import TourServiceFilterComponent from "../../../modules/filters/components/TourServiceFilter/TourServiceFilter.component";
 import CardToursComponent from "../../../modules/Tours/components/CardTours/CardTours.component";
 import {
-  IServicesInfoListResponseDataItemModel,
   ServicesInfoApi,
 } from "../../../rosha-api/api";
+import { IServicesInfoListResponseDataItemModel } from "../../../rosha-api/IServicesInfoListResponseDataItemModel";
+import SouvenirsServiceFilterComponent from '../../../modules/filters/components/SouvenirsServiceFilter/SouvenirsServiceFilter.component';
 
 const ToursPage = ({
   items,
   service,
   serviceInfo,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  debugger
   const GetFilterComponent = () => {
-    return (
-      <TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />
-    );
+    switch (service) {
+      case "tour":
+        return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "souvenirs":
+        return (<SouvenirsServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      default:
+        return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+    }
   };
   return (
     <>
@@ -81,6 +85,8 @@ export const getServerSideProps = async ({
     });
   }
 
+  console.log({ query });
+
   let items: IServicesMappedData[] | undefined;
 
   if (!ValidApis.includes(service)) {
@@ -95,7 +101,6 @@ export const getServerSideProps = async ({
   const foundedInfo = await servicesInfoApi
     .getServicesInfos({}, { params: infoQueryString })
     .then((res) => (res.data?.data?.length ? res.data.data[0] : null));
-  console.log({ foundedInfo });
 
   try {
     items = await getServicesApi(service, queryString);

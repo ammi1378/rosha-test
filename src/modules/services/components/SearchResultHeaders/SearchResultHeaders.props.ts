@@ -1,4 +1,4 @@
-import { IServicesInfoListResponseDataItemModel } from "../../../../rosha-api/api";
+import { IServicesInfoListResponseDataItemModel } from "../../../../rosha-api/IServicesInfoListResponseDataItemModel";
 
 export interface SearchResultHeadersProps {
   className?: string;
