@@ -21,6 +21,7 @@ import {
 } from "../../../rosha-api/api";
 import { IServicesInfoListResponseDataItemModel } from "../../../rosha-api/IServicesInfoListResponseDataItemModel";
 import SouvenirsServiceFilterComponent from '../../../modules/filters/components/SouvenirsServiceFilter/SouvenirsServiceFilter.component';
+import DailyTourServiceFilterComponent from '../../../modules/filters/components/DailyTourServiceFilter/DailyTourServiceFilter.component';
 
 const ToursPage = ({
   items,
@@ -31,8 +32,10 @@ const ToursPage = ({
     switch (service) {
       case "tour":
         return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
-      case "souvenirs":
-        return (<SouvenirsServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "daily-tour":
+        return (<DailyTourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "hotel":
+        // return (<HotelServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
       default:
         return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
     }

@@ -1,6 +1,7 @@
-
 export interface IRangeFilter {
-  type: "range";
-  field: string;
-  value: number[];
-}
+    type: "range";
+    field: string;
+    min: number;
+    max: number;
+  }
+  

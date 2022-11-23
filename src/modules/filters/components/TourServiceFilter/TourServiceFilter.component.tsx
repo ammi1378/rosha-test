@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import QueryString from "qs";
 import React, { useEffect, useState } from "react";
+import { IRangeDayFilter } from "../../common/IRangeDayFilter";
 import {
   IServiceFilter,
   IServiceFilters,
@@ -11,6 +12,9 @@ import {
 const tourServiceFilterComponent = "tourServiceFilterComponent";
 const ratings = [5, 4, 3, 2, 1];
 const seasons = ["Spring", "Summer", "Fall", "Winter"];
+const categories = ["WildLife Tours", "Persian food Tours", "Ski Tours"];
+const cities = ["Tehran", "Kish", "Mashhad", "Esfehan"];
+
 const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
   className,
   service,
@@ -20,9 +24,9 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
   const [filtersValue, setFiltersValue] = useState<ITourFilters>({
     keyword: "",
     rating: "",
-    minDays: "7",
-    maxDays: "14",
-    tourType: "",
+    minDay: 0,
+    maxDay: 0,
+    category: "",
     city: "",
     seasons: "",
   });
@@ -31,6 +35,16 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
       keywordFilter: {
         fields: ["Name"],
         type: "keyword",
+        value: "",
+      },
+      city: {
+        field: "city",
+        type: "City",
+        value: "",
+      },
+      category: {
+        field: "category",
+        type: "Category",
         value: "",
       },
       rates: {
@@ -43,21 +57,28 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         fields: "Season",
         value: [],
       },
+      rangeDay: {
+        field: "rangeDays",
+        type: "rangeDay",
+        minDay: 0,
+        maxDay: 0,
+      }
     },
     query: "",
   });
   const [filterQuery, setFilterQuery] = useState("");
 
   useEffect(() => {
+    debugger;
     const query = router.query;
     const filters: ITourFilters = {
       keyword: "",
       rating: "",
-      minDays: "1",
-      maxDays: "4",
-      tourType: "",
+      category: "",
       city: "",
       seasons: "",
+      minDay: 0,
+      maxDay: 0,
     };
     let queryString = "";
     if (query) {
@@ -84,6 +105,19 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         (val) => val
       );
     }
+    const minDayFilter = parsedQueryString?.filters?.Card?.MinDay?.$in as
+      | number
+      | undefined;
+
+    if (minDayFilter && localServicesFilters.filters.rangeDay?.minDay) {
+      localServicesFilters.filters.rangeDay.minDay = minDayFilter;
+    }
+    const maxDayFilter = parsedQueryString?.filters?.Card?.MaxDay?.$in as
+      | number
+      | undefined;
+    if (maxDayFilter && localServicesFilters.filters.rangeDay?.maxDay) {
+      localServicesFilters.filters.rangeDay.maxDay = maxDayFilter;
+    }
 
     const keywordFilter = parsedQueryString?.filters?.Name?.$contains;
     if (keywordFilter && localServicesFilters.filters.keywordFilter) {
@@ -109,9 +143,31 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
       };
     }
 
+    if (servicesFilters.filters.city?.value.length) {
+      filters.Card.CardCity = {
+        $in: servicesFilters.filters.city?.value,
+      };
+    }
+
+    if (servicesFilters.filters.category?.value.length) {
+      filters.Card.CardCategory = {
+        $in: servicesFilters.filters.category?.value,
+      };
+    }
     if (servicesFilters.filters.keywordFilter?.value.length) {
       filters.Name = {
         $contains: servicesFilters.filters.keywordFilter?.value,
+      };
+    }
+
+    if (servicesFilters.filters.rangeDay?.minDay! > 0) {
+      filters.Card.MinDay = {
+        $in: servicesFilters.filters.rangeDay?.minDay,
+      };
+    }
+    if (servicesFilters.filters.rangeDay?.maxDay! > 0) {
+      filters.Card.MaxDay = {
+        $in: servicesFilters.filters.rangeDay?.maxDay,
       };
     }
 
@@ -127,22 +183,24 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     router.push(`/service/${service}/${query.length ? "?" + query : ""}`);
   }, [servicesFilters]);
 
-  //   useEffect(() => {
-  //     debugger
-  //     router.push({}, `/service/${service}/${filterQuery.length ? "?" + filterQuery : ""}`);
-  //   }, [filterQuery]);
 
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
-    // const foundedFilterIndex = localServicesFilters.filters.findIndex(
-    //   (foundedFilter) => foundedFilter.type === filter.type
-    // );
+    if (filter.type === "Category" &&
+      localServicesFilters.filters.category) {
+      localServicesFilters.filters.category.value = value;
+    }
+    if (filter.type === "City" &&
+      localServicesFilters.filters.city) {
+      localServicesFilters.filters.city.value = value;
+    }
     if (
       filter.type === "keyword" &&
       localServicesFilters.filters.keywordFilter
     ) {
       localServicesFilters.filters.keywordFilter.value = value;
     }
+
     setServicesFilters(localServicesFilters);
   };
 
@@ -158,6 +216,17 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
 
     serviceFilterChange(filter, items);
   };
+  const changeServiceRangeDayMin = (filter: IRangeDayFilter, value: any) => {
+
+     filter.minDay = value;
+    serviceFilterChange(filter, value);
+  };
+
+  const changeServiceRangeDayMax = (filter: IRangeDayFilter, value: any) => {
+    filter.maxDay = value;
+    serviceFilterChange(filter, value);
+  };
+
 
   return (
     <aside
@@ -288,72 +357,55 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
           </ul>
         </div>
         <div className="rlr-range-slider">
+          <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
+            Days Between:
+          </label>
           <span className="rlr-range-slider__price-box">
             <input
               type="number"
               className="form-control"
-              defaultValue={0}
-              value={filtersValue.minDays!}
-              onChange={(e) => console.log(e.target.value)}
-              data-name-min="0"
-              data-name-max="30"
+              defaultValue={servicesFilters.filters.rangeDay?.minDay!}
+              value={servicesFilters.filters.rangeDay?.minDay!}
+              onChange={((e) => {
+                changeServiceRangeDayMin(
+                  servicesFilters.filters.rangeDay!,
+                  e.target.value
+                )
+              })}
             />
             <input
               type="number"
               className="form-control"
-              defaultValue={10}
-              value={filtersValue.maxDays!}
-              data-name-min="0"
-              data-name-max="30"
+              defaultValue={servicesFilters.filters.rangeDay?.maxDay!}
+              value={servicesFilters.filters.rangeDay?.maxDay!}
+              onChange={((e) => {
+                changeServiceRangeDayMax(
+                  servicesFilters.filters.rangeDay!,
+                  e.target.value
+                )
+              })}
             />
           </span>
-          <input
-            value={filtersValue.minDays!}
-            defaultValue={0}
-            min="0"
-            max="30"
-            step="1"
-            type="range"
-          />
-          <input
-            min="0"
-            max="30"
-            step="1"
-            type="range"
-            defaultValue={10}
-            value={filtersValue.maxDays!}
-          />
         </div>
-        <div className="row mt-3">
+        <div className="row">
           <div className="col-xl-10">
             <label className="rlr-form-label rlr-form-label--dark">
-              Physical
+              Tour Type
             </label>
             <select
               id="rlr-product-form-product-sub-category"
               className="form-select rlr-form-select"
+              onChange={(e) => {
+                serviceFilterChange(servicesFilters.filters.category!,
+                  e.target.value)
+              }}
             >
               <option value="" disabled selected>
                 Select
               </option>
-              <option value="1">WildLife Tours</option>
-              <option value="2">Persian food Tours</option>
-              <option value="3">Ski Tours</option>
-              <option value="3">Desert Tours</option>
-              <option value="3">Adventure Tours</option>
-              <option value="3">Nomadic Tours</option>
-              <option value="3">Historical Tours</option>
-              <option value="3">Eco Tours</option>
-              <option value="3">Cultural Tours</option>
-              <option value="3">Trekking Tours</option>
-              <option value="3">Camping Tours</option>
-              <option value="3">Safari Tours</option>
-              <option value="3">Combination Tours</option>
-              <option value="3">Multi Country</option>
-              <option value="3">All Tours</option>
-              <option value="3">Religious Tours</option>
-              <option value="3">Exhibition Tours</option>
-              <option value="3">Medical Tours</option>
+              {categories.map((category) => {
+                return (<option key={category} value={category}>{category}</option>)
+              })}
             </select>
           </div>
           <div className="col-xl-2"></div>
@@ -364,15 +416,20 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
             <label className="rlr-form-label rlr-form-label--dark">
               Cities
             </label>
-            <select className="form-select rlr-form-select">
+            <select className="form-select rlr-form-select"
+              onChange={(e) => {
+                serviceFilterChange(servicesFilters.filters.city!,
+                  e.target.value)
+              }}>
               <option value="" disabled selected>
                 Select
               </option>
-              <option value="1">Tehran</option>
-              <option value="2">Kish</option>
-              <option value="3">Mashhad</option>
-              <option value="3">Esfehan</option>
-              <option value="3">Gheshm</option>
+              {cities.map((city) => {
+                return (<option
+                  key={city}
+                  value={city}
+                >{city}</option>)
+              })}
             </select>
           </div>
           <div className="col-xl-2"></div>
