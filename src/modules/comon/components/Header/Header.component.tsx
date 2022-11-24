@@ -332,7 +332,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 <li className="navigation-dropdown-item">
                   <a
                     className="navigation-dropdown-link"
-                    href="Rosha-Blog-Useful.html"
+                    href="/usefulInformation"
                   >
                     Useful Information
                   </a>
