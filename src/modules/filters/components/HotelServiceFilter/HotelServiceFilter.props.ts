@@ -7,6 +7,7 @@ import { ICityFilter } from "../../common/ICityFilter";
 import { IMettingRoomFilter } from "../../common/IMettingRoomFilter";
 import { IHotelFilter } from "../../common/IHotelFilter";
 import { IRangeFilter } from "../../common/IRangeFilter";
+import { IMeetingRoomTypeFilter } from "../../common/IMeetingRoomTypeFilter";
 
 export interface HotelServiceFilterProps {
   className?: string;
@@ -21,6 +22,7 @@ export interface IHotelFilters {
   peopleRange: null | string;
   isItForHotel: null | boolean;
   mettingRoom: null | string;
+  meetingRoomType : null | string;
 }
 
 export interface IServiceFilters {
@@ -32,6 +34,7 @@ export interface IServiceFilters {
     city?: ICityFilter;
     isItForHotel?: IHotelFilter;
     mettingRoom: IMettingRoomFilter;
+    meetingRoomType:IMeetingRoomTypeFilter;
   };
   query: string;
 }
@@ -41,6 +44,9 @@ export type IServiceFilter =
   | IRangeFilter
   | ICityFilter
   | IMettingRoomFilter
-  | IHotelFilter;
+  | IHotelFilter
+  | IMeetingRoomTypeFilter;
 
 export type IHotelFiltersKey = keyof IHotelFilters;
+
+

@@ -4,5 +4,3 @@ export interface IRatesFilter {
   fields: string;
   value: number[];
 }
-
-

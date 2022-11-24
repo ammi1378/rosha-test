@@ -62,7 +62,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
         type: "rangeDay",
         minDay: 0,
         maxDay: 0,
-      }
+      },
     },
     query: "",
   });
@@ -183,15 +183,12 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     router.push(`/service/${service}/${query.length ? "?" + query : ""}`);
   }, [servicesFilters]);
 
-
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
-    if (filter.type === "Category" &&
-      localServicesFilters.filters.category) {
+    if (filter.type === "Category" && localServicesFilters.filters.category) {
       localServicesFilters.filters.category.value = value;
     }
-    if (filter.type === "City" &&
-      localServicesFilters.filters.city) {
+    if (filter.type === "City" && localServicesFilters.filters.city) {
       localServicesFilters.filters.city.value = value;
     }
     if (
@@ -217,8 +214,7 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     serviceFilterChange(filter, items);
   };
   const changeServiceRangeDayMin = (filter: IRangeDayFilter, value: any) => {
-
-     filter.minDay = value;
+    filter.minDay = value;
     serviceFilterChange(filter, value);
   };
 
@@ -226,7 +222,6 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
     filter.maxDay = value;
     serviceFilterChange(filter, value);
   };
-
 
   return (
     <aside
@@ -366,24 +361,24 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
               className="form-control"
               defaultValue={servicesFilters.filters.rangeDay?.minDay!}
               value={servicesFilters.filters.rangeDay?.minDay!}
-              onChange={((e) => {
+              onChange={(e) => {
                 changeServiceRangeDayMin(
                   servicesFilters.filters.rangeDay!,
                   e.target.value
-                )
-              })}
+                );
+              }}
             />
             <input
               type="number"
               className="form-control"
               defaultValue={servicesFilters.filters.rangeDay?.maxDay!}
               value={servicesFilters.filters.rangeDay?.maxDay!}
-              onChange={((e) => {
+              onChange={(e) => {
                 changeServiceRangeDayMax(
                   servicesFilters.filters.rangeDay!,
                   e.target.value
-                )
-              })}
+                );
+              }}
             />
           </span>
         </div>
@@ -396,15 +391,21 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
               id="rlr-product-form-product-sub-category"
               className="form-select rlr-form-select"
               onChange={(e) => {
-                serviceFilterChange(servicesFilters.filters.category!,
-                  e.target.value)
+                serviceFilterChange(
+                  servicesFilters.filters.category!,
+                  e.target.value
+                );
               }}
             >
               <option value="" disabled selected>
                 Select
               </option>
               {categories.map((category) => {
-                return (<option key={category} value={category}>{category}</option>)
+                return (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                );
               })}
             </select>
           </div>
@@ -416,19 +417,24 @@ const TourServiceFilterComponent: React.FC<TourServiceFilterProps> = ({
             <label className="rlr-form-label rlr-form-label--dark">
               Cities
             </label>
-            <select className="form-select rlr-form-select"
+            <select
+              className="form-select rlr-form-select"
               onChange={(e) => {
-                serviceFilterChange(servicesFilters.filters.city!,
-                  e.target.value)
-              }}>
+                serviceFilterChange(
+                  servicesFilters.filters.city!,
+                  e.target.value
+                );
+              }}
+            >
               <option value="" disabled selected>
                 Select
               </option>
               {cities.map((city) => {
-                return (<option
-                  key={city}
-                  value={city}
-                >{city}</option>)
+                return (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                );
               })}
             </select>
           </div>
