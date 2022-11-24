@@ -320,7 +320,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
             </li>
 
             <li className="navigation-item">
-              <a href="/service/iran-visa" className="navigation-link">
+              <a href="/businessTravel" className="navigation-link">
                 Business Travel
               </a>
             </li>
