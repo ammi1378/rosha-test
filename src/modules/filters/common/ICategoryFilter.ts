@@ -1,5 +1,5 @@
 export interface ICategoryFilter {
-  type: "Category";
+  type: "category";
   field: string;
   value: string;
 }

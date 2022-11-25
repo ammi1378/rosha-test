@@ -26,7 +26,7 @@ const CardToursComponent: React.FC<CardToursProps> = ({
           );
         })}
       </div>
-      <PaginationComponent />
+      {/* <PaginationComponent /> */}
     </div>
   );
 };

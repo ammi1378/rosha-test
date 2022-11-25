@@ -1,6 +1,7 @@
 export interface ICityFilter {
-  type: "City";
+  type: "city";
   field: string;
   value: string;
 }
+
 

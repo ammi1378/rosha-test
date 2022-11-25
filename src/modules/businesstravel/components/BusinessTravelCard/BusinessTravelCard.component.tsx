@@ -48,7 +48,7 @@ const BusinessTravelCardComponent: React.FC<BusinessTravelCardProps> = ({
             <div className="col-md-6 col-lg-4" key={index}>
               <article className="rlr-postcard">
                 <img
-                  itemprop="image"
+                  item-prop="image"
                   data-sizes="auto"
                   data-src="/NewImages/59972106.jpg"
                   data-srcset="/NewImages/hotels/Dariush-Grand-Hotel10.jpg"

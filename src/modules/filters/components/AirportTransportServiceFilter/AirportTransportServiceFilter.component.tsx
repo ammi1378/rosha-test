@@ -5,31 +5,25 @@ import { IRangeFilter } from "../../common/IRangeFilter";
 import {
   IServiceFilter,
   IServiceFilters,
-  IHotelFilters,
-  HotelServiceFilterProps,
-} from "./HotelServiceFilter.props";
+  IAirportTransportFilters,
+  AirportTransportServiceFilterProps,
+} from "./AirportTransportServiceFilter.props";
 
 const tourServiceFilterComponent = "tourServiceFilterComponent";
 const ratings = [5, 4, 3, 2, 1];
-const cities = ["Tehran", "Kish", "Mashhad", "Esfehan"];
-const meetingRoomTypes = ["Conference Room", "Meeting Room"];
 
 
-const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
+const AirportTransportServiceFilterComponent: React.FC<AirportTransportServiceFilterProps> = ({
   className,
   service,
   serviceInfo,
 }) => {
   const router = useRouter();
-  const [filtersValue, setFiltersValue] = useState<IHotelFilters>({
+  const [filtersValue, setFiltersValue] = useState<IAirportTransportFilters>({
     keyword: "",
     rating: "",
-    city: "",
-    isItForHotel: false,
-    meetingRoom: false,
     max: 0,
     min: 0,
-    meetingRoomType: "",
 
   });
   const [servicesFilters, setServicesFilters] = useState<IServiceFilters>({
@@ -39,37 +33,19 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
         type: "keyword",
         value: "",
       },
-      city: {
-        field: "city",
-        type: "city",
-        value: "",
-      },
+
       rates: {
         type: "rate",
         fields: "Rate",
         value: [],
       },
-      meetingRoom: {
-        type: "hasMeetingRoom",
-        field: "meetingRoom",
-        value: false,
-      },
+
       peopleRange: {
         field: "peoppleRange",
         type: "range",
         min: 0,
         max: 0,
       },
-      meetingRoomType: {
-        field: "meetingRoomType",
-        type: "meetingRoomType",
-        value: [],
-      },
-      isItForHotel: {
-        field: "isItForHotel",
-        type: "isItForHotel",
-        value: false
-      }
     },
     query: "",
   });
@@ -77,15 +53,11 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
 
   useEffect(() => {
     const query = router.query;
-    const filters: IHotelFilters = {
+    const filters: IAirportTransportFilters = {
       keyword: "",
       rating: "",
-      city: "",
-      isItForHotel: false,
-      meetingRoom: false,
       min: 0,
       max: 0,
-      meetingRoomType: "",
     };
     let queryString = "";
     if (query) {
@@ -104,21 +76,7 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
       localServicesFilters.filters.rates.value = ratesFilter.map((val) => +val);
     }
 
-    const mettingTypeFilter = parsedQueryString?.filters?.Card?.CardMeetingRoomType?.$in as
-      | string[]
-      | undefined;
-    if (mettingTypeFilter && localServicesFilters.filters.meetingRoomType) {
-      localServicesFilters.filters.meetingRoomType.value = mettingTypeFilter.map((val) => val);
-    }
-    const seasonFilter = parsedQueryString?.filters?.Card?.Season?.$in as
-      | string[]
-      | undefined;
 
-    if (seasonFilter && localServicesFilters.filters.seasons) {
-      localServicesFilters.filters.seasons.value = seasonFilter.map(
-        (val) => val
-      );
-    }
     const minFilter = parsedQueryString?.filters?.Card?.MinDay?.$in as
       | number
       | undefined;
@@ -137,15 +95,7 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
     if (keywordFilter && localServicesFilters.filters.keywordFilter) {
       localServicesFilters.filters.keywordFilter.value = keywordFilter;
     }
-    const mettingFilter = parsedQueryString?.filters?.Card?.CardMeetingRoom?.$contains;
-    if (mettingFilter && localServicesFilters.filters.meetingRoom) {
-      localServicesFilters.filters.meetingRoom.value = mettingFilter;
-    }
 
-    const isItForHotelFilter = parsedQueryString?.filters?.Card?.CardForHotel?.$contains;
-    if (isItForHotelFilter && localServicesFilters.filters.isItForHotel) {
-      localServicesFilters.filters.isItForHotel.value = isItForHotelFilter;
-    }
     setFiltersValue(filters);
     setServicesFilters(localServicesFilters);
   }, []);
@@ -159,30 +109,6 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
       };
     }
 
-    if (servicesFilters.filters.isItForHotel?.value) {
-      filters.Card.CardForHotel = {
-        $in: servicesFilters.filters.isItForHotel?.value,
-      };
-    }
-
-    if (servicesFilters.filters.meetingRoom?.value) {
-      filters.Card.CardMeetingRoom = {
-        $in: servicesFilters.filters.meetingRoom?.value,
-      };
-    }
-
-    if (servicesFilters.filters.city?.value.length) {
-      filters.Card.CardCity = {
-        $in: servicesFilters.filters.city?.value,
-      };
-    }
-
-
-    if (servicesFilters.filters.meetingRoomType?.value.length) {
-      filters.Card.CardMeetingRoomType = {
-        $in: servicesFilters.filters.meetingRoomType?.value,
-      };
-    }
 
     if (servicesFilters.filters.keywordFilter?.value.length) {
       filters.Name = {
@@ -216,19 +142,6 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
 
-    if (filter.type === "isItForHotel"
-      && localServicesFilters.filters.isItForHotel) {
-      localServicesFilters.filters.isItForHotel.value = value;
-    }
-
-    if (filter.type === "city" && localServicesFilters.filters.city) {
-      localServicesFilters.filters.city.value = value;
-    }
-
-    if (filter.type === "hasMeetingRoom"
-      && localServicesFilters.filters.meetingRoom) {
-      localServicesFilters.filters.meetingRoom.value = value;
-    }
 
     if (
       filter.type === "keyword" &&
@@ -363,78 +276,6 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
         )}
 
 
-        <div className="rlr-product-filters__filter">
-          <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
-            Type
-          </label>
-          <ul className="rlr-checkboxes">
-            {meetingRoomTypes.map((roomType) => {
-              return (
-                <li className="form-check form-check-block" key={roomType}>
-                  <input
-                    className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
-                    type="checkbox"
-                    value={`${roomType}`}
-                    onChange={() =>
-                      changeService(
-                        servicesFilters.filters.meetingRoomType!,
-                        roomType
-                      )
-                    }
-                    checked={servicesFilters.filters.meetingRoomType?.value?.includes(roomType)}
-                  />
-                  <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
-                    {roomType}
-                  </label>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <hr />
-        <div className="rlr-product-filters__filter">
-          <ul className="rlr-checkboxes">
-            <li className="form-check form-check-block">
-              <input
-                className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
-                type="checkbox"
-                value={`${servicesFilters.filters.isItForHotel?.value}`}
-                onChange={(e) =>
-                  serviceFilterChange(
-                    servicesFilters.filters.isItForHotel!,
-                    servicesFilters.filters.isItForHotel?.value ? false : true)
-                }
-                checked={servicesFilters.filters.isItForHotel?.value ? true : false}
-              />
-              <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
-                Is It For Hotel?
-              </label>
-            </li>
-          </ul>
-        </div>
-        <hr />
-
-        <div className="rlr-product-filters__filter">
-          <ul className="rlr-checkboxes">
-            <li className="form-check form-check-block">
-              <input
-                className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
-                type="checkbox"
-                value={`${servicesFilters.filters.meetingRoom?.value}`}
-                onChange={(e) =>
-                  serviceFilterChange(
-                    servicesFilters.filters.meetingRoom!,
-                    servicesFilters.filters.meetingRoom?.value ? false : true)
-                }
-                checked={servicesFilters.filters.meetingRoom?.value ? true : false}
-              />
-              <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
-                Has a meeting room?
-              </label>
-            </li>
-          </ul>
-        </div>
-        <hr />
 
         <div className="rlr-range-slider">
           <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
@@ -468,37 +309,10 @@ const HotelServiceFilterComponent: React.FC<HotelServiceFilterProps> = ({
           </span>
         </div>
 
-        <div className="row">
-          <div className="col-xl-10">
-            <label className="rlr-form-label rlr-form-label--dark">
-              Cities
-            </label>
-            <select
-              className="form-select rlr-form-select"
-              onChange={(e) => {
-                serviceFilterChange(
-                  servicesFilters.filters.city!,
-                  e.target.value
-                );
-              }}
-            >
-              <option value="" disabled selected>
-                Select
-              </option>
-              {cities.map((city) => {
-                return (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          <div className="col-xl-2"></div>
-        </div>
+
       </div>
     </aside>
   );
 };
 
-export default HotelServiceFilterComponent;
+export default AirportTransportServiceFilterComponent;

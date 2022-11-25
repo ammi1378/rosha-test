@@ -20,9 +20,17 @@ import {
   ServicesInfoApi,
 } from "../../../rosha-api/api";
 import { IServicesInfoListResponseDataItemModel } from "../../../rosha-api/IServicesInfoListResponseDataItemModel";
-import SouvenirsServiceFilterComponent from '../../../modules/filters/components/SouvenirsServiceFilter/SouvenirsServiceFilter.component';
-import DailyTourServiceFilterComponent from '../../../modules/filters/components/DailyTourServiceFilter/DailyTourServiceFilter.component';
-import HotelServiceFilterComponent from '../../../modules/filters/components/DailyTourServiceFilter/DailyTourServiceFilter.component';
+import HotelServiceFilterComponent from "../../../modules/filters/components/HotelServiceFilter/HotelServiceFilter.component";
+import DailyTourServiceFilterComponent from "../../../modules/filters/components/DailyTourServiceFilter/DailyTourServiceFilter.component";
+import PrivateJetServiceFilterComponent from "../../../modules/filters/components/PrivateJetServiceFilter/PrivateJetServiceFilter.component";
+import ResturantServiceFilterComponent from "../../../modules/filters/components/ResturantServiceFilter/ResturantServiceFilter.component";
+import DefaultServiceFilterComponent from "../../../modules/filters/components/DefaultServiceFilter/DefaultServiceFilter.component";
+import TranslateServiceFilterComponent from "../../../modules/filters/components/TranslateServiceFilter/TranslateServiceFilter.component";
+import VipServiceFilterComponent from "../../../modules/filters/components/VipServiceFilter/VipServiceFilter.component";
+import CipServiceFilterComponent from "../../../modules/filters/components/CipServiceFilter/CipServiceFilter.component";
+import AirportTransportServiceFilterComponent from "../../../modules/filters/components/AirportTransportServiceFilter/AirportTransportServiceFilter.component";
+import BusportTransportServiceFilterComponent from "../../../modules/filters/components/BusportTransportServiceFilter/BusportTransportServiceFilter.component";
+
 
 const ToursPage = ({
   items,
@@ -37,8 +45,22 @@ const ToursPage = ({
         return (<DailyTourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
       case "hotel":
         return (<HotelServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "private-jet":
+        return (<PrivateJetServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "restaurant":
+        return (<ResturantServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "translate":
+        return (<TranslateServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "vip-domestic":
+        return (<VipServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "cip":
+        return (<CipServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "airport":
+        return (<AirportTransportServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+      case "bus":
+        return (<BusportTransportServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
       default:
-        return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (<DefaultServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
     }
   };
   return (

@@ -1,29 +1,31 @@
 import { useRouter } from "next/router";
 import QueryString from "qs";
 import React, { useEffect, useState } from "react";
+import { IRangeDayFilter } from "../../common/IRangeDayFilter";
 import {
   IServiceFilter,
   IServiceFilters,
-  IDailyTourFilters,
-  DailyTourServiceFilterProps,
-} from "./DailyTourServiceFilter.props";
+  ITranslateFilters,
+  TranslateServiceFilterProps,
+} from "./TranslateServiceFilter.props";
 
-const tourServiceFilterComponent = "tourServiceFilterComponent";
+const resturantServiceFilterComponent = "resturantServiceFilterComponent";
 const ratings = [5, 4, 3, 2, 1];
-const seasons = ["Spring", "Summer", "Fall", "Winter"];
-const cities = ["Tehran", "Kish", "Mashhad", "Esfehan"];
+const languages = ["Romanian", "Chinese", "Japenese", "English"];
+const genders = ["Man", "Woman"];
 
-const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = ({
+
+const TranslateServiceFilterComponent: React.FC<TranslateServiceFilterProps> = ({
   className,
   service,
   serviceInfo,
 }) => {
   const router = useRouter();
-  const [, setFiltersValue] = useState<IDailyTourFilters>({
+  const [filtersValue, setFiltersValue] = useState<ITranslateFilters>({
     keyword: "",
     rating: "",
-    city: "",
-    seasons: "",
+    languages: "",
+    translatorGender: "",
   });
   const [servicesFilters, setServicesFilters] = useState<IServiceFilters>({
     filters: {
@@ -32,34 +34,29 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
         type: "keyword",
         value: "",
       },
-      city: {
-        field: "City",
-        type: "city",
+      languages: {
+        field: "language",
+        type: "language",
         value: "",
       },
-      rates: {
-        type: "rate",
-        fields: "Rate",
-        value: [],
+      translatorGender: {
+        field: "translatorGender",
+        type: "gender",
+        value: "",
       },
-      seasons: {
-        type: "season",
-        fields: "Season",
-        value: [],
-      },
-
     },
     query: "",
   });
   const [filterQuery, setFilterQuery] = useState("");
 
   useEffect(() => {
+    debugger;
     const query = router.query;
-    const filters: IDailyTourFilters = {
+    const filters: ITranslateFilters = {
       keyword: "",
       rating: "",
-      city: "",
-      seasons: "",
+      translatorGender: "",
+      languages: "",
     };
     let queryString = "";
     if (query) {
@@ -77,14 +74,20 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
     if (ratesFilter && localServicesFilters.filters.rates) {
       localServicesFilters.filters.rates.value = ratesFilter.map((val) => +val);
     }
-    const seasonFilter = parsedQueryString?.filters?.Card?.Season?.$in as
-      | string[]
+    const languageFilter = parsedQueryString?.filters?.Card?.Language?.$in as
+      | string
       | undefined;
 
-    if (seasonFilter && localServicesFilters.filters.seasons) {
-      localServicesFilters.filters.seasons.value = seasonFilter.map(
-        (val) => val
-      );
+    if (languageFilter && localServicesFilters.filters.languages) {
+      localServicesFilters.filters.languages.value = languageFilter;
+    }
+
+    const taranslatorGenderFilter = parsedQueryString?.filters?.Card?.Gender?.$in as
+      | string
+      | undefined;
+
+    if (taranslatorGenderFilter && localServicesFilters.filters.translatorGender) {
+      localServicesFilters.filters.translatorGender.value = taranslatorGenderFilter;
     }
 
 
@@ -106,25 +109,25 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
       };
     }
 
-    if (servicesFilters.filters.seasons?.value.length) {
-      filters.Card.CardSeason = {
-        $in: servicesFilters.filters.seasons?.value,
+
+    if (servicesFilters.filters.translatorGender?.value.length) {
+      filters.Card.Gender = {
+        $in: servicesFilters.filters.translatorGender?.value,
       };
     }
 
-    if (servicesFilters.filters.city?.value.length) {
-      filters.Card.CardCity = {
-        $in: servicesFilters.filters.city?.value,
+    if (servicesFilters.filters.languages?.value.length) {
+      filters.Card.Language = {
+        $in: servicesFilters.filters.languages?.value,
       };
     }
-    
-    
+
+
     if (servicesFilters.filters.keywordFilter?.value.length) {
       filters.Name = {
         $contains: servicesFilters.filters.keywordFilter?.value,
       };
     }
-
 
     const query = QueryString.stringify(
       {
@@ -138,19 +141,14 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
     router.push(`/service/${service}/${query.length ? "?" + query : ""}`);
   }, [servicesFilters]);
 
-
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
-   
-    if (filter.type === "city" &&
-    localServicesFilters.filters.city) {
-      localServicesFilters.filters.city.value = value;
+    if (filter.type === "language" && localServicesFilters.filters.languages) {
+      localServicesFilters.filters.languages.value = value;
     }
-    if (
-      filter.type === "keyword" &&
-      localServicesFilters.filters.keywordFilter
-    ) {
-      localServicesFilters.filters.keywordFilter.value = value;
+
+    if (filter.type === "gender" && localServicesFilters.filters.translatorGender) {
+      localServicesFilters.filters.translatorGender.value = value;
     }
 
     setServicesFilters(localServicesFilters);
@@ -171,7 +169,7 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
 
   return (
     <aside
-      className={`${tourServiceFilterComponent} ${className} col-xl-3 rlr-search-results-page__sidebar`}
+      className={`${resturantServiceFilterComponent} ${className} col-xl-3 rlr-search-results-page__sidebar`}
     >
       <div className="rlr-product-filters__filters-wrapper">
         {/* <!-- Search filter --> */}
@@ -267,54 +265,59 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
           </div>
         )}
 
-        <div className="rlr-product-filters__filter mt-4">
-          <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
-            Seasons
-          </label>
-          <ul className="rlr-checkboxes">
-            {seasons.map((season) => {
-              return (
-                <li className="form-check form-check-block" key={season}>
-                  <input
-                    className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
-                    type="checkbox"
-                    value={`${season}`}
-                    onChange={(e) =>
-                      changeServiceRate(
-                        servicesFilters.filters.seasons!,
-                        season
-                      )
-                    }
-                    checked={servicesFilters.filters.seasons?.value?.includes(
-                      season
-                    )}
-                  />
-                  <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
-                    {season}
-                  </label>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+
         <div className="row mt-3">
           <div className="col-xl-10">
             <label className="rlr-form-label rlr-form-label--dark">
-              Cities
+              Languages
             </label>
-            <select className="form-select rlr-form-select"
+            <select
+              className="form-select rlr-form-select"
               onChange={(e) => {
-                serviceFilterChange(servicesFilters.filters.city!,
-                  e.target.value)
-              }}>
+                serviceFilterChange(
+                  servicesFilters.filters.languages!,
+                  e.target.value
+                );
+              }}
+            >
               <option value="" disabled selected>
                 Select
               </option>
-              {cities.map((city) => {
-                return (<option
-                  key={city}
-                  value={city}
-                >{city}</option>)
+              {languages.map((language) => {
+                return (
+                  <option key={language} value={language}>
+                    {language}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div className="col-xl-2"></div>
+        </div>
+
+        <div className="row mt-3">
+          <div className="col-xl-10">
+            <label className="rlr-form-label rlr-form-label--dark">
+              Translator Gender
+            </label>
+            <select
+              className="form-select rlr-form-select"
+              onChange={(e) => {
+                serviceFilterChange(
+                  servicesFilters.filters.translatorGender!,
+                  e.target.value
+                );
+              }}
+            >
+              <option value="" disabled selected>
+                Select
+              </option>
+              {genders.map((gender) => {
+                return (
+                  <option key={gender} value={gender}>
+                    {gender}
+                  </option>
+                );
               })}
             </select>
           </div>
@@ -325,4 +328,7 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
   );
 };
 
-export default DailyTourServiceFilterComponent;
+export default TranslateServiceFilterComponent;
+
+
+

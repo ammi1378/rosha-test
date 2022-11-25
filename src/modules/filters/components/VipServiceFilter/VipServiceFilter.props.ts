@@ -7,29 +7,24 @@ import { ICityFilter } from "../../common/ICityFilter";
 import { ICategoryFilter } from "../../common/ICategoryFilter";
 import { IRangeDayFilter } from "../../common/IRangeDayFilter";
 
-export interface TourServiceFilterProps {
+export interface VipServiceFilterProps {
   className?: string;
   service: IServiceApiName;
   serviceInfo?: IServicesInfoListResponseDataItemModel | null;
 }
 
-export interface ITourFilters {
+export interface IVipFilters {
   keyword: null | string;
   rating: null | string;
   city: null | string;
-  seasons: null | string;
-  category: null | string;
-  minDay:null | number;
-  maxDay: null |number;
+  VipService: null | string;
 }
 
 export interface IServiceFilters {
   filters: {
     keywordFilter?: IKeywordFilter;
     rates?: IRatesFilter;
-    seasons?: ISeasonFilter;
-    rangeDay?: IRangeDayFilter;
-    category?: ICategoryFilter;
+    VipService?: ISeasonFilter;
     city?: ICityFilter;
   };
   query: string;
@@ -42,4 +37,4 @@ export type IServiceFilter =
   | ICityFilter
   | ICategoryFilter;
 
-export type ITourFiltersKey = keyof ITourFilters;
+export type IVipFiltersKey = keyof IVipFilters;

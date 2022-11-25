@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import QueryString from "qs";
-import {
-  IServiceFilter,
-  IServiceFilters,
-} from "../../../filters/components/HotelServiceFilter.props";
+
 import { BusinessTravelFilterProps } from "./BusinessTravelFilter.props";
+import { IServiceFilters } from "../../../filters/components/DailyTourServiceFilter/DailyTourServiceFilter.props";
 
 const ratings = [5, 4, 3, 2, 1];
 const seasons = ["Spring", "Summer", "Fall", "Winter"];

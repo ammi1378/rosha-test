@@ -6,40 +6,35 @@ import { ISeasonFilter } from "../../common/ISeasonFilter";
 import { ICityFilter } from "../../common/ICityFilter";
 import { ICategoryFilter } from "../../common/ICategoryFilter";
 import { IRangeDayFilter } from "../../common/IRangeDayFilter";
+import { IGenderFilter } from "../../common/IGenderFilter";
+import { ILanguageFilter } from "../../common/ILanguageFilter";
 
-export interface TourServiceFilterProps {
+export interface TranslateServiceFilterProps {
   className?: string;
   service: IServiceApiName;
   serviceInfo?: IServicesInfoListResponseDataItemModel | null;
 }
 
-export interface ITourFilters {
+export interface ITranslateFilters {
   keyword: null | string;
   rating: null | string;
-  city: null | string;
-  seasons: null | string;
-  category: null | string;
-  minDay:null | number;
-  maxDay: null |number;
+  translatorGender: null | string;
+  languages: null | string;
 }
 
 export interface IServiceFilters {
   filters: {
     keywordFilter?: IKeywordFilter;
     rates?: IRatesFilter;
-    seasons?: ISeasonFilter;
-    rangeDay?: IRangeDayFilter;
-    category?: ICategoryFilter;
-    city?: ICityFilter;
+    translatorGender?: IGenderFilter;
+    languages?: ILanguageFilter;
   };
   query: string;
 }
 export type IServiceFilter =
   | IKeywordFilter
   | IRatesFilter
-  | ISeasonFilter
-  | IRangeDayFilter
-  | ICityFilter
-  | ICategoryFilter;
+  | ILanguageFilter
+  | IGenderFilter;
 
-export type ITourFiltersKey = keyof ITourFilters;
+export type ITranslateFiltersKey = keyof ITranslateFilters;

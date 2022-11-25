@@ -4,42 +4,34 @@ import { IKeywordFilter } from "../../common/IKeywordFilter";
 import { IRatesFilter } from "../../common/IRatesFilter";
 import { ISeasonFilter } from "../../common/ISeasonFilter";
 import { ICityFilter } from "../../common/ICityFilter";
-import { ICategoryFilter } from "../../common/ICategoryFilter";
-import { IRangeDayFilter } from "../../common/IRangeDayFilter";
+import { IRangeFilter } from "../../common/IRangeFilter";
+import { IMeetingRoomTypeFilter } from "../../common/IMeetingRoomTypeFilter";
+import { IMeetingRoomFilter } from "../../common/IMeetingRoomFilter";
 
-export interface TourServiceFilterProps {
+export interface PrivateJetServiceFilterProps {
   className?: string;
   service: IServiceApiName;
   serviceInfo?: IServicesInfoListResponseDataItemModel | null;
 }
 
-export interface ITourFilters {
+export interface IPrivateJetFilters {
   keyword: null | string;
   rating: null | string;
-  city: null | string;
-  seasons: null | string;
-  category: null | string;
-  minDay:null | number;
-  maxDay: null |number;
+  min: null | number;
+  max: null | number;
 }
 
 export interface IServiceFilters {
   filters: {
     keywordFilter?: IKeywordFilter;
     rates?: IRatesFilter;
-    seasons?: ISeasonFilter;
-    rangeDay?: IRangeDayFilter;
-    category?: ICategoryFilter;
-    city?: ICityFilter;
+    peopleRange?: IRangeFilter;
   };
   query: string;
 }
 export type IServiceFilter =
   | IKeywordFilter
   | IRatesFilter
-  | ISeasonFilter
-  | IRangeDayFilter
-  | ICityFilter
-  | ICategoryFilter;
+  | IRangeFilter
 
-export type ITourFiltersKey = keyof ITourFilters;
+export type IPrivateJetFiltersKey = keyof IPrivateJetFilters;

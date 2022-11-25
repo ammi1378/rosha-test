@@ -4,10 +4,10 @@ import { IKeywordFilter } from "../../common/IKeywordFilter";
 import { IRatesFilter } from "../../common/IRatesFilter";
 import { ISeasonFilter } from "../../common/ISeasonFilter";
 import { ICityFilter } from "../../common/ICityFilter";
-import { IMettingRoomFilter } from "../../common/IMettingRoomFilter";
 import { IHotelFilter } from "../../common/IHotelFilter";
 import { IRangeFilter } from "../../common/IRangeFilter";
 import { IMeetingRoomTypeFilter } from "../../common/IMeetingRoomTypeFilter";
+import { IMeetingRoomFilter } from "../../common/IMeetingRoomFilter";
 
 export interface HotelServiceFilterProps {
   className?: string;
@@ -19,10 +19,11 @@ export interface IHotelFilters {
   keyword: null | string;
   rating: null | string;
   city: null | string;
-  peopleRange: null | string;
+  min: null | number;
+  max: null | number;
   isItForHotel: null | boolean;
-  mettingRoom: null | string;
-  meetingRoomType : null | string;
+  meetingRoom: null | boolean;
+  meetingRoomType: null | string;
 }
 
 export interface IServiceFilters {
@@ -33,8 +34,8 @@ export interface IServiceFilters {
     peopleRange?: IRangeFilter;
     city?: ICityFilter;
     isItForHotel?: IHotelFilter;
-    mettingRoom: IMettingRoomFilter;
-    meetingRoomType:IMeetingRoomTypeFilter;
+    meetingRoom: IMeetingRoomFilter;
+    meetingRoomType: IMeetingRoomTypeFilter;
   };
   query: string;
 }
@@ -43,10 +44,8 @@ export type IServiceFilter =
   | IRatesFilter
   | IRangeFilter
   | ICityFilter
-  | IMettingRoomFilter
+  | IMeetingRoomFilter
   | IHotelFilter
   | IMeetingRoomTypeFilter;
 
 export type IHotelFiltersKey = keyof IHotelFilters;
-
-

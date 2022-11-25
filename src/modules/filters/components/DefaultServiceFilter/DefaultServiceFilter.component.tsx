@@ -1,29 +1,26 @@
 import { useRouter } from "next/router";
 import QueryString from "qs";
 import React, { useEffect, useState } from "react";
+import { IRangeDayFilter } from "../../common/IRangeDayFilter";
 import {
   IServiceFilter,
   IServiceFilters,
-  IDailyTourFilters,
-  DailyTourServiceFilterProps,
-} from "./DailyTourServiceFilter.props";
+  IDefaultFilters,
+  DefaultServiceFilterProps,
+} from "./DefaultServiceFilter.props";
 
-const tourServiceFilterComponent = "tourServiceFilterComponent";
+const dafualtServiceFilterComponent = "dafualtServiceFilterComponent";
 const ratings = [5, 4, 3, 2, 1];
-const seasons = ["Spring", "Summer", "Fall", "Winter"];
-const cities = ["Tehran", "Kish", "Mashhad", "Esfehan"];
 
-const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = ({
+const DefaultServiceFilterComponent: React.FC<DefaultServiceFilterProps> = ({
   className,
   service,
   serviceInfo,
 }) => {
   const router = useRouter();
-  const [, setFiltersValue] = useState<IDailyTourFilters>({
+  const [filtersValue, setFiltersValue] = useState<IDefaultFilters>({
     keyword: "",
     rating: "",
-    city: "",
-    seasons: "",
   });
   const [servicesFilters, setServicesFilters] = useState<IServiceFilters>({
     filters: {
@@ -32,34 +29,22 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
         type: "keyword",
         value: "",
       },
-      city: {
-        field: "City",
-        type: "city",
-        value: "",
-      },
-      rates: {
+       rates: {
         type: "rate",
         fields: "Rate",
         value: [],
       },
-      seasons: {
-        type: "season",
-        fields: "Season",
-        value: [],
-      },
-
     },
     query: "",
   });
   const [filterQuery, setFilterQuery] = useState("");
 
   useEffect(() => {
+    debugger;
     const query = router.query;
-    const filters: IDailyTourFilters = {
+    const filters: IDefaultFilters = {
       keyword: "",
       rating: "",
-      city: "",
-      seasons: "",
     };
     let queryString = "";
     if (query) {
@@ -77,16 +62,6 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
     if (ratesFilter && localServicesFilters.filters.rates) {
       localServicesFilters.filters.rates.value = ratesFilter.map((val) => +val);
     }
-    const seasonFilter = parsedQueryString?.filters?.Card?.Season?.$in as
-      | string[]
-      | undefined;
-
-    if (seasonFilter && localServicesFilters.filters.seasons) {
-      localServicesFilters.filters.seasons.value = seasonFilter.map(
-        (val) => val
-      );
-    }
-
 
     const keywordFilter = parsedQueryString?.filters?.Name?.$contains;
     if (keywordFilter && localServicesFilters.filters.keywordFilter) {
@@ -105,26 +80,11 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
         $in: servicesFilters.filters.rates?.value,
       };
     }
-
-    if (servicesFilters.filters.seasons?.value.length) {
-      filters.Card.CardSeason = {
-        $in: servicesFilters.filters.seasons?.value,
-      };
-    }
-
-    if (servicesFilters.filters.city?.value.length) {
-      filters.Card.CardCity = {
-        $in: servicesFilters.filters.city?.value,
-      };
-    }
-    
-    
     if (servicesFilters.filters.keywordFilter?.value.length) {
       filters.Name = {
         $contains: servicesFilters.filters.keywordFilter?.value,
       };
     }
-
 
     const query = QueryString.stringify(
       {
@@ -138,21 +98,8 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
     router.push(`/service/${service}/${query.length ? "?" + query : ""}`);
   }, [servicesFilters]);
 
-
   const serviceFilterChange = (filter: IServiceFilter, value: any) => {
     const localServicesFilters = { ...servicesFilters };
-   
-    if (filter.type === "city" &&
-    localServicesFilters.filters.city) {
-      localServicesFilters.filters.city.value = value;
-    }
-    if (
-      filter.type === "keyword" &&
-      localServicesFilters.filters.keywordFilter
-    ) {
-      localServicesFilters.filters.keywordFilter.value = value;
-    }
-
     setServicesFilters(localServicesFilters);
   };
 
@@ -171,7 +118,7 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
 
   return (
     <aside
-      className={`${tourServiceFilterComponent} ${className} col-xl-3 rlr-search-results-page__sidebar`}
+      className={`${dafualtServiceFilterComponent} ${className} col-xl-3 rlr-search-results-page__sidebar`}
     >
       <div className="rlr-product-filters__filters-wrapper">
         {/* <!-- Search filter --> */}
@@ -266,63 +213,12 @@ const DailyTourServiceFilterComponent: React.FC<DailyTourServiceFilterProps> = (
             </ul>
           </div>
         )}
-
-        <div className="rlr-product-filters__filter mt-4">
-          <label className="rlr-form-label rlr-form-label-- rlr-product-filters__label">
-            Seasons
-          </label>
-          <ul className="rlr-checkboxes">
-            {seasons.map((season) => {
-              return (
-                <li className="form-check form-check-block" key={season}>
-                  <input
-                    className="form-check-input rlr-form-check-input rlr-product-filters__checkbox"
-                    type="checkbox"
-                    value={`${season}`}
-                    onChange={(e) =>
-                      changeServiceRate(
-                        servicesFilters.filters.seasons!,
-                        season
-                      )
-                    }
-                    checked={servicesFilters.filters.seasons?.value?.includes(
-                      season
-                    )}
-                  />
-                  <label className="rlr-form-label rlr-form-label--checkbox rlr-product-filters__checkbox-label">
-                    {season}
-                  </label>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="row mt-3">
-          <div className="col-xl-10">
-            <label className="rlr-form-label rlr-form-label--dark">
-              Cities
-            </label>
-            <select className="form-select rlr-form-select"
-              onChange={(e) => {
-                serviceFilterChange(servicesFilters.filters.city!,
-                  e.target.value)
-              }}>
-              <option value="" disabled selected>
-                Select
-              </option>
-              {cities.map((city) => {
-                return (<option
-                  key={city}
-                  value={city}
-                >{city}</option>)
-              })}
-            </select>
-          </div>
-          <div className="col-xl-2"></div>
-        </div>
       </div>
     </aside>
   );
 };
 
-export default DailyTourServiceFilterComponent;
+export default DefaultServiceFilterComponent;
+
+
+
