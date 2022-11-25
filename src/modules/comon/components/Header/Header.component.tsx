@@ -325,7 +325,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
               </a>
             </li>
             <li className="navigation-item has-submenu">
-              <a className="navigation-link" href="Rosha-BlogList.html">
+              <a className="navigation-link" href="#">
                 About Iran
               </a>
               <ul className="navigation-dropdown navigation-submenu">
