@@ -155,25 +155,35 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
               </div>
             </div>
           </div>
-          <div className="rlr-product-card__footer">
-            {item.features && (
-              <ul className="rlr-product-card__icon-text-list">
-                {item.features?.map((feature, index) => {
-                  return (
-                    <li
-                      className="rlr-icon-text rlr-product-card__icon-text"
-                      key={index}
-                    >
-                      <i className="rlr-icon-font flaticon-check"> </i>
-                      <span className="rlr-icon-text__title">{feature}</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+        </div>
+
+        <div className="rlr-product-card__footer row">
+          {item.features && (
+            <ul className="rlr-product-card__icon-text-list">
+              {item.features?.map((feature, index) => {
+                return (
+                  <li
+                    className="rlr-icon-text rlr-product-card__icon-text"
+                    key={index}
+                  >
+                    <i className="rlr-icon-font flaticon-check"> </i>
+                    <span className="rlr-icon-text__title">{feature}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+          <div className="row">
+            <a type="button" className="col-md-6 my-2">
+              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2" data-bs-toggle="modal" data-bs-target="#myModal"> More Info</span>
+            </a>
+            <div className="col-md-6 my-2">
+              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">Booking
+              </span>
+            </div>
           </div>
         </div>
-      </article>
+      </article >
     </div>
   );
 };

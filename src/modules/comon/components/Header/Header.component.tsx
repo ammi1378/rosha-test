@@ -348,7 +348,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
               </ul>
             </li>
             <li className="navigation-item">
-              <a className="navigation-link" href="/souvenirs">
+              <a className="navigation-link" href="/service/souvenirs">
                 Souvenirs
               </a>
             </li>
