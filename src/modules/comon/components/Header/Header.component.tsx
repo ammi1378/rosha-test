@@ -79,58 +79,36 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           <a href="#"> Reservation Services </a>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-ph-hand-waving-light"></i>
-                          </span>
+
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/hotel">Hotel Booking</a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-dinner"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/restaurant">
                                 Restaurant Reservation
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Add your menu subtext here
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-sidebar-1"></i>
-                          </span>
+
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/meeting-room">
                                 Meeting Room & Salon Raservation
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Add your menu subtext here
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-shopping"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/shopping"> Shopping Tour</a>
-                            </span>
-                            <span className="rlr-icon-text__subtext">
-                              Add your menu subtext here
                             </span>
                           </div>
                         </li>
@@ -143,57 +121,34 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           <a href="#"> Transportation Services</a>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-whatsapp"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/flight"> Fights Booking</a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-train"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/train"> Train Booking</a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-bus"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/bus"> Bus Booking</a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Add your menu subtext here
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-wine"></i>
-                          </span>
+                       
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/airport">
                                 {" "}
                                 Airport Transportation
                               </a>
-                            </span>
-                            <span className="rlr-icon-text__subtext">
-                              Add your menu subtext here
                             </span>
                           </div>
                         </li>
@@ -206,9 +161,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           <a href="#"> VIP Services </a>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
+                         
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/vip-domestic">
@@ -216,15 +169,10 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                                 VIP Domestic Airport Services
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
+                          
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/cip">
@@ -232,15 +180,9 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                                 CIP International Airport Services
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/private-jet">
@@ -248,23 +190,16 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                                 Privat Jet Reservation
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                       </ul>
                     </li>
-
                     <li className="navigation-col">
                       <ul className="navigation-list">
                         <li className="navigation-list-heading rlr-navigation-list-heading--tall">
                           <a href="#"> Other Services </a>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/insurance">
@@ -272,37 +207,22 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                                 Travel Insurance Service
                               </a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/tour-guid"> Tour Guid</a>
                             </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
-                            </span>
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                          <span className="rlr-step__icon rlr-step__icon--active">
-                            <i className="rlr-icon-font rlr-icon-font--megamenu flaticon-feedback"></i>
-                          </span>
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/translate">
                                 {" "}
                                 Translating and Interpreting Services
                               </a>
-                            </span>
-                            <span className="rlr-icon-text__subtext">
-                              Lorem ipsum dolor sit amet, consectetur
                             </span>
                           </div>
                         </li>
