@@ -58,7 +58,8 @@ const BookingFormSingleTourComponent: React.FC<BookingFormSingleTourProps> = ({ 
           </div>
         </div>
       </fieldset>
-      <a href="./checkout-page.html" className="btn rlr-button rlr-booking-card__button"> Proceed to
+
+      <a href="/form" className="btn rlr-button rlr-booking-card__button"> Proceed to
         Booking </a>
     </form>
 

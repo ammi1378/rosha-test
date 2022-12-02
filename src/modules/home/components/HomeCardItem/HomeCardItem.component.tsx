@@ -176,15 +176,17 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           <div className="row">
             <a type="button" className="col-md-6 my-2">
               <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2" data-bs-toggle="modal" data-bs-target="#myModal"> More Info</span>
-            </a>
-            <div className="col-md-6 my-2">
-              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">Booking
-              </span>
-            </div>
+            </a >
+            <Link href="/form">
+              <div className="col-md-6 my-2">
+                <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">Booking
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </article >
-    </div>
+    </div >
   );
 };
 
