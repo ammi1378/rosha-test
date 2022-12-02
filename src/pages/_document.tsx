@@ -4,7 +4,7 @@ function MyApp() {
   return (
     <Html>
       <Head />
-      <body className="rlr-body">
+      <body className="rlr-body" style={{zoom: '90%'}}>
         <Main />
         <NextScript />
       </body>

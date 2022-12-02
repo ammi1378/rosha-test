@@ -25,7 +25,7 @@ const toursingle = ({ service }: { service: IServiceDetail | null }) => {
             <MediaSliderComponent media={service.gallery} />
           )}
           {service && <ProductDetailSectionComponent service={service} />}
-          <SimilarProductsComponent />
+          {/* <SimilarProductsComponent /> */}
         </div>
       </main>
       <FooterComponent />

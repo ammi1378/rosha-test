@@ -106,7 +106,7 @@ const ProductCarouselComponent: React.FC<ProductCarouselProps> = ({
                   <HomeCardItemComponent
                     item={homeCardItem}
                     isSearchListing={false}
-                    service={"tour-guid"}
+                    service={"tour"}
                   />
                 );
               })}

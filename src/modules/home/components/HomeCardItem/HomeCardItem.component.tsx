@@ -13,8 +13,9 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
 }) => {
   return (
     <div
-      className={`${className} ${homeCardItemComponent} ${isSearchListing ? "col-md-6 col-lg-4" : "swiper-slide"
-        }`}
+      className={`${className} ${homeCardItemComponent} ${
+        isSearchListing ? "col-md-6 col-lg-4" : "swiper-slide"
+      }`}
     >
       <article
         className="rlr-product-card rlr-product-card--v3"
@@ -157,7 +158,10 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           </div>
         </div>
 
-        <div className="rlr-product-card__footer row">
+        <div
+          className="rlr-product-card__footer row"
+          style={{ margin: 0, paddingLeft: "1rem", width: "100%" }}
+        >
           {item.features && (
             <ul className="rlr-product-card__icon-text-list">
               {item.features?.map((feature, index) => {
@@ -174,19 +178,33 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
             </ul>
           )}
           <div className="row">
-            <a type="button" className="col-md-6 my-2">
-              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2" data-bs-toggle="modal" data-bs-target="#myModal"> More Info</span>
-            </a >
-            <Link href="/form">
-              <div className="col-md-6 my-2">
-                <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">Booking
-                </span>
-              </div>
-            </Link>
+            <a
+              type="button"
+              href={`/service/${service}/${item.id}`}
+              target="_blank"
+              className="col-md-6 my-2"
+            >
+              <span
+                className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                More Info
+              </span>
+            </a>
+            <a
+              className="col-md-6 my-2"
+              href={`/service/${service}/${item.id}/request`}
+              target="_blank"
+            >
+              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">
+                Booking
+              </span>
+            </a>
           </div>
         </div>
-      </article >
-    </div >
+      </article>
+    </div>
   );
 };
 

@@ -6493,15 +6493,15 @@ i[class^="flaticon-"]:before {
   }
 }
 .rlr-media__thumb {
-  -webkit-filter: sepia(0.4);
-  filter: sepia(0.4);
+  /* -webkit-filter: sepia(0.4); */
+  /* filter: sepia(0.4); */
 }
 .rlr-media__thumb:hover {
-  -webkit-filter: sepia(0);
+  /* -webkit-filter: sepia(0);
   filter: sepia(0);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
-  transition: all 0.5s;
+  transition: all 0.5s; */
 }
 
 /*!  ==============================================================
