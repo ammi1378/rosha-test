@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Link from "next/link";
 import React from "react";
 import { HeaderProps } from "./Header.props";
 
@@ -64,22 +63,16 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 Daly Tours
               </a>
             </li>
-            {/* <!-- Dropdown menu 1 --> */}
             <li className="navigation-item has-submenu">
               <a className="navigation-link" href="#">
                 Services
               </a>
-              <ul className="navigation-megamenu navigation-submenu">
-                <li className="navigation-megamenu-container">
+              <ul className="navigation-dropdown navigation-submenu">
+                <li className="navigation-dropdown-container">
                   <ul className="navigation-row">
-                    {/* <!-- Mega menu col 1 --> */}
                     <li className="navigation-col">
                       <ul className="navigation-list">
-                        <li className="navigation-list-heading rlr-navigation-list-heading--tall">
-                          <a href="#"> Reservation Services </a>
-                        </li>
                         <li className="rlr-icon-text">
-
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/hotel">Hotel Booking</a>
@@ -112,14 +105,6 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                             </span>
                           </div>
                         </li>
-                      </ul>
-                    </li>
-                    {/* <!-- Mega menu col 2 --> */}
-                    <li className="navigation-col">
-                      <ul className="navigation-list">
-                        <li className="navigation-list-heading rlr-navigation-list-heading--tall">
-                          <a href="#"> Transportation Services</a>
-                        </li>
                         <li className="rlr-icon-text">
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
@@ -142,7 +127,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                           </div>
                         </li>
                         <li className="rlr-icon-text">
-                       
+
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/airport">
@@ -152,16 +137,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                             </span>
                           </div>
                         </li>
-                      </ul>
-                    </li>
-                    {/* <!-- Mega menu col 4 --> */}
-                    <li className="navigation-col">
-                      <ul className="navigation-list">
-                        <li className="navigation-list-heading rlr-navigation-list-heading--tall">
-                          <a href="#"> VIP Services </a>
-                        </li>
                         <li className="rlr-icon-text">
-                         
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
                               <a href="/service/vip-domestic">
@@ -169,7 +145,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                                 VIP Domestic Airport Services
                               </a>
                             </span>
-                          
+
                           </div>
                         </li>
                         <li className="rlr-icon-text">
@@ -191,13 +167,6 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                               </a>
                             </span>
                           </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="navigation-col">
-                      <ul className="navigation-list">
-                        <li className="navigation-list-heading rlr-navigation-list-heading--tall">
-                          <a href="#"> Other Services </a>
                         </li>
                         <li className="rlr-icon-text">
                           <div className="rlr-icon-text__text-wrapper">
