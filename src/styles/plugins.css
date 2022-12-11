@@ -6213,11 +6213,11 @@ fieldset:disabled .btn {
 }
 .modal-backdrop {
   background-color: #000;
-  height: 100vh;
+  height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1050;
 }
 .modal-backdrop.fade {

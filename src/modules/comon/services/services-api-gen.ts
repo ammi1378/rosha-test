@@ -12,11 +12,13 @@ import {
   PrivateJetServiceApi,
   RestaurantServiceApi,
   ShoppingServiceApi,
+  SouvenirApi,
   TourApi,
   TourGuideServiceApi,
   TrainServiceApi,
   TranslatingInterpretingServiceApi,
   TravelInsuranceServiceApi,
+  UseFullInformationApi,
   VipDomesticAirportServiceApi,
 } from "../../../rosha-api/api";
 import { IServiceApiName } from "./IServiceApiName";
@@ -131,6 +133,18 @@ export const getServicesApi = (
     return iranVisaApi
       .getIranVisas({}, { params: queryString })
       .then((res) => servicesDataMapper(res.data));
+  } else if (type === "souvenirs") {
+    const souvenirApi = new SouvenirApi();
+
+    return souvenirApi
+      .getSouvenirs({}, { params: queryString })
+      .then((res) => servicesDataMapper(res.data));
+  } else if (type === "usefull-information") {
+    const useFullInformationApi = new UseFullInformationApi();
+
+    return useFullInformationApi
+      .getUseFullInformations({}, { params: queryString })
+      .then((res) => servicesDataMapper(res.data));
   }
 
   return toursApi
@@ -144,13 +158,11 @@ export const servicesDataMapper = (
   return data.data?.map((item) => serviceItemMapper(item));
 };
 
-const serviceItemMapper = (
-  item: ITourListResponseDataItemModel
-): IServicesMappedData => {
+const serviceItemMapper = (item: any): IServicesMappedData => {
   return {
     id: item.id,
     title: item.attributes?.Name,
-    images: item.attributes?.Card?.CardImage?.data?.map((img) => {
+    images: item.attributes?.Card?.CardImage?.data?.map((img: any) => {
       return {
         url: img.attributes?.url,
         alt: img.attributes?.alternativeText,
@@ -163,7 +175,8 @@ const serviceItemMapper = (
 
     city: item.attributes?.Cities?.CityName,
     duration: item.attributes?.Duration || 1,
-    features: item.attributes?.Services?.map((service) => service.Service),
+    features: item.attributes?.Services?.map((service: any) => service.Service),
+    moreInfo: item.attributes?.MoreInfo as string,
   };
 };
 
@@ -177,7 +190,8 @@ export interface IServicesMappedData {
   id?: number;
   title?: string;
   featured?: boolean;
-  season? : string;
+  season?: string;
+  moreInfo?: string;
 }
 
 export const ValidApis: Array<IServiceApiName> = [
@@ -199,4 +213,6 @@ export const ValidApis: Array<IServiceApiName> = [
   "hotel",
   "vip-domestic",
   "iran-visa",
+  "souvenirs",
+  "usefull-information",
 ];

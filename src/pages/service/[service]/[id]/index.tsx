@@ -14,8 +14,16 @@ import { IServiceApiName } from "../../../../modules/comon/services/IServiceApiN
 import MediaSliderComponent from "../../../../modules/toursingle/components/MediaSlider/MediaSlider.component";
 import ProductDetailSectionComponent from "../../../../modules/toursingle/components/ProductDetailSection/ProductDetailSection.component";
 import SimilarProductsComponent from "../../../../modules/toursingle/components/SimilarProducts/SimilarProducts.component";
+import ContnetDetailSectionComponent from "../../../../modules/toursingle/components/ContnetDetailSection/ProductDetailSection.component";
 
-const toursingle = ({ service }: { service: IServiceDetail | null }) => {
+const toursingle = ({
+  service,
+  serviceName,
+}: {
+  service: IServiceDetail | null;
+  serviceName: IServiceApiName;
+}) => {
+  debugger;
   return (
     <>
       <HeaderComponent />
@@ -24,7 +32,11 @@ const toursingle = ({ service }: { service: IServiceDetail | null }) => {
           {service && service.gallery && (
             <MediaSliderComponent media={service.gallery} />
           )}
-          {service && <ProductDetailSectionComponent service={service} />}
+          {serviceName === "iran-visa" ||
+          serviceName === "souvenirs" ||
+          serviceName === "usefull-information"
+            ? service && <ContnetDetailSectionComponent service={service} />
+            : service && <ProductDetailSectionComponent service={service} />}
           {/* <SimilarProductsComponent /> */}
         </div>
       </main>
@@ -55,7 +67,7 @@ export const getServerSideProps = async ({
     item = await getServiceApi(service, +id);
 
     return {
-      props: { service: item },
+      props: { service: item, serviceName: service },
     };
   } catch (e: any) {
     if (e instanceof AxiosError) {

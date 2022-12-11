@@ -16,9 +16,7 @@ import SearchResultHeadersComponent from "../../../modules/services/components/S
 import ServiceFilterContainerComponent from "../../../modules/services/components/ServiceFilterContainer/ServiceFilterContainer.component";
 import TourServiceFilterComponent from "../../../modules/filters/components/TourServiceFilter/TourServiceFilter.component";
 import CardToursComponent from "../../../modules/Tours/components/CardTours/CardTours.component";
-import {
-  ServicesInfoApi,
-} from "../../../rosha-api/api";
+import { ServicesInfoApi } from "../../../rosha-api/api";
 import { IServicesInfoListResponseDataItemModel } from "../../../rosha-api/IServicesInfoListResponseDataItemModel";
 import HotelServiceFilterComponent from "../../../modules/filters/components/HotelServiceFilter/HotelServiceFilter.component";
 import DailyTourServiceFilterComponent from "../../../modules/filters/components/DailyTourServiceFilter/DailyTourServiceFilter.component";
@@ -31,36 +29,91 @@ import CipServiceFilterComponent from "../../../modules/filters/components/CipSe
 import AirportTransportServiceFilterComponent from "../../../modules/filters/components/AirportTransportServiceFilter/AirportTransportServiceFilter.component";
 import BusportTransportServiceFilterComponent from "../../../modules/filters/components/BusportTransportServiceFilter/BusportTransportServiceFilter.component";
 
-
 const ToursPage = ({
   items,
   service,
   serviceInfo,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  debugger;
   const GetFilterComponent = () => {
     switch (service) {
       case "tour":
-        return (<TourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <TourServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "daily-tour":
-        return (<DailyTourServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <DailyTourServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "hotel":
-        return (<HotelServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <HotelServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "private-jet":
-        return (<PrivateJetServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <PrivateJetServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "restaurant":
-        return (<ResturantServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <ResturantServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "translate":
-        return (<TranslateServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <TranslateServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "vip-domestic":
-        return (<VipServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <VipServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "cip":
-        return (<CipServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <CipServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "airport":
-        return (<AirportTransportServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <AirportTransportServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       case "bus":
-        return (<BusportTransportServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <BusportTransportServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
       default:
-        return (<DefaultServiceFilterComponent service={service} serviceInfo={serviceInfo} />);
+        return (
+          <DefaultServiceFilterComponent
+            service={service}
+            serviceInfo={serviceInfo}
+          />
+        );
     }
   };
   return (
@@ -76,8 +129,10 @@ const ToursPage = ({
             FilterSidedBar={GetFilterComponent()}
           >
             {items && items.length ? (
-              service === "iran-visa" ? (
-                <CardIranvisaComponent items={items} />
+              service === "iran-visa" ||
+              service === "souvenirs" ||
+              service === "usefull-information" ? (
+                <CardIranvisaComponent service={service} items={items} />
               ) : (
                 <CardToursComponent service={service} tours={items} />
               )

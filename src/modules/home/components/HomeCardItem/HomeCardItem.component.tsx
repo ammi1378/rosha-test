@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { serverImage } from "../../../comon/util/image-utils";
+import MoreInfoModalComponent from "../MoreInfoModal/MoreInfoModal.component";
 import { HomeCardItemProps } from "./HomeCardItem.props";
 
 const homeCardItemComponent = "homeCardItemComponent";
@@ -178,20 +179,35 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
             </ul>
           )}
           <div className="row">
-            <a
-              type="button"
-              href={`/service/${service}/${item.id}`}
-              target="_blank"
-              className="col-md-6 my-2"
-            >
-              <span
-                className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
-                data-bs-toggle="modal"
-                data-bs-target="#myModal"
+            {!item.moreInfo && (
+              <a
+                type="button"
+                href={`/service/${service}/${item.id}`}
+                target="_blank"
+                className="col-md-6 my-2"
               >
-                More Info
-              </span>
-            </a>
+                <span
+                  className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  More Info
+                </span>
+              </a>
+            )}
+            {item.moreInfo && (
+              <>
+                <a type="button" className="col-md-6 my-2">
+                  <span
+                    className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
+                    data-bs-toggle="modal"
+                    data-bs-target={`#myModal-${item.id}`}
+                  >
+                    More Info
+                  </span>
+                </a>
+              </>
+            )}
             <a
               className="col-md-6 my-2"
               href={`/service/${service}/${item.id}/request`}
@@ -204,6 +220,9 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
           </div>
         </div>
       </article>
+      {item.moreInfo && (
+        <MoreInfoModalComponent item={item} service={service} />
+      )}
     </div>
   );
 };
