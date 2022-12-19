@@ -19,6 +19,8 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                 <img
                   src="/NewImages/logo-rosha-Copy.png"
                   alt="#"
+                  width="170px"
+                  height="170px"
                   className=""
                 />
               </a>
