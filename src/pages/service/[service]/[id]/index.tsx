@@ -15,6 +15,7 @@ import MediaSliderComponent from "../../../../modules/toursingle/components/Medi
 import ProductDetailSectionComponent from "../../../../modules/toursingle/components/ProductDetailSection/ProductDetailSection.component";
 import SimilarProductsComponent from "../../../../modules/toursingle/components/SimilarProducts/SimilarProducts.component";
 import ContnetDetailSectionComponent from "../../../../modules/toursingle/components/ContnetDetailSection/ProductDetailSection.component";
+import BlogElementComponent from "../../../../modules/blogsingle/components/BlogElement/BlogElement.component";
 
 const toursingle = ({
   service,
@@ -29,14 +30,27 @@ const toursingle = ({
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         <div className="container">
-          {service && service.gallery && (
-            <MediaSliderComponent media={service.gallery} />
-          )}
           {serviceName === "iran-visa" ||
           serviceName === "souvenirs" ||
-          serviceName === "usefull-information"
-            ? service && <ContnetDetailSectionComponent service={service} />
-            : service && <ProductDetailSectionComponent service={service} />}
+          serviceName === "usefull-information" ? (
+            service && (
+              <>
+                <BlogElementComponent
+                  title={service.title}
+                  content={service.moreInfo}
+                  media={service.gallery}
+                />
+                {/* <ContnetDetailSectionComponent service={service} /> */}
+              </>
+            )
+          ) : (
+            <>
+              {service && service.gallery && (
+                <MediaSliderComponent media={service.gallery} />
+              )}
+              {service && <ProductDetailSectionComponent service={service} />}
+            </>
+          )}
           {/* <SimilarProductsComponent /> */}
         </div>
       </main>

@@ -20,10 +20,12 @@ const ServiceRequest = ({
   service,
   name,
   serviceInfo,
+  serviceName,
 }: {
   service: IServiceDetail;
   name: string;
   serviceInfo: null | IServicesInfoListResponseDataItemModel;
+  serviceName: IServiceApiName;
 }) => {
   const [status, setStatus] = useState<"fail" | "success" | null>(null);
   const submit = (data: any) => {
@@ -98,6 +100,7 @@ const ServiceRequest = ({
                 <div className="container-xxl">
                   <div className="entry-content">
                     <FormBookingComponent
+                      serviceName={serviceName}
                       onSubmit={submit}
                       status={status}
                       service={service as string}
@@ -144,14 +147,19 @@ export const getServerSideProps = async ({
     item = await getServiceApi(service, +id);
 
     return {
-      props: { service: item, name: service, serviceInfo: foundedInfo },
+      props: {
+        service: item,
+        name: service,
+        serviceInfo: foundedInfo,
+        serviceName: service,
+      },
     };
   } catch (e: any) {
     if (e instanceof AxiosError) {
       if (e.response?.status === 404)
         return {
           notFound: true,
-          props: { service: item, name: service },
+          props: { service: item, name: service, serviceName: service },
         };
     }
   }
