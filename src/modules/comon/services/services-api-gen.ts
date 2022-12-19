@@ -5,6 +5,7 @@ import {
   CipInternationalAirportServiceApi,
   DailyTourApi,
   FlightServiceApi,
+  HotelServiceApi,
   IranVisaApi,
   ITourListResponseDataItemModel,
   ITourListResponseModel,
@@ -40,6 +41,12 @@ export const getServicesApi = (
 
     return airportTransportationServiceApi
       .getAirportTransportationServices({}, { params: queryString })
+      .then((res) => servicesDataMapper(res.data as any));
+  } else if (type === "hotel") {
+    const hotelServiceApi = new HotelServiceApi();
+
+    return hotelServiceApi
+      .getHotelServices({}, { params: queryString })
       .then((res) => servicesDataMapper(res.data as any));
   } else if (type === "business-travel") {
     const businessTravelApi = new BusinessTravelApi();
