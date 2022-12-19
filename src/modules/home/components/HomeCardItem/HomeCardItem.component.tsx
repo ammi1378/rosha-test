@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { serverImage } from "../../../comon/util/image-utils";
+import MoreInfoModalComponent from "../MoreInfoModal/MoreInfoModal.component";
 import { HomeCardItemProps } from "./HomeCardItem.props";
 
 const homeCardItemComponent = "homeCardItemComponent";
@@ -106,6 +107,14 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
                     </a>
                   </>
                 )}
+                {item.city && (
+                  <>
+                    <span className="rlr-product-card__sub-title">|</span>
+                    <span className="rlr-product-card__sub-title">
+                      {item.season}
+                    </span>
+                  </>
+                )}
               </div>
             </div>
           </header>
@@ -148,25 +157,72 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
               </div>
             </div>
           </div>
-          <div className="rlr-product-card__footer">
-            {item.features && (
-              <ul className="rlr-product-card__icon-text-list">
-                {item.features?.map((feature, index) => {
-                  return (
-                    <li
-                      className="rlr-icon-text rlr-product-card__icon-text"
-                      key={index}
-                    >
-                      <i className="rlr-icon-font flaticon-check"> </i>
-                      <span className="rlr-icon-text__title">{feature}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+        </div>
+
+        <div
+          className="rlr-product-card__footer row"
+          style={{ margin: 0, paddingLeft: "1rem", width: "100%" }}
+        >
+          {item.features && (
+            <ul className="rlr-product-card__icon-text-list">
+              {item.features?.map((feature, index) => {
+                return (
+                  <li
+                    className="rlr-icon-text rlr-product-card__icon-text"
+                    key={index}
+                  >
+                    <i className="rlr-icon-font flaticon-check"> </i>
+                    <span className="rlr-icon-text__title">{feature}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+          <div className="row">
+            {!item.moreInfo && (
+              <a
+                type="button"
+                href={`/service/${service}/${item.id}`}
+                target="_blank"
+                className="col-md-6 my-2"
+              >
+                <span
+                  className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  More Info
+                </span>
+              </a>
             )}
+            {item.moreInfo && (
+              <>
+                <a type="button" className="col-md-6 my-2">
+                  <span
+                    className="btn rlr-icon-text__title Rosha-btn-moreinfo-style2"
+                    data-bs-toggle="modal"
+                    data-bs-target={`#myModal-${item.id}`}
+                  >
+                    More Info
+                  </span>
+                </a>
+              </>
+            )}
+            <a
+              className="col-md-6 my-2"
+              href={`/service/${service}/${item.id}/request`}
+              target="_blank"
+            >
+              <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">
+                Booking
+              </span>
+            </a>
           </div>
         </div>
       </article>
+      {item.moreInfo && (
+        <MoreInfoModalComponent item={item} service={service} />
+      )}
     </div>
   );
 };

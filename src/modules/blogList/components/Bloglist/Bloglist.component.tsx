@@ -1,5 +1,4 @@
 import React from "react";
-import PaginationComponent from "../../../services/components/Pagination/Pagination.component";
 import AsidBlogesComponent from "../AsidBloges/AsidBloges.component";
 import CardBlogesComponent from "../CardBloges/CardBloges.component";
 import { BloglistProps } from "./Bloglist.props";

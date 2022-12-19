@@ -1,5 +1,6 @@
 import { IServicesInfoListResponseDataItemModel } from "../../../../rosha-api/IServicesInfoListResponseDataItemModel";
 import { IServiceApiName } from "../../../comon/services/IServiceApiName";
+import { ICityFilter } from "../../common/ICityFilter";
 import { IKeywordFilter } from "../../common/IKeywordFilter";
 import { IRatesFilter } from "../../common/IRatesFilter";
 import { ISeasonFilter } from '../../common/ISeasonFilter';
@@ -13,9 +14,6 @@ export interface DailyTourServiceFilterProps {
 export interface IDailyTourFilters {
   keyword: null | string;
   rating: null | string;
-  minDays: null | string;
-  maxDays: null | string;
-  DailyTourType: null | string;
   city: null | string;
   seasons: null | string;
 }
@@ -24,10 +22,14 @@ export interface IServiceFilters {
   filters: {
     keywordFilter?: IKeywordFilter;
     rates?: IRatesFilter;
-    seasons?: ISeasonFilter
+    seasons?: ISeasonFilter;
+    city?: ICityFilter;
   };
   query: string;
 }
-export type IServiceFilter = IKeywordFilter | IRatesFilter | ISeasonFilter;
-
+export type IServiceFilter =
+  | IKeywordFilter
+  | IRatesFilter
+  | ISeasonFilter
+  | ICityFilter
 export type IDailyTourFiltersKey = keyof IDailyTourFilters;

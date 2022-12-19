@@ -9,6 +9,8 @@ const IranVisaCardItemComponent: React.FC<IranVisaCardItemProps> = ({
   title,
   describtion,
   image,
+  id,
+  service,
 }) => {
   return (
     <div
@@ -22,7 +24,7 @@ const IranVisaCardItemComponent: React.FC<IranVisaCardItemProps> = ({
           <div className="rlr-secondary-menu-desc__icon Rosha-size-image-Card">
             <img
               className="Rosha-size-image-card-IranVisa rounded"
-              src={serverImage(image || '')}
+              src={serverImage(image || "")}
               alt=""
             />
           </div>
@@ -31,7 +33,7 @@ const IranVisaCardItemComponent: React.FC<IranVisaCardItemProps> = ({
               <div className="rlr-readmore-desc rlr-overview-detail__description">
                 <div>
                   <a
-                    href="./Rosha-Form.html"
+                    href={`/service/${service}/${id}`}
                     className="rlr-product-card__anchor-title"
                   >
                     <h2
@@ -51,12 +53,14 @@ const IranVisaCardItemComponent: React.FC<IranVisaCardItemProps> = ({
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 col-lg-4 col-sm-12 align-to-right">
+              <a
+                href={`/service/${service}/${id}`}
+                className="col-md-6 col-lg-4 col-sm-12 align-to-right"
+              >
                 <span className="btn rlr-icon-text__title Rosha-btn-moreinfo-style1">
-                  {" "}
-                  Iran Visa Booking{" "}
+                  {title}
                 </span>
-              </div>
+              </a>
             </div>
           </div>
         </div>

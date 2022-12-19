@@ -1,7 +1,7 @@
 
 export interface IKeywordFilter {
-  type: "keyword";
-  fields: string[];
-  value: string;
+	  type: "keyword";
+	  fields: string[];
+	  value: string;
 }
 

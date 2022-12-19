@@ -6,16 +6,20 @@ import {
   DailyTourApi,
   FlightServiceApi,
   HotelServiceApi,
+  IIranVisaResponseDataObjectModel,
+  IranVisaApi,
   ITourResponseDataObjectModel,
   MeetingRoomServiceApi,
   PrivateJetServiceApi,
   RestaurantServiceApi,
   ShoppingServiceApi,
+  SouvenirApi,
   TourApi,
   TourGuideServiceApi,
   TrainServiceApi,
   TranslatingInterpretingServiceApi,
   TravelInsuranceServiceApi,
+  UseFullInformationApi,
   VipDomesticAirportServiceApi,
 } from "../../../rosha-api/api";
 import { IServiceApiName } from "./IServiceApiName";
@@ -24,7 +28,6 @@ export const getServiceApi = (
   type: IServiceApiName,
   id: number
 ): Promise<IServiceDetail | null> => {
-
   const toursApi = new TourApi();
   if (type === "tour") {
     return toursApi
@@ -129,23 +132,43 @@ export const getServiceApi = (
     return vipDomesticAirportServiceApi
       .getVipDomesticAirportServicesId({ id })
       .then((res) => serviceDataMapper(res.data.data));
-  }
+  } else if (type === "iran-visa") {
+    const iranVisaApi = new IranVisaApi();
 
+    return iranVisaApi
+      .getIranVisasId({ id })
+      .then((res) => serviceDataMapper(res.data.data));
+  } else if (type === "souvenirs") {
+    const souvenirApi = new SouvenirApi();
+
+    return souvenirApi
+      .getSouvenirsId({ id })
+      .then((res) => serviceDataMapper(res.data.data));
+  } else if (type === "usefull-information") {
+    const useFullInformationApi = new UseFullInformationApi();
+
+    return useFullInformationApi
+      .getUseFullInformationsId({ id })
+      .then((res) => serviceDataMapper(res.data.data));
+  }
   return toursApi
     .getToursId({ id })
     .then((res) => serviceDataMapper(res.data.data));
 };
 
 export const serviceDataMapper = (
-  item: ITourResponseDataObjectModel | undefined
+  item: any | undefined
 ): IServiceDetail | null => {
   if (!item) return null;
+
+  const image =
+    item.attributes?.Gallery?.data || item.attributes?.Card?.CardImage?.data;
   return {
     id: item.id,
     title: item.attributes?.Name,
     stars: item.attributes?.Card?.CardStar,
 
-    gallery: item.attributes?.Gallery?.data?.map((image) => {
+    gallery: image?.map((image: any) => {
       return {
         alt: image.attributes?.alternativeText,
         url: image.attributes?.url,
@@ -153,6 +176,7 @@ export const serviceDataMapper = (
       };
     }),
     sections: sectionGenerator(item),
+    moreInfo: item.attributes?.MoreInfo as string,
   };
 };
 
@@ -249,9 +273,7 @@ const sectionGenerator = (
   return sections;
 };
 
-const serviceIconsGenerator = (
-  item: any
-): IOverviewServiceIcons[] => {
+const serviceIconsGenerator = (item: any): IOverviewServiceIcons[] => {
   const icons: IOverviewServiceIcons[] = [];
   if (item?.attributes?.Duration) {
     icons.push({
@@ -326,6 +348,7 @@ export interface IServiceDetail {
   stars?: number;
   sections?: IServiceSections;
   gallery?: { url?: string; alt?: string; id?: number }[];
+  moreInfo?: string;
 }
 
 export type IServiceSections = Array<
