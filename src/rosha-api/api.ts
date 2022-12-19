@@ -3331,62 +3331,6 @@ export interface IGeneralInfoPagesReviewsComponentModel {
 /**
  * 
  * @export
- * @interface IGeneralInfoPagesSecondGeneralCardsComponentModel
- */
-export interface IGeneralInfoPagesSecondGeneralCardsComponentModel {
-    /**
-     * 
-     * @type {number}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Name'?: string;
-    /**
-     * 
-     * @type {IAboutAboutCardsComponentImageModel}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Picture'?: IAboutAboutCardsComponentImageModel;
-    /**
-     * 
-     * @type {string}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Date'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Description'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Tags'?: IGeneralInfoPagesSecondGeneralCardsComponentModelTagsEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof IGeneralInfoPagesSecondGeneralCardsComponentModel
-     */
-    'Order'?: number;
-}
-
-export const IGeneralInfoPagesSecondGeneralCardsComponentModelTagsEnum = {
-    Spring: 'Spring'
-} as const;
-
-export type IGeneralInfoPagesSecondGeneralCardsComponentModelTagsEnum = typeof IGeneralInfoPagesSecondGeneralCardsComponentModelTagsEnum[keyof typeof IGeneralInfoPagesSecondGeneralCardsComponentModelTagsEnum];
-
-/**
- * 
- * @export
  * @interface IHomePageDetailListResponseDataItemAttributesModel
  */
 export interface IHomePageDetailListResponseDataItemAttributesModel {
@@ -5004,6 +4948,12 @@ export interface IRequestListResponseDataItemAttributesModel {
     'GeneralRequests'?: IGeneralInfoPagesGeneralRequestsComponentModel;
     /**
      * 
+     * @type {IAirportTransportationServiceListResponseDataItemAttributesGalleryModel}
+     * @memberof IRequestListResponseDataItemAttributesModel
+     */
+    'Attachments'?: IAirportTransportationServiceListResponseDataItemAttributesGalleryModel;
+    /**
+     * 
      * @type {string}
      * @memberof IRequestListResponseDataItemAttributesModel
      */
@@ -5102,6 +5052,12 @@ export interface IRequestRequestDataModel {
      * @memberof IRequestRequestDataModel
      */
     'GeneralRequests'?: IGeneralInfoPagesGeneralRequestsComponentModel;
+    /**
+     * 
+     * @type {Array<IAirportTransportationServiceRequestDataGalleryInnerModel>}
+     * @memberof IRequestRequestDataModel
+     */
+    'Attachments'?: Array<IAirportTransportationServiceRequestDataGalleryInnerModel>;
 }
 /**
  * 
@@ -5947,6 +5903,12 @@ export interface ISouvenirListResponseDataItemAttributesModel {
      * @type {string}
      * @memberof ISouvenirListResponseDataItemAttributesModel
      */
+    'Name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ISouvenirListResponseDataItemAttributesModel
+     */
     'createdAt'?: string;
     /**
      * 
@@ -6048,6 +6010,12 @@ export interface ISouvenirRequestDataModel {
      * @memberof ISouvenirRequestDataModel
      */
     'Card'?: IGeneralInfoPagesFirstGeneralCardsComponentModel;
+    /**
+     * 
+     * @type {string}
+     * @memberof ISouvenirRequestDataModel
+     */
+    'Name'?: string;
 }
 /**
  * 
@@ -8787,10 +8755,16 @@ export interface IUseFullInformationListResponseDataItemAttributesModel {
     'Name'?: string;
     /**
      * 
-     * @type {IGeneralInfoPagesSecondGeneralCardsComponentModel}
+     * @type {string}
      * @memberof IUseFullInformationListResponseDataItemAttributesModel
      */
-    'Card'?: IGeneralInfoPagesSecondGeneralCardsComponentModel;
+    'MoreInfo'?: string;
+    /**
+     * 
+     * @type {IGeneralInfoPagesFirstGeneralCardsComponentModel}
+     * @memberof IUseFullInformationListResponseDataItemAttributesModel
+     */
+    'Card'?: IGeneralInfoPagesFirstGeneralCardsComponentModel;
     /**
      * 
      * @type {string}
@@ -8893,10 +8867,16 @@ export interface IUseFullInformationRequestDataModel {
     'Name'?: string;
     /**
      * 
-     * @type {IGeneralInfoPagesSecondGeneralCardsComponentModel}
+     * @type {string}
      * @memberof IUseFullInformationRequestDataModel
      */
-    'Card'?: IGeneralInfoPagesSecondGeneralCardsComponentModel;
+    'MoreInfo'?: string;
+    /**
+     * 
+     * @type {IGeneralInfoPagesFirstGeneralCardsComponentModel}
+     * @memberof IUseFullInformationRequestDataModel
+     */
+    'Card'?: IGeneralInfoPagesFirstGeneralCardsComponentModel;
 }
 /**
  * 

@@ -14,6 +14,8 @@ const FormBookingComponent: React.FC<FormBookingProps> = ({
     e.preventDefault();
     console.log(e);
     const formData = new FormData(e.currentTarget);
+    const formDataasasa = formData.get("Attachments");
+    // debugger;
     const values = {} as any;
     for (let pair of formData.entries()) {
       console.log(pair[0] + ": " + pair[1]);
@@ -39,6 +41,7 @@ const FormBookingComponent: React.FC<FormBookingProps> = ({
 
       <div className="woocommerce-notices-wrapper"></div>
       <form
+        id="request-form"
         name="checkout"
         className="checkout woocommerce-checkout"
         noValidate
@@ -1396,7 +1399,7 @@ const FormBookingComponent: React.FC<FormBookingProps> = ({
                   <span> Choose File </span>
                 </h6>
 
-                {/* <div id="payment" className="woocommerce-checkout-payment">
+                <div id="payment" className="woocommerce-checkout-payment">
                   <div className="rlr-fieldrow">
                     <div className="rlr-fieldrow__form-element">
                       <div className="rlr-fieldrow__item js-fieldrow__item">
@@ -1413,6 +1416,8 @@ const FormBookingComponent: React.FC<FormBookingProps> = ({
                               id="rlr_input_splide_photouploader"
                               className="rlr-drop-region__image-input js-rlr-drop-input"
                               type="file"
+                              multiple
+                              name="Attachments"
                               accept="file/zip"
                             />
                             <svg
@@ -1470,7 +1475,8 @@ const FormBookingComponent: React.FC<FormBookingProps> = ({
                       </div>
                     </div>
                   </div>
-                </div> */}
+                </div>
+                {/* <input name="files" type="file" multiple /> */}
               </div>
             </div>
           </div>
