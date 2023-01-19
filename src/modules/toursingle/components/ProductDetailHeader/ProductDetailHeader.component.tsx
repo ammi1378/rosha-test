@@ -50,12 +50,20 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
                 {Array(service.stars)
                   .fill("")
                   .map((i, index) => {
-                    return <i key={index} className="rlr-icon-font flaticon-star-1"> </i>;
+                    return (
+                      <i key={index} className="rlr-icon-font flaticon-star-1">
+                        {" "}
+                      </i>
+                    );
                   })}
                 {Array(5 - service.stars)
                   .fill("")
                   .map((i, index) => {
-                    return <i key={index} className="rlr-icon-font flaticon-star"> </i>;
+                    return (
+                      <i key={index} className="rlr-icon-font flaticon-star">
+                        {" "}
+                      </i>
+                    );
                   })}
               </div>
             )}
@@ -160,7 +168,7 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
         </div>
       </div>
       {/* <!-- Secondary Menu --> */}
-      <nav className="rlr-product-detail-secondary-menu">
+      <nav className="rlr-product-detail-secondary-menu mb-4">
         <ul
           className="rlr-product-detail-secondary-menu__tabitems"
           id="rlr-js-secondary-menu"
@@ -183,7 +191,7 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
         if (section.type === "overview" && section.data.text?.length) {
           return (
             <div
-              className="rlr-secondary-menu-desc"
+              className="rlr-secondary-menu-desc mb-4"
               data-id={`rlr-product-sec-${section.title}`}
               key={section.title}
             >
@@ -220,9 +228,9 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
                     </span>
                   </div>
                   <div className="rlr-overview-detail__icon-groupset">
-                    {section.data.serviceIcons.map((tourIconDetail: any) => {
+                    {section.data.serviceIcons.map((tourIconDetail: any, index) => {
                       return (
-                        <div className="rlr-overview-detail__icon-group">
+                        <div className="rlr-overview-detail__icon-group" key={index}>
                           <span className="rlr-overview-detail__label">
                             {tourIconDetail.title}
                           </span>
@@ -248,7 +256,7 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
         ) {
           return (
             <div
-              className="rlr-secondary-menu-desc"
+              className="rlr-secondary-menu-desc mb-5"
               key={section.title}
               data-id={`rlr-product-sec-${section.title}`}
             >
@@ -336,7 +344,10 @@ const ProductDetailHeaderComponent: React.FC<ProductDetailHeaderProps> = ({
                   {section.data?.mediaItems?.map(
                     (itinerary: any, index: number) => {
                       return (
-                        <div className="accordion-item rlr-accordion__item">
+                        <div
+                          className="accordion-item rlr-accordion__item"
+                          key={index}
+                        >
                           <div
                             className="accordion-header rlr-accordion__header"
                             id={`rlr-itinerary-header${index + 1}`}

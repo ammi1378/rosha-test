@@ -11,19 +11,39 @@ import CategoryCarouselComponent from "../modules/home/components/CategoryCarous
 import HeroBannerComponent from "../modules/home/components/HeroBanner/HeroBanner.component";
 import ProductCarouselComponent from "../modules/home/components/ProductCarousel/ProductCarousel.component";
 import VideoBlockComponent from "../modules/home/components/VideoBlock/VideoBlock.component";
-import { HomePageDetailApi, TourApi } from "../rosha-api/api";
+import {
+  HomePageDetailApi,
+  IAboutAboutCardsComponentImageDataModel,
+  IHomePageDetailListResponseDataItemModel,
+  TourApi,
+} from "../rosha-api/api";
+import Head from "next/head";
+import LogoCarouselComponent from "../modules/home/components/LogoCarousel/LogoCarousel.component";
+import ExhibitionListComponent from "../modules/home/components/ExhibitionList/ExhibitionList.component";
+import SalesAndSupportComponent from "../modules/home/components/SalesAndSupport/SalesAndSupport.component";
 
 const Home = ({
   newTours,
   bestSellingTours,
   homePageDtails,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: InferGetServerSidePropsType<typeof getServerSideProps> & {
+  homePageDtails: any;
+}) => {
   return (
     <>
+      <Head>
+        <title>Rosha travel</title>
+      </Head>
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         {/* <!-- Hero Banner --> */}
-        {homePageDtails && <HeroBannerComponent homePageDtails={homePageDtails}/>}
+        {homePageDtails && (
+          <HeroBannerComponent
+            homePageDtails={
+              homePageDtails as IHomePageDetailListResponseDataItemModel
+            }
+          />
+        )}
         {/* <!-- Product Carousel --> */}
         {newTours.tours && (
           <ProductCarouselComponent
@@ -40,7 +60,20 @@ const Home = ({
           />
         )}
         <CategoryCarouselComponent />
-        {/* <VideoBlockComponent /> */}
+        {/* <ExhibitionListComponent /> */}
+        <LogoCarouselComponent
+          images={
+            homePageDtails.attributes.TrustedByPicture
+              .data as IAboutAboutCardsComponentImageDataModel[]
+          }
+        />
+        <VideoBlockComponent
+          video={
+            homePageDtails.attributes
+              .IntroduceVideo?.data as IAboutAboutCardsComponentImageDataModel
+          }
+        />
+        <SalesAndSupportComponent />
       </main>
       <FooterComponent />
     </>
@@ -56,7 +89,7 @@ export const getServerSideProps = async ({
     .then((res) => servicesDataMapper(res.data));
   const newToursData = {
     header: "New Tours",
-    subHeader: "Sost Brilliant reasons Emprise should be your one-stop-shop!",
+    subHeader: "Most Brilliant reasons Emprise should be your one-stop-shop!",
     tours: newTours,
   };
 
@@ -66,7 +99,7 @@ export const getServerSideProps = async ({
 
   const bestSellingToursData = {
     header: "Best Selling Tours",
-    subHeader: "Sost Brilliant reasons Emprise should be your one-stop-shop!",
+    subHeader: "Most Brilliant reasons Emprise should be your one-stop-shop!",
     tours: bestSellingTours,
   };
 

@@ -116,7 +116,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ className }) => {
                         <li className="rlr-icon-text">
                           <div className="rlr-icon-text__text-wrapper">
                             <span className="rlr-icon-text__title">
-                              <a href="/service/train"> Train Booking</a>
+                              <a href="/service/train"> Touristic train </a>
                             </span>
                           </div>
                         </li>

@@ -28,6 +28,7 @@ import VipServiceFilterComponent from "../../../modules/filters/components/VipSe
 import CipServiceFilterComponent from "../../../modules/filters/components/CipServiceFilter/CipServiceFilter.component";
 import AirportTransportServiceFilterComponent from "../../../modules/filters/components/AirportTransportServiceFilter/AirportTransportServiceFilter.component";
 import BusportTransportServiceFilterComponent from "../../../modules/filters/components/BusportTransportServiceFilter/BusportTransportServiceFilter.component";
+import Head from "next/head";
 
 const ToursPage = ({
   items,
@@ -118,6 +119,9 @@ const ToursPage = ({
   };
   return (
     <>
+      <Head>
+        <title>Rosha travel | {service}</title>
+      </Head>
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         <div className="rlr-search-results-page container">

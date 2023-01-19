@@ -3,8 +3,10 @@ import { Html, Head, Main, NextScript } from "next/document";
 function MyApp() {
   return (
     <Html>
-      <Head />
-      <body className="rlr-body" style={{zoom: '90%'}}>
+      <Head>
+        <link rel="shortcut icon" href="/NewImages/logo-rosha.png" />
+      </Head>
+      <body className="rlr-body" style={{ zoom: "90%" }}>
         <Main />
         <NextScript />
       </body>

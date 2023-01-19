@@ -13,6 +13,7 @@ const ResultheadersItemComponent: React.FC<ResultheadersItemProps> = ({
   return (
     <div
       className={`${resultheadersItemComponent} ${className} rlr-search-results-header__sorting-wrapper Rosha-height-banner`}
+      style={{maxHeight: '30rem', overflow: 'hidden'}}
     >
       <img className="Rosha-style-banner rounded" src={serverImage(image || '')} />
       <div className="Rosha-layer-on-benner rounded"></div>

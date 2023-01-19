@@ -1,6 +1,6 @@
 import { IAboutAboutCardsComponentImageDataModel } from "../../../../rosha-api/api";
 
-export interface VideoBlockProps {
+export interface LogoCarouselProps {
   className?: string;
-  video: IAboutAboutCardsComponentImageDataModel
+  images: IAboutAboutCardsComponentImageDataModel[];
 }

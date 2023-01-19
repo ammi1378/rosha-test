@@ -1,16 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { FooterProps } from "./Footer.props";
+import { RequestApi } from "../../../../rosha-api/api";
 
 const footerComponent = "footerComponent";
 
 const FooterComponent: React.FC<FooterProps> = ({ className }) => {
+  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(e);
+    const formData = new FormData(e.currentTarget);
+    const values = {} as any;
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ": " + pair[1]);
+      values[pair[0]] = pair[1];
+    }
+    submit(values);
+  };
+  const [status, setStatus] = useState<"fail" | "success" | null>(null);
+
+  const submit = (data: any) => {
+    const requestApi = new RequestApi();
+    const requestData = {
+      service: { title: "email subscribe" },
+      ...data,
+    };
+    requestApi
+      .postRequests({
+        iRequestRequestModel: {
+          data: { GeneralRequests: { Identifiers: requestData } },
+        },
+      })
+      .then((val) => {
+        if (val.status === 200) {
+          setStatus("success");
+        } else {
+          setStatus("fail");
+        }
+      })
+      .catch((e) => {
+        setStatus("fail");
+      });
+  };
   return (
     <div>
       <footer
         className={`${footerComponent} ${className} rlr-footer rlr-section rlr-section__mt`}
       >
         <div className="container">
-
           {/* <!-- Footer menu --> */}
           <div className="rlr-footer__menu">
             <nav className="rlr-footer__menu__col">
@@ -18,70 +54,52 @@ const FooterComponent: React.FC<FooterProps> = ({ className }) => {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <a href="#">Budget Tours</a>
+                  <a href="/service/tour">Tour</a>
                 </li>
                 <li>
-                  <a href="#">Expert Insight</a>
+                  <a href="/service/daily-tour">Daily tour</a>
                 </li>
                 <li>
-                  <a href="#">Independent</a>
+                  <a href="/service/hotel">Hotel</a>
                 </li>
                 <li>
-                  <a href="#">Luxury Tours</a>
-                </li>
-                <li>
-                  <a href="#">Safety Tips</a>
-                </li>
-                <li>
-                  <a href="#">Tips n Tricks</a>
+                  <a href="/service/restaurant">Restaurant</a>
                 </li>
               </ul>
             </nav>
             <nav className="rlr-footer__menu__col">
               {/* <!-- Footer menu col --> */}
-              <h4>Adventures</h4>
+              <h4>Blogs</h4>
               <ul>
                 <li>
-                  <a href="#">Beach Activity</a>
+                  <a href="/service/usefull-information">Usefull information</a>
                 </li>
                 <li>
-                  <a href="#">Bungee Jump</a>
+                  <a href="/service/business-travel">Business travel</a>
                 </li>
                 <li>
-                  <a href="#">City Tour</a>
+                  <a href="/service/iran-visa">Iran visa</a>
                 </li>
                 <li>
-                  <a href="#">Hiking Trips</a>
-                </li>
-                <li>
-                  <a href="#">Jungle Safari</a>
-                </li>
-                <li>
-                  <a href="#">Night City Walk</a>
+                  <a href="/service/meeting-room">Meeting room</a>
                 </li>
               </ul>
             </nav>
             <nav className="rlr-footer__menu__col">
               {/* <!-- Footer menu col --> */}
-              <h4>Country</h4>
+              <h4>Others</h4>
               <ul>
                 <li>
-                  <a href="#">USA</a>
+                  <a href="/service/daily-tour">Daily tour</a>
                 </li>
                 <li>
-                  <a href="#">Australia</a>
+                  <a href="/service/tour">Tour</a>
                 </li>
                 <li>
-                  <a href="#">South Africa</a>
+                  <a href="/aboutUs">About Us</a>
                 </li>
                 <li>
-                  <a href="#">West Indies</a>
-                </li>
-                <li>
-                  <a href="#">New Zealand</a>
-                </li>
-                <li>
-                  <a href="#">Srilanka</a>
+                  <a href="/service/souvenirs">Souvenirs</a>
                 </li>
               </ul>
             </nav>
@@ -91,19 +109,23 @@ const FooterComponent: React.FC<FooterProps> = ({ className }) => {
               <a href="#" className="rlr-footer__menu__col__letstalk">
                 Let’s Talk
               </a>
-              <form
-                className="rlr-subscribe"
-                data-aos="fade-up"
-                data-aos-offset="250"
-                data-aos-duration="700"
-              >
+              <form className="rlr-subscribe" onSubmit={(e) => submitForm(e)}>
                 <input
                   type="email"
+                  required
                   className="rlr-subscribe__input"
                   placeholder="Enter your email"
                 />
                 <button className="btn">Send Now!</button>
               </form>
+              {status === "fail" && (
+                <p className="text-danger mt-2">An error accured!</p>
+              )}
+              {status === "success" && (
+                <p className="text-success mt-2">
+                  We recieved your email address. Thanks for your submission
+                </p>
+              )}
             </nav>
           </div>
           {/* <!-- Footer bottom --> */}
@@ -124,12 +146,13 @@ const FooterComponent: React.FC<FooterProps> = ({ className }) => {
             {/* <!-- Footer copyright --> */}
             <div className="rlr-footer__legal__row rlr-footer__legal__row--bottom">
               <div className="rlr-footer__legal__row__col">
-                <span>2022 © Railar Solutions</span>
+                <span>
+                  2023 © rosha Trvael created by:{" "}
+                  <a href="http://adiaweb.io/">Adiaweb</a>
+                </span>
               </div>
               {/* <!-- Footer payment thumbs --> */}
-              <div className="rlr-footer__legal__row__col">
-                <img src="/images/ele-payments.png" alt="Payments" />
-              </div>
+              <div className="rlr-footer__legal__row__col"></div>
             </div>
           </div>
         </div>

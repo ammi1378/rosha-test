@@ -15,6 +15,7 @@ import { IServicesInfoListResponseDataItemModel } from "../../../../rosha-api/IS
 import { BASE_PATH } from "../../../../rosha-api/base";
 
 import globalAxios from "axios";
+import Head from "next/head";
 
 const ServiceRequest = ({
   service,
@@ -88,6 +89,11 @@ const ServiceRequest = ({
   };
   return (
     <>
+      <Head>
+        <title>
+          Rosha travel | request {serviceName} - {name}
+        </title>
+      </Head>
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         <div className="rlr-section__content--md-top">

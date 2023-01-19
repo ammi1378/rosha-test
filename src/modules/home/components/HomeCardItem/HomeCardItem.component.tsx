@@ -19,7 +19,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
       }`}
     >
       <article
-        className="rlr-product-card rlr-product-card--v3"
+        className="rlr-product-card rlr-product-card--v3 pb-3 "
         itemScope
         itemType="https://schema.org/Product"
       >
@@ -119,7 +119,7 @@ const HomeCardItemComponent: React.FC<HomeCardItemProps> = ({
             </div>
           </header>
           <div className="rlr-product-card__details">
-            {item.duration && (
+            {!item.moreInfo && item.duration && (
               <div
                 className="rlr-product-card__prices"
                 itemProp="offers"

@@ -278,14 +278,14 @@ const serviceIconsGenerator = (item: any): IOverviewServiceIcons[] => {
   if (item?.attributes?.Duration) {
     icons.push({
       icon: "flaticon-three-o-clock-clock",
-      title: "Duration",
+      title: "Time",
       value: item?.attributes?.Duration,
     });
   }
   if (item?.attributes?.Type) {
     icons.push({
       icon: "flaticon-beach",
-      title: "Type",
+      title: "Activity",
       value: item?.attributes?.Type,
     });
   }
@@ -313,14 +313,14 @@ const serviceIconsGenerator = (item: any): IOverviewServiceIcons[] => {
   if (item?.attributes?.Destinations) {
     icons.push({
       icon: "flaticon-map-marker",
-      title: "Destinations",
+      title: "Historical Unesco site",
       value: item?.attributes?.Destinations,
     });
   }
   if (item?.attributes?.Cities?.CityName) {
     icons.push({
       icon: "flaticon-map-marker",
-      title: "City",
+      title: "Intangible unesco site",
       value: item?.attributes?.Cities?.CityName,
     });
   }

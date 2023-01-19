@@ -3,5 +3,6 @@ export interface CategoryCarouselItemProps {
   rate:string;
   icon:string;
   title:string;
+  link:string;
   activities:string[];
 }

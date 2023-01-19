@@ -24,9 +24,11 @@ const toursingle = ({
   service: IServiceDetail | null;
   serviceName: IServiceApiName;
 }) => {
-  debugger;
   return (
     <>
+      <title>
+        Rosha travel | {serviceName} - {service?.title}
+      </title>
       <HeaderComponent />
       <main id="rlr-main" className="rlr-main--fixed-top">
         <div className="container">
